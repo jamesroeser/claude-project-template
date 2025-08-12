@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Khol Gray Archive',
-  description: 'Digital archive for Khol Gray\'s music, art, and creative journey',
+  description:
+    "Digital archive for Khol Gray's music, art, and creative journey",
 }
 
 export default function RootLayout({
