@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "pre-edit": {
+      "command": "npm run format -- --write",
+      "description": "Format code with Prettier before edits"
+    },
+    "post-edit": {
+      "command": "npm run type-check",
+      "description": "Run TypeScript checks after edits"
+    },
+    "pre-commit": {
+      "command": "npm run lint && npm run type-check",
+      "description": "Lint and type-check before commits"
+    }
+  },
+  "slashCommands": {
+    "format": {
+      "command": "npm run format",
+      "description": "Format all files with Prettier"
+    },
+    "lint": {
+      "command": "npm run lint:fix",
+      "description": "Run ESLint and fix issues"
+    },
+    "build": {
+      "command": "npm run build",
+      "description": "Build the project"
+    },
+    "dev": {
+      "command": "npm run dev",
+      "description": "Start development server"
+    },
+    "db-types": {
+      "command": "npm run db:generate",
+      "description": "Generate Supabase TypeScript types"
+    }
+  },
+  "tools": {
+    "editor": {
+      "autoFormat": true,
+      "formatOnSave": true
+    },
+    "git": {
+      "autoCommitFormat": true,
+      "requireCleanWorkingDirectory": false
+    }
+  }
+}
