@@ -18,7 +18,7 @@ import { formatDistanceToNow } from 'date-fns'
 // Define what data structure each timeline entry expects
 interface TimelineEntryProps {
   id: string
-  type: 'music' | 'blog' | 'artwork' | 'project'
+  type: 'music' | 'blog' | 'artwork' | 'project' | 'update'
   title: string
   description?: string
   createdAt: string // ISO date string from database
@@ -26,6 +26,9 @@ interface TimelineEntryProps {
   content?: string // Full text content for blog posts
   tags?: string[] // Categories or labels for filtering
   isPremium?: boolean // Whether this content requires subscription
+  layout?: 'list' | 'grid' | 'compact' // Display layout option
+  isFirst?: boolean // Whether this is the first entry
+  isLast?: boolean // Whether this is the last entry
 }
 
 /**
