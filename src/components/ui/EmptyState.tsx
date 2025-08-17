@@ -1,11 +1,11 @@
 /**
  * Empty State Component
- * 
+ *
  * Shows when there's no content to display, providing helpful messaging
  * and guidance to users. Empty states are crucial for good UX - they
  * help users understand why they're not seeing content and what they
  * can do about it.
- * 
+ *
  * Features:
  * - Customizable icon, title, and message
  * - Optional action buttons
@@ -21,15 +21,15 @@ import React from 'react'
  * Props for EmptyState Component
  */
 interface EmptyStateProps {
-  icon?: string                     // Emoji or icon to display
-  title: string                     // Main heading
-  message: string                   // Descriptive message
-  actionLabel?: string              // Label for primary action button
-  onAction?: () => void            // Function to call when action is clicked
-  secondaryActionLabel?: string     // Label for secondary action
-  onSecondaryAction?: () => void   // Function for secondary action
-  className?: string               // Additional CSS classes
-  size?: 'sm' | 'md' | 'lg'        // Overall size of the empty state
+  icon?: string // Emoji or icon to display
+  title: string // Main heading
+  message: string // Descriptive message
+  actionLabel?: string // Label for primary action button
+  onAction?: () => void // Function to call when action is clicked
+  secondaryActionLabel?: string // Label for secondary action
+  onSecondaryAction?: () => void // Function for secondary action
+  className?: string // Additional CSS classes
+  size?: 'sm' | 'md' | 'lg' // Overall size of the empty state
 }
 
 /**
@@ -82,47 +82,43 @@ export function EmptyState({
   const classes = getSizeClasses()
 
   return (
-    <div 
+    <div
       className={`
         flex flex-col items-center justify-center text-center
         ${classes.container} ${className}
       `}
-      role="status"          // Indicates this represents the status of content
-      aria-live="polite"     // Screen readers announce when content changes
+      role="status" // Indicates this represents the status of content
+      aria-live="polite" // Screen readers announce when content changes
     >
       {/* Icon */}
-      <div 
-        className={`${classes.icon}`}
-        role="img" 
-        aria-hidden="true"
-      >
+      <div className={`${classes.icon}`} role="img" aria-hidden="true">
         {icon}
       </div>
 
       {/* Content */}
       <div className={classes.spacing}>
         {/* Title */}
-        <h3 className={`${classes.title} text-foreground`}>
-          {title}
-        </h3>
+        <h3 className={`${classes.title} text-foreground`}>{title}</h3>
 
         {/* Message */}
-        <p className={`${classes.message} text-muted-foreground max-w-md mx-auto`}>
+        <p
+          className={`${classes.message} mx-auto max-w-md text-muted-foreground`}
+        >
           {message}
         </p>
 
         {/* Action Buttons */}
         {(onAction || onSecondaryAction) && (
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 mt-6">
+          <div className="mt-6 flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-3 sm:space-y-0">
             {/* Primary Action */}
             {onAction && actionLabel && (
               <button
                 onClick={onAction}
                 className={`
-                  inline-flex items-center px-4 py-2 rounded-md font-medium
-                  text-primary-foreground bg-primary hover:bg-primary/90
-                  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
-                  transition-colors duration-200
+                  inline-flex items-center rounded-md bg-primary px-4 py-2
+                  font-medium text-primary-foreground transition-colors
+                  duration-200 hover:bg-primary/90 focus:outline-none focus:ring-2
+                  focus:ring-primary focus:ring-offset-2
                   ${size === 'sm' ? 'text-sm' : 'text-base'}
                 `}
                 type="button"
@@ -136,10 +132,10 @@ export function EmptyState({
               <button
                 onClick={onSecondaryAction}
                 className={`
-                  inline-flex items-center px-4 py-2 rounded-md font-medium
-                  text-muted-foreground border border-border hover:bg-muted
-                  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
-                  transition-colors duration-200
+                  inline-flex items-center rounded-md border border-border px-4
+                  py-2 font-medium text-muted-foreground transition-colors
+                  duration-200 hover:bg-muted focus:outline-none focus:ring-2
+                  focus:ring-primary focus:ring-offset-2
                   ${size === 'sm' ? 'text-sm' : 'text-base'}
                 `}
                 type="button"
@@ -156,17 +152,17 @@ export function EmptyState({
 
 /**
  * Timeline Empty State
- * 
+ *
  * Specific empty state for when the timeline has no content.
  */
-export function TimelineEmptyState({ 
+export function TimelineEmptyState({
   hasFilters = false,
   onClearFilters,
-  className = '' 
-}: { 
+  className = '',
+}: {
   hasFilters?: boolean
   onClearFilters?: () => void
-  className?: string 
+  className?: string
 }) {
   if (hasFilters) {
     return (
@@ -193,17 +189,17 @@ export function TimelineEmptyState({
 
 /**
  * Search Empty State
- * 
+ *
  * For when search results are empty.
  */
-export function SearchEmptyState({ 
+export function SearchEmptyState({
   searchQuery,
   onClearSearch,
-  className = '' 
-}: { 
+  className = '',
+}: {
   searchQuery: string
   onClearSearch?: () => void
-  className?: string 
+  className?: string
 }) {
   return (
     <EmptyState
@@ -213,7 +209,7 @@ export function SearchEmptyState({
       actionLabel="Clear Search"
       onAction={onClearSearch}
       secondaryActionLabel="Browse All"
-      onSecondaryAction={() => window.location.href = '/timeline'}
+      onSecondaryAction={() => (window.location.href = '/timeline')}
       className={className}
       size="sm"
     />
@@ -222,15 +218,15 @@ export function SearchEmptyState({
 
 /**
  * Content Type Empty State
- * 
+ *
  * For when a specific content type has no items.
  */
-export function ContentTypeEmptyState({ 
+export function ContentTypeEmptyState({
   contentType,
-  className = '' 
-}: { 
+  className = '',
+}: {
   contentType: string
-  className?: string 
+  className?: string
 }) {
   const getContentInfo = () => {
     switch (contentType.toLowerCase()) {
@@ -238,13 +234,15 @@ export function ContentTypeEmptyState({
         return {
           icon: '🎵',
           title: 'No music yet',
-          message: 'New tracks and albums will appear here as they\'re released.',
+          message:
+            "New tracks and albums will appear here as they're released.",
         }
       case 'blog':
         return {
           icon: '📝',
           title: 'No blog posts yet',
-          message: 'Stay tuned for behind-the-scenes stories and creative insights.',
+          message:
+            'Stay tuned for behind-the-scenes stories and creative insights.',
         }
       case 'artwork':
         return {
@@ -262,7 +260,7 @@ export function ContentTypeEmptyState({
         return {
           icon: '📄',
           title: `No ${contentType} yet`,
-          message: 'Content will appear here as it\'s added.',
+          message: "Content will appear here as it's added.",
         }
     }
   }

@@ -1,12 +1,12 @@
 /**
  * Timeline View Controls Component
- * 
+ *
  * Provides controls for changing how the timeline is displayed:
  * - Layout options (list, grid, compact)
  * - Sort options (date, title, etc.)
  * - Sort order (ascending/descending)
  * - Items per page
- * 
+ *
  * This component helps users customize their browsing experience.
  */
 
@@ -55,11 +55,13 @@ export function TimelineViewControls({
   }
 
   return (
-    <div className={`timeline-view-controls flex items-center space-x-4 ${className}`}>
+    <div
+      className={`timeline-view-controls flex items-center space-x-4 ${className}`}
+    >
       {/* Layout Controls */}
       <div className="flex items-center space-x-1">
         <span className="text-sm text-muted-foreground">Layout:</span>
-        <div className="flex rounded-lg border border-border overflow-hidden">
+        <div className="flex overflow-hidden rounded-lg border border-border">
           {[
             { key: 'list', icon: '☰', label: 'List' },
             { key: 'grid', icon: '⊞', label: 'Grid' },
@@ -70,9 +72,10 @@ export function TimelineViewControls({
               onClick={() => handleLayoutChange(key as any)}
               className={`
                 px-2 py-1 text-sm transition-colors
-                ${viewOptions.layout === key
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                ${
+                  viewOptions.layout === key
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                 }
               `}
               title={label}
@@ -86,11 +89,11 @@ export function TimelineViewControls({
       {/* Sort Controls */}
       <div className="flex items-center space-x-2">
         <span className="text-sm text-muted-foreground">Sort:</span>
-        
+
         {/* Sort By Dropdown */}
         <select
           value={viewOptions.sortBy}
-          onChange={(e) => handleSortChange(e.target.value as any)}
+          onChange={e => handleSortChange(e.target.value as any)}
           className="rounded border border-border bg-background px-2 py-1 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
         >
           <option value="publishedAt">Published Date</option>

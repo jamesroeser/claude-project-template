@@ -11,28 +11,33 @@
 The Khol Gray Archive is more than a website—it's a new way to experience creative content through chronological storytelling. Every piece of content, from music tracks to blog posts to artwork, is positioned on a timeline that tells the complete story of creative evolution.
 
 This project serves as both:
+
 1. **Immediate Goal**: A professional digital presence for Khol Gray
 2. **Long-term Vision**: A blueprint for a scalable platform where any creator can build their own timeline-based archive
 
 ## ✨ Key Features
 
 ### 🕒 Timeline-First Design
-- All content organized chronologically 
+
+- All content organized chronologically
 - Visual storytelling through time
 - Smooth scrolling experience across all devices
 
 ### 🎵 Rich Media Support
+
 - Audio player with queue functionality
 - High-quality image galleries
 - Blog posts with rich text formatting
 - Cross-content browsing without interrupting playback
 
 ### 💰 Creator Economy Integration
+
 - Subscription system for premium content
 - Direct fan support and tips
 - Payment processing through Stripe
 
 ### 📱 Modern Web Experience
+
 - Mobile-first responsive design
 - Fast loading with optimized assets
 - SEO-friendly for content discovery
@@ -40,21 +45,25 @@ This project serves as both:
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **Next.js 14+**: React framework with app router for optimal performance
 - **TypeScript**: Type-safe development with better error catching
 - **Tailwind CSS**: Utility-first styling for rapid development
 
 ### Backend & Database
+
 - **Supabase**: PostgreSQL database with real-time capabilities
 - **Supabase Auth**: User authentication and session management
 - **Supabase Storage**: Cloud file storage for media assets
 
 ### Hosting & Deployment
+
 - **Vercel**: Automatic deployments from GitHub
 - **Custom Domain**: kholgray.com (managed through Namecheap)
 - **Global CDN**: Fast loading worldwide
 
 ### Development Tools
+
 - **ESLint**: Code quality and consistency checking
 - **Prettier**: Automatic code formatting
 - **TypeScript Compiler**: Type checking and error prevention
@@ -62,31 +71,36 @@ This project serves as both:
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 - Git
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/kg.archive.git
    cd kg.archive
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
    Create `.env.local` in the project root:
+
    ```env
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
 
 4. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -140,32 +154,39 @@ kg.archive/
 ## 🎨 Design Philosophy
 
 ### Timeline-Centric
+
 Every design decision supports chronological content exploration. The timeline isn't just navigation—it's the core storytelling mechanism.
 
 ### Content-First
+
 The interface gets out of the way and lets the content shine. Clean typography, purposeful white space, and intuitive interactions.
 
 ### Performance-Focused
+
 Fast loading is crucial for engagement. We optimize everything: images, code splitting, caching, and global CDN delivery.
 
 ### Accessibility-Aware
+
 Semantic HTML, keyboard navigation, screen reader support, and high contrast ratios ensure everyone can access the content.
 
 ## 🔧 Development Guidelines
 
 ### Code Style
+
 - All code must pass ESLint and Prettier checks
 - TypeScript strict mode enabled for better error catching
 - Comprehensive inline comments explaining complex logic
 - Descriptive variable and function names
 
 ### Git Workflow
+
 - Use conventional commits: `feat:`, `fix:`, `docs:`, etc.
 - Create feature branches for all changes
 - Pull requests required for main branch changes
 - Automatic deployment to production on main branch merge
 
 ### Component Architecture
+
 - Each component should have a single responsibility
 - Props interfaces defined with TypeScript
 - Comprehensive JSDoc comments for complex components
@@ -176,6 +197,7 @@ Semantic HTML, keyboard navigation, screen reader support, and high contrast rat
 The site automatically deploys to [kholgray.com](https://kholgray.com) when changes are pushed to the main branch.
 
 ### Deployment Pipeline
+
 1. Push code to GitHub
 2. Vercel detects changes automatically
 3. Runs build process with type checking and linting
@@ -183,6 +205,7 @@ The site automatically deploys to [kholgray.com](https://kholgray.com) when chan
 5. If failed, previous version remains live (zero downtime)
 
 ### Environment Management
+
 - Development: Local environment with `.env.local`
 - Production: Environment variables managed through Vercel dashboard
 - Database: Supabase handles staging and production environments
@@ -190,12 +213,14 @@ The site automatically deploys to [kholgray.com](https://kholgray.com) when chan
 ## 📈 Performance & Analytics
 
 ### Built-in Optimizations
+
 - Automatic image optimization and WebP conversion
 - Code splitting for faster page loads
 - Global CDN for worldwide fast access
 - Lazy loading for images and components
 
 ### Monitoring
+
 - Vercel Analytics for performance metrics
 - Core Web Vitals tracking
 - Real user monitoring for actual user experience
@@ -204,24 +229,28 @@ The site automatically deploys to [kholgray.com](https://kholgray.com) when chan
 ## 🎯 Roadmap
 
 ### Phase 1: Foundation (Current)
+
 - ✅ Project setup and configuration
 - ✅ Development tools and quality checks
 - 🔄 Timeline component architecture
 - 🔄 Basic content types (music, blog, artwork)
 
 ### Phase 2: Core Features
+
 - ⏳ Audio player with queue functionality
 - ⏳ Content management system
 - ⏳ Responsive design implementation
 - ⏳ Database schema and API integration
 
 ### Phase 3: User Experience
+
 - ⏳ User authentication and accounts
 - ⏳ Content filtering and search
 - ⏳ Subscription and payment system
 - ⏳ Mobile app considerations
 
 ### Phase 4: Platform Preparation
+
 - ⏳ Multi-tenant architecture
 - ⏳ Creator onboarding tools
 - ⏳ Advanced analytics and insights
@@ -232,6 +261,7 @@ The site automatically deploys to [kholgray.com](https://kholgray.com) when chan
 This is primarily a personal project, but we welcome feedback and suggestions!
 
 ### How to Contribute
+
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
@@ -239,6 +269,7 @@ This is primarily a personal project, but we welcome feedback and suggestions!
 5. Open a Pull Request
 
 ### Code of Conduct
+
 - Be respectful and constructive in all interactions
 - Focus on the work and ideas, not the person
 - Help create a welcoming environment for learning and growth
@@ -257,6 +288,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Khol Gray**
+
 - Website: [kholgray.com](https://kholgray.com)
 - Project Link: [https://github.com/yourusername/kg.archive](https://github.com/yourusername/kg.archive)
 

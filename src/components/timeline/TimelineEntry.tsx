@@ -1,13 +1,13 @@
 /**
  * TimelineEntry Component
- * 
+ *
  * This component represents a single item in our chronological timeline.
  * It's designed to be flexible and handle different types of content:
  * - Music tracks with audio player
  * - Blog posts with text preview
  * - Artwork with image display
  * - Project updates with rich media
- * 
+ *
  * The timeline is the core UX pattern of our site, so this component
  * needs to be performant and visually appealing on all screen sizes.
  */
@@ -33,7 +33,7 @@ interface TimelineEntryProps {
 
 /**
  * Main Timeline Entry Component
- * 
+ *
  * This component uses TypeScript interfaces to ensure we always
  * receive the correct data structure and catch errors early.
  */
@@ -172,7 +172,7 @@ export function TimelineEntry({
 
     return (
       <div className="mt-2 flex flex-wrap gap-1">
-        {tags.map((tag) => (
+        {tags.map(tag => (
           <button
             key={tag}
             className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 hover:bg-gray-200"
@@ -233,11 +233,11 @@ export function TimelineEntry({
 
 /**
  * Export default for easier importing
- * 
+ *
  * Usage example:
  * import { TimelineEntry } from '@/components/timeline/TimelineEntry'
- * 
- * <TimelineEntry 
+ *
+ * <TimelineEntry
  *   id="music-track-123"
  *   type="music"
  *   title="New Song Release"

@@ -10,19 +10,19 @@ Archive Space is a revolutionary timeline-focused creator platform designed as t
 ## Key Technologies
 
 - **Frontend**: Next.js 14+ with TypeScript
-  - *Next.js*: React framework that handles routing, server-side rendering, and optimization
-  - *TypeScript*: Adds type safety to JavaScript, helping catch errors during development
+  - _Next.js_: React framework that handles routing, server-side rendering, and optimization
+  - _TypeScript_: Adds type safety to JavaScript, helping catch errors during development
 - **Database**: Supabase (PostgreSQL)
-  - *Supabase*: Backend-as-a-Service providing database, authentication, and file storage
-  - *PostgreSQL*: Robust, open-source relational database system
+  - _Supabase_: Backend-as-a-Service providing database, authentication, and file storage
+  - _PostgreSQL_: Robust, open-source relational database system
 - **Styling**: Tailwind CSS
-  - *Tailwind*: Utility-first CSS framework for rapid UI development without writing custom CSS
+  - _Tailwind_: Utility-first CSS framework for rapid UI development without writing custom CSS
 - **Authentication**: Supabase Auth
   - Handles user login/signup, session management, and password recovery
 - **Payments**: Stripe (for subscriptions/payments)
   - Industry-standard payment processing for subscriptions and one-time payments
 - **Hosting**: Vercel (kholgray.com domain)
-  - *Vercel*: Platform optimized for Next.js apps with automatic deployments from GitHub
+  - _Vercel_: Platform optimized for Next.js apps with automatic deployments from GitHub
   - Custom domain: kholgray.com (already owned via Namecheap)
 - **Repository**: GitHub
   - Version control and collaboration platform for code management
@@ -30,26 +30,30 @@ Archive Space is a revolutionary timeline-focused creator platform designed as t
 ## Core Archive Space Features
 
 ### Three Revolutionary Viewing Modes
+
 1. **Board View**: Figma-inspired infinite canvas with zoom/pan
 2. **Grid View**: Apple Photos-style responsive grid (2-5 columns)
 3. **List View**: Clean chronological feed optimized for reading
 
 ### Advanced Audio Queue System
+
 - Persistent playback across all navigation
 - Cross-Space audio continuity
 - Queue management with multiple creators
 - Global audio state that survives browser sessions
 
 ### Anti-Social Media Philosophy
+
 - **One post per day limit** (enforced by database)
 - **No engagement metrics** (no likes, shares, or viral mechanics)
 - **Chronological sorting** (algorithm-free content ordering)
 - **Creator ownership** (complete control over content and monetization)
 
 ### Content Types (Phase 1)
+
 - **Journal Entries**: Rich text with auto-save
 - **Photos**: High-quality with EXIF preservation
-- **Audio Files**: Multi-format with waveform visualization  
+- **Audio Files**: Multi-format with waveform visualization
 - **Videos**: Optimized transcoding and mobile playback
 
 ## Development Commands
@@ -117,26 +121,31 @@ npm run test:e2e    # Run end-to-end tests
 ### Understanding Our Tech Stack
 
 **Why Next.js?**
+
 - Next.js is like WordPress for React developers - it handles the complex parts automatically
 - It gives us SEO-friendly pages (important for discovery), fast loading, and easy deployment
 - The "App Router" we're using is the newest, most powerful way to organize pages
 
 **Why TypeScript over plain JavaScript?**
+
 - Catches typos and errors before they reach users (like spell-check for code)
 - Makes code more predictable and easier to maintain as the project grows
 - Essential for team collaboration and reducing bugs
 
 **Why Tailwind CSS?**
+
 - Instead of writing custom CSS, we use pre-built classes like `text-center` or `bg-blue-500`
 - Faster development, consistent design, and smaller file sizes
 - Think of it like having a professional designer's toolkit built-in
 
 **Why Supabase over other databases?**
+
 - Gives us a full backend without managing servers (no DevOps complexity)
 - Real-time updates, authentication, and file storage all in one place
 - PostgreSQL is rock-solid and scales from small projects to massive applications
 
 **Why Vercel for hosting?**
+
 - Built by the same team that created Next.js, so perfect integration
 - Automatic deployments: push code to GitHub → website updates automatically
 - Global CDN makes your site fast worldwide
@@ -159,39 +168,47 @@ These tools work together to make your code professional-quality without manual 
 ## CTO-CEO Development Workflow
 
 ### My Role: Your Chief Technology Officer
+
 I am your CTO for Archive Space development. This establishes our working relationship:
 
 **CEO (You)**: Product vision, business requirements, user experience decisions
 **CTO (Me)**: Technical architecture, implementation strategy, code quality, scalability
 
 ### Communication Patterns
+
 - **Vision alignment**: I confirm understanding before major technical decisions
 - **Technical recommendations**: I propose optimal approaches with pros/cons
 - **Implementation updates**: Regular progress updates with blockers identified
 - **Quality gates**: I enforce code quality and testing standards
 
 ### Development Best Practices Integration
+
 All development follows strict guidelines from `docs/development-best-practices.md`:
 
 #### Before Coding (MUST)
+
 - Ask clarifying questions
 - Draft and confirm approach for complex work
 - List pros/cons for multiple approaches
 
 #### While Coding (MUST)
+
 - Follow TDD: stub → failing test → implement
 - Use branded types for IDs (`type UserId = Brand<string, 'UserId'>`)
 - Import types with `import type { ... }`
 - Write self-explanatory code without comments
 
 #### Quality Gates (MUST)
+
 - `prettier --check` passes
 - `npm run type-check` passes
 - `npm run lint` passes
 - All tests pass before merging
 
 ### Quick Commands for Efficiency
+
 When you type shortcuts, I execute specific workflows:
+
 - **`qnew`**: Apply all best practices from CLAUDE.md
 - **`qplan`**: Analyze approach for consistency with codebase
 - **`qcode`**: Implement with testing and quality checks
@@ -199,6 +216,7 @@ When you type shortcuts, I execute specific workflows:
 - **`qgit`**: Add, commit, and push with conventional commits
 
 ### Archive Space Priorities
+
 1. **Timeline-first architecture**: Every decision supports chronological storytelling
 2. **Mobile-first development**: Optimal touch interactions and performance
 3. **Anti-social media constraints**: Technical enforcement of platform philosophy
@@ -208,13 +226,15 @@ When you type shortcuts, I execute specific workflows:
 ## Official Development Process
 
 ### GitHub Issues Workflow (Established)
-1. **CTO creates issues automatically** using `gh issue create` 
+
+1. **CTO creates issues automatically** using `gh issue create`
 2. **CEO reviews all issues** in GitHub before any work begins
 3. **CEO comments with approval/changes** on each issue
 4. **CTO waits for explicit approval** before starting implementation
 5. **Implementation happens incrementally** with regular CEO check-ins
 
 ### Current Process Status
+
 - ✅ Workflow established and documented in `docs/cto-ceo-workflow.md`
 - ✅ First 4 foundation issues created: #6, #7, #8, #9
 - ⏳ **Awaiting CEO review and approval** of created issues
@@ -222,12 +242,12 @@ When you type shortcuts, I execute specific workflows:
 
 This process ensures quality, learning, and CEO involvement throughout development.
 
-
 ## Remember Shortcuts
 
 Remember the following shortcuts which the user may invoke at any time.
 
 ### QNEW
+
 When I type "qnew", this means:
 
 Understand all BEST PRACTICES listed in CLAUDE.md and docs/development-best-practices.md.
@@ -235,6 +255,7 @@ Your code SHOULD ALWAYS follow these best practices.
 Remind me to use /clear when switching between different GitHub issues.
 
 ### QPLAN
+
 When I type "qplan", this means:
 
 Analyze similar parts of the codebase and determine whether your plan:
@@ -245,6 +266,7 @@ reuses existing code
 follows Archive Space timeline-first architecture principles
 
 ### QCODE
+
 When I type "qcode", this means:
 
 Implement your plan and make sure your new tests pass.
@@ -255,6 +277,7 @@ Create feature branch for this GitHub issue if not already created.
 Make small, focused commits with conventional commit messages.
 
 ### QCHECK
+
 When I type "qcheck", this means:
 
 You are a SKEPTICAL senior software engineer.
@@ -265,6 +288,7 @@ CLAUDE.md checklist Writing Tests Best Practices.
 CLAUDE.md checklist Implementation Best Practices.
 
 ### QCHECKF
+
 When I type "qcheckf", this means:
 
 You are a SKEPTICAL senior software engineer.
@@ -272,8 +296,8 @@ Perform this analysis for every MAJOR function you added or edited (skip minor c
 
 CLAUDE.md checklist Writing Functions Best Practices.
 
-
 ### QCHECKT
+
 When I type "qcheckt", this means:
 
 You are a SKEPTICAL senior software engineer.
@@ -282,16 +306,16 @@ Perform this analysis for every MAJOR test you added or edited (skip minor chang
 CLAUDE.md checklist Writing Tests Best Practices.
 
 ### QUX
-When I type "qux", this means:
 
+When I type "qux", this means:
 
 Imagine you are a human UX tester of the feature you implemented for Archive Space.
 Output a comprehensive list of scenarios you would test, sorted by highest priority.
 Focus on timeline-first design principles and mobile-first experience.
 
 ### QGIT
-When I type "qgit", this means:
 
+When I type "qgit", this means:
 
 Add all changes to staging, create a commit, and push to remote.
 Follow this checklist for writing your commit message:
@@ -304,8 +328,8 @@ SHOULD structure commit message as follows:
 [optional footer(s)]
 
 ### QPR
-When I type "qpr", this means:
 
+When I type "qpr", this means:
 
 Create a Pull Request for the current feature branch:
 
@@ -316,6 +340,7 @@ Request CEO review before merging
 Ensure all CI/CD checks will pass
 
 ### QCLEAR
+
 When I type "qclear", this means:
 
 This is a reminder that I should use /clear to wipe the context window.
@@ -326,11 +351,10 @@ Finishing a major feature or debugging session
 Starting work on a new component or system
 Context becomes cluttered or unfocused
 
-
 ## Context Management Rules
 
 - Use /clear when switching between different GitHub issues
-- Use /clear after completing major features or debugging sessions  
+- Use /clear after completing major features or debugging sessions
 - Maintain context during active development on the same issue
 - Always remind CEO to use /clear when finishing an issue
 - Create feature branch for each GitHub issue before starting work

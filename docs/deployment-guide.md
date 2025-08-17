@@ -7,6 +7,7 @@ This guide walks through setting up hosting for kholgray.com using Vercel, conne
 ## Why This Setup?
 
 **GitHub → Vercel → kholgray.com** creates a professional deployment pipeline:
+
 - **GitHub**: Stores your code and tracks changes
 - **Vercel**: Builds and hosts your website automatically when you push code
 - **Custom Domain**: Professional appearance (kholgray.com vs random-name.vercel.app)
@@ -21,9 +22,11 @@ This guide walks through setting up hosting for kholgray.com using Vercel, conne
 ## Step 1: Connect GitHub to Vercel
 
 ### What we're doing:
+
 Setting up automatic deployments so every time you push code to GitHub, your website updates automatically.
 
 ### Steps:
+
 1. Go to [vercel.com](https://vercel.com) and sign up with your GitHub account
 2. Click "Import Project" or "New Project"
 3. Select your `khol-gray-archive` repository
@@ -34,6 +37,7 @@ Setting up automatic deployments so every time you push code to GitHub, your web
    - **Output Directory**: `.next` (auto-filled)
 
 ### Why these settings?
+
 - Vercel automatically detects Next.js projects and configures optimal settings
 - The build process compiles your TypeScript and optimizes your assets
 - The output directory is where the compiled website files are stored
@@ -41,9 +45,11 @@ Setting up automatic deployments so every time you push code to GitHub, your web
 ## Step 2: Configure Environment Variables
 
 ### What we're doing:
+
 Adding secret keys and configuration that shouldn't be in your public code.
 
 ### In Vercel Dashboard:
+
 1. Go to your project → Settings → Environment Variables
 2. Add these variables:
    ```
@@ -53,6 +59,7 @@ Adding secret keys and configuration that shouldn't be in your public code.
    ```
 
 ### Why environment variables?
+
 - Keeps sensitive information secure (not visible in your code)
 - Different values for development vs production environments
 - Easy to update without changing code
@@ -60,14 +67,17 @@ Adding secret keys and configuration that shouldn't be in your public code.
 ## Step 3: Connect Custom Domain (kholgray.com)
 
 ### What we're doing:
+
 Making your website accessible at kholgray.com instead of a random Vercel URL.
 
 ### In Vercel:
+
 1. Go to your project → Settings → Domains
 2. Add domain: `kholgray.com`
 3. Add subdomain: `www.kholgray.com` (recommended for SEO)
 
 ### In Namecheap:
+
 1. Log into your Namecheap account
 2. Go to Domain List → Manage → Advanced DNS
 3. Delete existing A records and CNAME records
@@ -86,11 +96,13 @@ TTL: Automatic
 ```
 
 ### Why these DNS settings?
+
 - **A Record**: Points your main domain (kholgray.com) to Vercel's servers
 - **CNAME Record**: Points www.kholgray.com to Vercel's content delivery network
 - **TTL (Time To Live)**: How long DNS servers cache this information
 
 ### Expected Timeline:
+
 - DNS changes can take 24-48 hours to propagate globally
 - Vercel will show "Configuration Error" until DNS propagates
 - SSL certificate will be automatically issued once DNS is working
@@ -98,6 +110,7 @@ TTL: Automatic
 ## Step 4: Test Deployment
 
 ### What to verify:
+
 1. **Build Success**: Check Vercel dashboard for successful deployment
 2. **Environment Variables**: Ensure no undefined environment variable errors
 3. **Domain Access**: Test both kholgray.com and www.kholgray.com
@@ -107,16 +120,19 @@ TTL: Automatic
 ### Common Issues and Solutions:
 
 **Build Fails:**
+
 - Check the build logs in Vercel dashboard
 - Usually TypeScript errors or missing dependencies
 - Run `npm run build` locally to reproduce the error
 
 **Domain Not Working:**
+
 - DNS propagation takes time (24-48 hours maximum)
 - Use [whatsmydns.net](https://whatsmydns.net) to check propagation
 - Verify DNS records match exactly what Vercel requires
 
 **Environment Variables Missing:**
+
 - Make sure variables are added in Vercel dashboard
 - Variable names must match exactly (case-sensitive)
 - Redeploy after adding new environment variables
@@ -124,6 +140,7 @@ TTL: Automatic
 ## Step 5: Set Up Automatic Deployments
 
 ### What happens automatically:
+
 1. You push code to GitHub main branch
 2. Vercel detects the change within seconds
 3. Vercel builds your project with latest code
@@ -131,6 +148,7 @@ TTL: Automatic
 5. If build fails, previous version stays live (no downtime)
 
 ### Branch Strategy:
+
 - **main branch**: Automatically deploys to kholgray.com
 - **feature branches**: Create preview deployments for testing
 - **Pull requests**: Generate preview links for code review
@@ -138,16 +156,19 @@ TTL: Automatic
 ## Step 6: Monitoring and Maintenance
 
 ### Vercel Analytics (Free):
+
 - Page views and performance metrics
 - Core Web Vitals tracking
 - No setup required, automatically enabled
 
 ### GitHub Integration:
+
 - Deployment status shown in GitHub commits
 - Preview links automatically added to pull requests
 - Failed deployments create GitHub issues
 
 ### Performance Monitoring:
+
 - Vercel automatically optimizes images, fonts, and JavaScript
 - Global CDN ensures fast loading worldwide
 - Built-in monitoring alerts for downtime
@@ -169,12 +190,14 @@ Before going live with real users:
 ## Future Enhancements
 
 ### Advanced Vercel Features:
+
 - **Edge Functions**: Run code closer to users for better performance
 - **Image Optimization**: Automatic WebP conversion and resizing
 - **Analytics**: Detailed performance and user behavior insights
 - **Preview Deployments**: Test changes before going live
 
 ### Domain Management:
+
 - **Email Setup**: Configure email@kholgray.com through email service
 - **Subdomain Strategy**: blog.kholgray.com, shop.kholgray.com, etc.
 - **CDN Configuration**: Optimize global content delivery
@@ -182,12 +205,14 @@ Before going live with real users:
 ## Cost Breakdown
 
 ### Free Tier Limits (Vercel):
+
 - 100GB bandwidth per month
 - Unlimited personal projects
 - Custom domains included
 - SSL certificates included
 
 ### When to upgrade:
+
 - Higher traffic (>100GB/month)
 - Need team collaboration features
 - Advanced analytics and monitoring

@@ -1,10 +1,10 @@
 /**
  * Home Page Component
- * 
+ *
  * The main landing page for the Khol Gray Archive.
  * This showcases the timeline-first approach with the most recent content
  * and provides navigation to different content types.
- * 
+ *
  * Features:
  * - Hero section with project introduction
  * - Recent timeline entries preview
@@ -25,9 +25,10 @@ export default function Home() {
           </h1>
           <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground sm:text-xl">
             Welcome to the digital archive - a timeline-focused journey through
-            music, art, and creative expression. Every piece tells a story in time.
+            music, art, and creative expression. Every piece tells a story in
+            time.
           </p>
-          
+
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <a
@@ -56,7 +57,8 @@ export default function Home() {
               Recent Updates
             </h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              The latest music, artwork, and behind-the-scenes content from the archive.
+              The latest music, artwork, and behind-the-scenes content from the
+              archive.
             </p>
           </div>
 
@@ -82,7 +84,7 @@ export default function Home() {
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
             Explore by Type
           </h2>
-          
+
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* Music Card */}
             <a

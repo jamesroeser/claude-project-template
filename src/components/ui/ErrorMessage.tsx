@@ -1,10 +1,10 @@
 /**
  * Error Message Component
- * 
+ *
  * A user-friendly error display component that shows when something goes wrong.
  * Instead of technical error messages, this component presents errors in a way
  * that's helpful to users and provides actions they can take.
- * 
+ *
  * Features:
  * - User-friendly error messages
  * - Retry functionality for recoverable errors
@@ -20,14 +20,14 @@ import React from 'react'
  * Props for ErrorMessage Component
  */
 interface ErrorMessageProps {
-  title?: string                    // Error title/heading
-  message: string                   // Main error message
-  details?: string                  // Technical details (optional)
-  severity?: 'error' | 'warning'    // Visual severity level
-  onRetry?: () => void             // Function to call when user clicks retry
-  retryLabel?: string              // Custom label for retry button
-  className?: string               // Additional CSS classes
-  showDetails?: boolean            // Whether to show technical details
+  title?: string // Error title/heading
+  message: string // Main error message
+  details?: string // Technical details (optional)
+  severity?: 'error' | 'warning' // Visual severity level
+  onRetry?: () => void // Function to call when user clicks retry
+  retryLabel?: string // Custom label for retry button
+  className?: string // Additional CSS classes
+  showDetails?: boolean // Whether to show technical details
 }
 
 /**
@@ -51,7 +51,7 @@ export function ErrorMessage({
    */
   const getSeverityClasses = () => {
     const baseClasses = 'rounded-lg border p-4'
-    
+
     switch (severity) {
       case 'warning':
         return `${baseClasses} border-yellow-200 bg-yellow-50 text-yellow-800`
@@ -75,30 +75,24 @@ export function ErrorMessage({
   }
 
   return (
-    <div 
+    <div
       className={`${getSeverityClasses()} ${className}`}
-      role="alert"        // Tells screen readers this is an error message
-      aria-live="polite"  // Screen readers announce this when it appears
+      role="alert" // Tells screen readers this is an error message
+      aria-live="polite" // Screen readers announce this when it appears
     >
       {/* Error Header */}
       <div className="flex items-start space-x-3">
         {/* Error Icon */}
-        <span className="text-xl flex-shrink-0" role="img" aria-hidden="true">
+        <span className="flex-shrink-0 text-xl" role="img" aria-hidden="true">
           {getIcon()}
         </span>
 
-        <div className="flex-1 min-w-0">
+        <div className="min-w-0 flex-1">
           {/* Error Title */}
-          {title && (
-            <h3 className="font-semibold text-lg mb-1">
-              {title}
-            </h3>
-          )}
+          {title && <h3 className="mb-1 text-lg font-semibold">{title}</h3>}
 
           {/* Main Error Message */}
-          <p className="text-sm leading-relaxed">
-            {message}
-          </p>
+          <p className="text-sm leading-relaxed">{message}</p>
 
           {/* Technical Details (collapsible) */}
           {details && (
@@ -110,10 +104,10 @@ export function ErrorMessage({
               >
                 {detailsVisible ? 'Hide' : 'Show'} technical details
               </button>
-              
+
               {detailsVisible && (
-                <div className="mt-2 p-3 bg-black/5 rounded border">
-                  <pre className="text-xs whitespace-pre-wrap font-mono">
+                <div className="mt-2 rounded border bg-black/5 p-3">
+                  <pre className="whitespace-pre-wrap font-mono text-xs">
                     {details}
                   </pre>
                 </div>
@@ -127,11 +121,12 @@ export function ErrorMessage({
               <button
                 onClick={onRetry}
                 className={`
-                  inline-flex items-center px-3 py-2 text-sm font-medium rounded-md
+                  inline-flex items-center rounded-md px-3 py-2 text-sm font-medium
                   transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2
-                  ${severity === 'error' 
-                    ? 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500' 
-                    : 'bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500'
+                  ${
+                    severity === 'error'
+                      ? 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'
+                      : 'bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500'
                   }
                 `}
                 type="button"
@@ -148,15 +143,15 @@ export function ErrorMessage({
 
 /**
  * Network Error Message
- * 
+ *
  * Specific error message for network/connection issues.
  */
-export function NetworkErrorMessage({ 
+export function NetworkErrorMessage({
   onRetry,
-  className = '' 
-}: { 
+  className = '',
+}: {
   onRetry?: () => void
-  className?: string 
+  className?: string
 }) {
   return (
     <ErrorMessage
@@ -171,15 +166,15 @@ export function NetworkErrorMessage({
 
 /**
  * Not Found Error Message
- * 
+ *
  * For when requested content doesn't exist.
  */
-export function NotFoundErrorMessage({ 
+export function NotFoundErrorMessage({
   resourceName = 'content',
-  className = '' 
-}: { 
+  className = '',
+}: {
   resourceName?: string
-  className?: string 
+  className?: string
 }) {
   return (
     <ErrorMessage
@@ -193,13 +188,13 @@ export function NotFoundErrorMessage({
 
 /**
  * Permission Error Message
- * 
+ *
  * For when user doesn't have access to requested content.
  */
-export function PermissionErrorMessage({ 
+export function PermissionErrorMessage({
   className = '',
-  loginUrl
-}: { 
+  loginUrl,
+}: {
   className?: string
   loginUrl?: string
 }) {
@@ -209,7 +204,7 @@ export function PermissionErrorMessage({
       message="You don't have permission to view this content. You may need to log in or upgrade your subscription."
       severity="warning"
       className={className}
-      onRetry={loginUrl ? () => window.location.href = loginUrl : undefined}
+      onRetry={loginUrl ? () => (window.location.href = loginUrl) : undefined}
       retryLabel="Log In"
     />
   )

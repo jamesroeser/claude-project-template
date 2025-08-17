@@ -1,12 +1,12 @@
 /**
  * Timeline Filters Component
- * 
+ *
  * Provides filtering controls for the timeline, allowing users to:
  * - Filter by content type (music, blog, artwork, etc.)
  * - Search within content
  * - Filter by tags
  * - Toggle premium-only content
- * 
+ *
  * This component will be expanded with more advanced filtering options
  * as the platform grows.
  */
@@ -54,7 +54,7 @@ export function TimelineFilters({
   const handleContentTypeToggle = (contentType: string) => {
     const currentTypes = filters.contentTypes || []
     const isSelected = currentTypes.includes(contentType as any)
-    
+
     let newTypes: string[]
     if (isSelected) {
       // Remove the type from filters
@@ -63,9 +63,9 @@ export function TimelineFilters({
       // Add the type to filters
       newTypes = [...currentTypes, contentType]
     }
-    
-    onFilterChange({ 
-      contentTypes: newTypes.length > 0 ? newTypes as any : undefined 
+
+    onFilterChange({
+      contentTypes: newTypes.length > 0 ? (newTypes as any) : undefined,
     })
   }
 
@@ -112,23 +112,44 @@ export function TimelineFilters({
       {/* Content Type Filters */}
       <div className="flex flex-wrap gap-2">
         {[
-          { key: 'music', label: 'Music', icon: '🎵', count: entryCounts.music },
+          {
+            key: 'music',
+            label: 'Music',
+            icon: '🎵',
+            count: entryCounts.music,
+          },
           { key: 'blog', label: 'Blog', icon: '📝', count: entryCounts.blog },
-          { key: 'artwork', label: 'Artwork', icon: '🎨', count: entryCounts.artwork },
-          { key: 'project', label: 'Projects', icon: '🚀', count: entryCounts.project },
-          { key: 'update', label: 'Updates', icon: '📢', count: entryCounts.update },
+          {
+            key: 'artwork',
+            label: 'Artwork',
+            icon: '🎨',
+            count: entryCounts.artwork,
+          },
+          {
+            key: 'project',
+            label: 'Projects',
+            icon: '🚀',
+            count: entryCounts.project,
+          },
+          {
+            key: 'update',
+            label: 'Updates',
+            icon: '📢',
+            count: entryCounts.update,
+          },
         ].map(({ key, label, icon, count }) => {
           const isSelected = filters.contentTypes?.includes(key as any) || false
-          
+
           return (
             <button
               key={key}
               onClick={() => handleContentTypeToggle(key)}
               className={`
                 inline-flex items-center space-x-1 rounded-full px-3 py-1 text-sm font-medium transition-colors
-                ${isSelected
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                ${
+                  isSelected
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted text-muted-foreground hover:bg-muted/80'
                 }
               `}
             >
@@ -147,7 +168,7 @@ export function TimelineFilters({
           <input
             type="checkbox"
             checked={filters.isPremiumOnly || false}
-            onChange={(e) => onFilterChange({ isPremiumOnly: e.target.checked })}
+            onChange={e => onFilterChange({ isPremiumOnly: e.target.checked })}
             className="rounded border-border text-primary focus:ring-primary"
           />
           <span className="text-muted-foreground">Premium content only</span>
@@ -157,7 +178,7 @@ export function TimelineFilters({
         {hasActiveFilters() && (
           <button
             onClick={clearAllFilters}
-            className="text-sm text-muted-foreground hover:text-foreground underline"
+            className="text-sm text-muted-foreground underline hover:text-foreground"
           >
             Clear all filters
           </button>
@@ -170,7 +191,8 @@ export function TimelineFilters({
           {filters.contentTypes && filters.contentTypes.length > 0 && (
             <span>
               Showing {filters.contentTypes.join(', ')} content
-              {filters.searchQuery && ` matching &quot;${filters.searchQuery}&quot;`}
+              {filters.searchQuery &&
+                ` matching &quot;${filters.searchQuery}&quot;`}
             </span>
           )}
           {!filters.contentTypes && filters.searchQuery && (

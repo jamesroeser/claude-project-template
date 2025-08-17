@@ -1,10 +1,10 @@
 /**
  * Timeline Component
- * 
+ *
  * This is the main timeline display component - the heart of our application.
  * It shows all content entries in chronological order and handles user interactions
  * like filtering, searching, and changing the display layout.
- * 
+ *
  * Key Features:
  * - Responsive design that works on all screen sizes
  * - Infinite scrolling for performance with large content libraries
@@ -26,15 +26,15 @@ import { EmptyState } from '@/components/ui/EmptyState'
 
 /**
  * Props for Timeline Component
- * 
+ *
  * These allow parent components to customize timeline behavior.
  */
 interface TimelineProps {
-  className?: string              // Additional CSS classes
-  showFilters?: boolean          // Whether to show filter controls
-  showViewControls?: boolean     // Whether to show layout/sort controls
-  maxItems?: number              // Limit number of items displayed
-  contentTypes?: string[]        // Restrict to specific content types
+  className?: string // Additional CSS classes
+  showFilters?: boolean // Whether to show filter controls
+  showViewControls?: boolean // Whether to show layout/sort controls
+  maxItems?: number // Limit number of items displayed
+  contentTypes?: string[] // Restrict to specific content types
 }
 
 /**
@@ -62,7 +62,7 @@ export function Timeline({
 
   /**
    * Handle Filter Changes
-   * 
+   *
    * This function is called when users interact with filter controls.
    * It updates the timeline to show only matching content.
    */
@@ -72,7 +72,7 @@ export function Timeline({
 
   /**
    * Handle View Option Changes
-   * 
+   *
    * This function is called when users change layout or sorting preferences.
    */
   const handleViewChange = (newViewOptions: Partial<typeof viewOptions>) => {
@@ -81,22 +81,22 @@ export function Timeline({
 
   /**
    * Get Layout Classes
-   * 
+   *
    * Returns CSS classes based on the selected layout option.
    * This controls how timeline entries are visually arranged.
    */
   const getLayoutClasses = () => {
     const baseClasses = 'timeline-container'
-    
+
     switch (viewOptions.layout) {
       case 'grid':
         // Grid layout: entries in a responsive grid
         return `${baseClasses} grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
-      
+
       case 'compact':
         // Compact layout: smaller entries, more items visible
         return `${baseClasses} space-y-3`
-      
+
       case 'list':
       default:
         // List layout: full-width entries in a vertical list
@@ -106,7 +106,7 @@ export function Timeline({
 
   /**
    * Filter Entries by Props
-   * 
+   *
    * Apply additional filtering based on component props.
    * This allows parent components to restrict content types.
    */
@@ -128,7 +128,7 @@ export function Timeline({
 
   /**
    * Render Loading State
-   * 
+   *
    * Shows a loading spinner while timeline data is being fetched.
    */
   if (loading && entries.length === 0) {
@@ -144,14 +144,14 @@ export function Timeline({
 
   /**
    * Render Error State
-   * 
+   *
    * Shows an error message if something went wrong loading the timeline.
    */
   if (error) {
     return (
       <div className={`timeline-error ${className}`}>
-        <ErrorMessage 
-          message={error} 
+        <ErrorMessage
+          message={error}
           onRetry={refresh}
           title="Unable to load timeline"
         />
@@ -161,17 +161,17 @@ export function Timeline({
 
   /**
    * Render Empty State
-   * 
+   *
    * Shows a helpful message when there are no timeline entries to display.
    */
   if (filteredEntries.length === 0) {
-    const emptyMessage = filters.searchQuery 
+    const emptyMessage = filters.searchQuery
       ? `No results found for "${filters.searchQuery}"`
-      : "No timeline entries yet. Check back soon for new content!"
+      : 'No timeline entries yet. Check back soon for new content!'
 
     return (
       <div className={`timeline-empty ${className}`}>
-        <EmptyState 
+        <EmptyState
           title="Timeline is empty"
           message={emptyMessage}
           icon="📅"
@@ -182,7 +182,7 @@ export function Timeline({
 
   /**
    * Main Timeline Render
-   * 
+   *
    * This is what users see when everything is working correctly.
    */
   return (
@@ -194,13 +194,14 @@ export function Timeline({
           <div className="flex items-center space-x-4">
             <h2 className="text-2xl font-bold text-foreground">Timeline</h2>
             <span className="rounded-full bg-muted px-3 py-1 text-sm text-muted-foreground">
-              {filteredEntries.length} {filteredEntries.length === 1 ? 'entry' : 'entries'}
+              {filteredEntries.length}{' '}
+              {filteredEntries.length === 1 ? 'entry' : 'entries'}
             </span>
           </div>
 
           {/* View Controls (Layout, Sort) */}
           {showViewControls && (
-            <TimelineViewControls 
+            <TimelineViewControls
               viewOptions={viewOptions}
               onViewChange={handleViewChange}
             />
@@ -210,7 +211,7 @@ export function Timeline({
         {/* Filters */}
         {showFilters && (
           <div className="mt-6">
-            <TimelineFilters 
+            <TimelineFilters
               filters={filters}
               onFilterChange={handleFilterChange}
               entryCounts={{
@@ -242,7 +243,9 @@ export function Timeline({
       {loading && entries.length > 0 && (
         <div className="mt-8 flex justify-center">
           <LoadingSpinner size="md" />
-          <span className="ml-2 text-muted-foreground">Loading more entries...</span>
+          <span className="ml-2 text-muted-foreground">
+            Loading more entries...
+          </span>
         </div>
       )}
 
@@ -272,48 +275,38 @@ export function Timeline({
 
 /**
  * Timeline with Preset Configurations
- * 
+ *
  * These are pre-configured versions of the Timeline component
  * for common use cases throughout the app.
  */
 
 /**
  * Music-Only Timeline
- * 
+ *
  * Shows only music entries, useful for a dedicated music page.
  */
 export function MusicTimeline(props: Omit<TimelineProps, 'contentTypes'>) {
-  return (
-    <Timeline 
-      {...props} 
-      contentTypes={['music']}
-    />
-  )
+  return <Timeline {...props} contentTypes={['music']} />
 }
 
 /**
  * Blog Timeline
- * 
+ *
  * Shows only blog entries, useful for a blog section.
  */
 export function BlogTimeline(props: Omit<TimelineProps, 'contentTypes'>) {
-  return (
-    <Timeline 
-      {...props} 
-      contentTypes={['blog']}
-    />
-  )
+  return <Timeline {...props} contentTypes={['blog']} />
 }
 
 /**
  * Recent Timeline
- * 
+ *
  * Shows the most recent 10 entries, useful for homepage previews.
  */
 export function RecentTimeline(props: Omit<TimelineProps, 'maxItems'>) {
   return (
-    <Timeline 
-      {...props} 
+    <Timeline
+      {...props}
       maxItems={10}
       showFilters={false}
       showViewControls={false}
