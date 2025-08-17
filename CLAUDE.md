@@ -252,6 +252,9 @@ When I type "qnew", this means:
 
 Understand all BEST PRACTICES listed in CLAUDE.md and docs/development-best-practices.md.
 Your code SHOULD ALWAYS follow these best practices.
+Remember our CTO-CEO workflow: GitHub issues created (#6, #7, #8, #9) are awaiting CEO review and approval.
+Maintain project context: We're in the "GitHub Issues Workflow" phase where CEO reviews issues before CTO implementation.
+Current status: Issue #6 is pending CEO review - wait for explicit approval before starting work.
 Remind me to use /clear when switching between different GitHub issues.
 
 ### QPLAN
