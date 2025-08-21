@@ -1,7 +1,7 @@
 # Archive Space - Master Project Context
 
-**Last Updated**: 2025-08-20 22:45 PST  
-**Document Version**: 2.0  
+**Last Updated**: 2025-08-20 22:50 PST  
+**Document Version**: 2.1  
 **Project Phase**: Foundation Development  
 
 ## 🎯 Executive Summary
@@ -46,6 +46,9 @@ The platform addresses the concern that the internet is becoming increasingly ar
 - **Wikipedia**: Permanent, valuable content that serves humanity long-term
 - **Figma**: Open canvas creative control (Board view inspiration)
 - **Apple Photos**: Responsive grid organization (Grid view inspiration)
+- **Stumbleupon**: Genuine content discovery without algorithmic manipulation
+- **Tumblr**: Creative expression and multimedia content mixing
+- **MoMA Through Time**: Visual timeline presentation reference (https://www.moma.org/interactives/moma_through_time/)
 - **Soundcloud**: Creator-focused audio platform with direct fan relationships
 - **Patreon**: Direct creator-fan financial relationships without platform interference
 
@@ -181,6 +184,13 @@ While starting with audio, the queue system will eventually support:
 - Advanced filtering options for consumers
 - Tag-based content relationships and suggestions
 - Search functionality across tags and content
+
+#### Content History and Versioning (Private Creator Feature)
+- **Revision Timestamps**: Track all content changes with precise timestamps
+- **Change Tracking**: Detailed history of content modifications and edits
+- **Private Version History**: Creators can track content evolution privately
+- **Draft Management System**: Auto-save functionality with recovery capabilities
+- **Content Scheduling**: Future publication with precise date/time control
 
 #### Premium Content Gating
 - Subscription-based access to exclusive content
@@ -528,6 +538,7 @@ This master context document will be updated when:
 5. **CEO Downloads and Uploads**: Updates Claude Web project knowledge for strategic conversations
 
 ### Change Log
+- **v2.1 (2025-08-20)**: Added missing features: content versioning, draft management, scheduling, plus Stumbleupon/Tumblr/MoMA references
 - **v2.0 (2025-08-20)**: Comprehensive update with correct platform vision, revolutionary viewing modes, audio queue system, creator economy, and complete development strategy
 - **v1.0 (2025-08-20)**: Initial master context document created
 
