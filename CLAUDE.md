@@ -15,6 +15,8 @@ Archive Space is a revolutionary timeline-focused creator platform designed as t
 - **Database**: Supabase (PostgreSQL)
   - _Supabase_: Backend-as-a-Service providing database, authentication, and file storage
   - _PostgreSQL_: Robust, open-source relational database system
+  - **Project URL**: https://pghakybuiisjudisufgx.supabase.co
+  - **Configuration**: See `.env.local` for credentials and connection details
 - **Styling**: Tailwind CSS
   - _Tailwind_: Utility-first CSS framework for rapid UI development without writing custom CSS
 - **Authentication**: Supabase Auth
@@ -82,6 +84,43 @@ npm run format      # Run Prettier formatting
 npm run db:generate # Generate Supabase types
 npm run db:reset    # Reset local database
 npm run db:push     # Push schema changes
+```
+
+## Supabase Configuration
+
+### Environment Setup
+
+The project is configured with Supabase credentials in `.env.local`:
+
+```bash
+# Copy .env.example to .env.local and update with your values
+cp .env.example .env.local
+```
+
+**Current Configuration:**
+
+- **Project ID**: `pghakybuiisjudisufgx`
+- **Project URL**: `https://pghakybuiisjudisufgx.supabase.co`
+- **Environment file**: `.env.local` (credentials already configured)
+
+### Database Schema Status
+
+✅ **Schema Designed**: Complete timeline-optimized database schema documented in `docs/database-schema.md`
+⏳ **Implementation Pending**: Schema ready for migration to Supabase
+📋 **Next Step**: Create Supabase migrations from schema design
+
+### Connection Test
+
+To verify Supabase connectivity:
+
+```bash
+# Test connection (if needed)
+node -e "
+const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config({ path: '.env.local' });
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+console.log('✅ Supabase client configured successfully');
+"
 ```
 
 ### Testing
