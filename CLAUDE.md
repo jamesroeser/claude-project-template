@@ -418,3 +418,27 @@ Context becomes cluttered or unfocused
 - All new features require comprehensive unit and integration tests
 - All commits must follow conventional commit message format
 - All Pull Requests must include testing verification
+
+## Master Project Context Management
+
+### Master Context Document
+- **Location**: `docs/master-project-context.md`
+- **Purpose**: Single source of truth combining technical architecture, business vision, progress, and implementation learnings
+- **CEO Responsibility**: Download and upload to Claude Web project knowledge regularly
+
+### CTO Update Responsibilities
+Update `docs/master-project-context.md` when:
+- **Major features completed** (Issues resolved)
+- **Architecture decisions made** (Technology, database, infrastructure choices)
+- **Technical constraints discovered** (Performance, scaling, integration challenges)  
+- **User testing insights** (Khol Gray feedback, usability discoveries)
+
+### Master Context Update Protocol
+1. **CTO identifies update need** based on development progress
+2. **CTO requests CEO approval** with clear explanation of changes needed
+3. **CTO explicitly states**: "This is a MASTER PROJECT CONTEXT update request"
+4. **CEO reviews and approves** changes for accuracy and strategic alignment
+5. **CTO updates document** with changelog entry
+6. **CEO downloads updated file** and uploads to Claude Web project knowledge
+
+**CRITICAL**: Always request CEO approval before updating master context document
