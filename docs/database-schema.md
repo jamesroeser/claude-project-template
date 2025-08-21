@@ -8,7 +8,7 @@ This document defines the complete database schema for Archive Space, optimized 
 
 1. **Timeline-First**: All queries optimized for chronological retrieval
 2. **Multi-Tenant**: Complete data isolation between creator Spaces
-3. **Anti-Social Media**: No engagement metrics, one post per day enforcement
+3. **Gallery/Archive Design**: No engagement metrics, creative freedom for content creation
 4. **Scalable**: Ready for millions of creators and content items
 5. **Type Safety**: Aligned with TypeScript interfaces in `src/types/timeline.ts`
 
@@ -521,16 +521,18 @@ LEFT JOIN content co ON s.id = co.space_id AND co.is_published = true
 GROUP BY c.id;
 ```
 
-## Anti-Social Media Constraints
+## Gallery/Archive Design Constraints
 
-### 1. One Post Per Day Enforcement
+### 1. One Post Per Day Constraint (Future Consideration)
 
-The database enforces our core constraint:
+The database includes an optional constraint for future use:
 
 ```sql
--- This constraint prevents multiple posts on the same day
+-- Optional constraint for future gallery curation (not enforced in Phase 1)
 CONSTRAINT one_post_per_day_per_space UNIQUE(space_id, post_date)
 ```
+
+**Note**: This constraint is included in the schema for future consideration but should not be a development priority. Creators should have creative freedom to draft and create dozens of posts.
 
 ### 2. No Engagement Metrics
 

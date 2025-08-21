@@ -44,12 +44,13 @@ Archive Space is a revolutionary timeline-focused creator platform designed as t
 - Queue management with multiple creators
 - Global audio state that survives browser sessions
 
-### Anti-Social Media Philosophy
+### Gallery/Archive Philosophy
 
-- **One post per day limit** (enforced by database)
-- **No engagement metrics** (no likes, shares, or viral mechanics)
+- **Creative freedom** (creators can draft and create dozens of posts)
+- **No engagement metrics** (no likes, shares, or viral mechanics) 
 - **Chronological sorting** (algorithm-free content ordering)
 - **Creator ownership** (complete control over content and monetization)
+- **Archive-first design** (permanent digital spaces that outlast creators)
 
 ### Content Types (Phase 1)
 

@@ -18,7 +18,7 @@ This document describes the Supabase database migrations for Archive Space, impl
 - `content_tags` - Junction table for content-tag relationships
 
 **Key Features**:
-- ✅ **Anti-social media constraint**: `one_post_per_day_per_space` prevents multiple posts per day
+- ✅ **Future constraint option**: `one_post_per_day_per_space` available for future gallery curation (not enforced in Phase 1)
 - ✅ **Timeline optimization**: Primary index on `(space_id, published_at DESC)`
 - ✅ **Content type filtering**: Indexes for efficient type-based queries
 - ✅ **Full-text search**: GIN index for PostgreSQL text search
