@@ -2,7 +2,7 @@
 
 **Last Updated**: [DATE]  
 **Document Version**: 1.0  
-**Project Phase**: [CURRENT_PHASE]  
+**Project Phase**: [CURRENT_PHASE]
 
 ## 🎯 Executive Summary
 
@@ -20,6 +20,7 @@ PROJECT_NAME serves [PURPOSE]. Our mission is to [MISSION_STATEMENT] - [LONG_TER
 A [MAIN_USER_ENTITY] is [DESCRIPTION]. Each [MAIN_USER_ENTITY] displays [CONTENT_TYPES] that tells the [MAIN_PURPOSE] through [INTERACTION_METHOD].
 
 **[MAIN_USER_ENTITY] Characteristics:**
+
 - **[Characteristic 1]**: [Description]
 - **[Characteristic 2]**: [Description]
 - **[Characteristic 3]**: [Description]
@@ -30,6 +31,7 @@ A [MAIN_USER_ENTITY] is [DESCRIPTION]. Each [MAIN_USER_ENTITY] displays [CONTENT
 ## 🎨 Platform Philosophy: [DESIGN_PHILOSOPHY]
 
 ### Intentional Design Principles
+
 - **[Principle 1]**: [Description]
 - **[Principle 2]**: [Description]
 - **[Principle 3]**: [Description]
@@ -38,9 +40,11 @@ A [MAIN_USER_ENTITY] is [DESCRIPTION]. Each [MAIN_USER_ENTITY] displays [CONTENT
 - **[Principle 6]**: [Description]
 
 ### Inspired by [INSPIRATION_SOURCE]
+
 The platform addresses [CORE_PROBLEM]. PROJECT_NAME provides [SOLUTION] with [DIFFERENTIATION_FACTORS].
 
 ### Reference Platforms (Inspiration, Not Imitation)
+
 - **[Platform 1]**: [What we learn from it]
 - **[Platform 2]**: [What we learn from it]
 - **[Platform 3]**: [What we learn from it]
@@ -50,36 +54,44 @@ The platform addresses [CORE_PROBLEM]. PROJECT_NAME provides [SOLUTION] with [DI
 ## 🎪 [FEATURE_SET_NAME]
 
 ### 1. [Feature One]
+
 **Concept**: [Description]
 
 **Technical Requirements**:
+
 - [Requirement 1]
 - [Requirement 2]
 - [Requirement 3]
 - [Requirement 4]
 
 **User Experience**:
+
 - [UX Point 1]
 - [UX Point 2]
 - [UX Point 3]
 
 ### 2. [Feature Two]
+
 **Concept**: [Description]
 
 **Technical Requirements**:
+
 - [Requirement 1]
 - [Requirement 2]
 - [Requirement 3]
 
 **User Controls**:
+
 - [Control 1]
 - [Control 2]
 - [Control 3]
 
 ### 3. [Feature Three]
+
 **Concept**: [Description]
 
 **Technical Requirements**:
+
 - [Requirement 1]
 - [Requirement 2]
 - [Requirement 3]
@@ -87,15 +99,18 @@ The platform addresses [CORE_PROBLEM]. PROJECT_NAME provides [SOLUTION] with [DI
 ## 🎵 [CORE_SYSTEM_NAME]
 
 ### Core Functionality
+
 The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 
 **Technical Requirements**:
+
 - **[Capability 1]**: [Description]
 - **[Capability 2]**: [Description]
 - **[Capability 3]**: [Description]
 - **[Capability 4]**: [Description]
 
 **User Experience**:
+
 - [UX Feature 1]
 - [UX Feature 2]
 - [UX Feature 3]
@@ -104,6 +119,7 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 📝 Comprehensive Content/Data Type System
 
 ### Primary Content Types
+
 1. **[Type 1]**
    - [Description and features]
 
@@ -119,16 +135,19 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ### Advanced Features (Future Phases)
 
 #### [Advanced Feature 1]
+
 - [Description]
 - [Implementation details]
 
 #### [Advanced Feature 2]
+
 - [Description]
 - [Implementation details]
 
 ## 🏗️ Current Technical Architecture
 
 ### Technology Stack
+
 - **Frontend**: Next.js 14+ with TypeScript and Tailwind CSS
 - **Database**: Supabase (PostgreSQL) with Row Level Security
 - **Authentication**: Supabase Auth
@@ -138,6 +157,7 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 - **Repository**: GitHub with automated workflows
 
 ### Architecture Principles
+
 - **[Principle 1]**: [Description]
 - **Multi-Tenant Architecture**: Scalable design for [SCALE_TARGET]
 - **Performance Optimization**: Fast loading, smooth scrolling, efficient media handling
@@ -145,6 +165,7 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 - **Real-Time Capabilities**: Live updates for collaborative features and real-time content
 
 ### Architecture Decisions Made
+
 1. **[Decision 1]**: [Description and rationale]
 2. **Multi-Tenant Architecture**: Complete data isolation between [USER_ENTITIES] using RLS policies
 3. **Type Safety Priority**: Branded types system for ID safety and better developer experience
@@ -152,6 +173,7 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 5. **[Core Feature] = [Implementation Approach]**: [Description]
 
 ### Current Technical Capabilities
+
 - ✅ **Complete Database Schema**: [X] tables with proper relationships and indexes
 - ✅ **Row Level Security**: Multi-tenant data isolation implemented
 - ✅ **Storage Buckets**: Media file handling with access controls
@@ -165,14 +187,17 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 💰 [MONETIZATION_STRATEGY]
 
 ### [Revenue Stream 1]
+
 - [Description]
 - [Implementation details]
 
-### [Revenue Stream 2] 
+### [Revenue Stream 2]
+
 - [Description]
 - [Implementation details]
 
 ### [Revenue Philosophy]
+
 - **[Principle 1]**: [Description]
 - **[Principle 2]**: [Description]
 - **[Principle 3]**: [Description]
@@ -180,41 +205,50 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 🎯 Three-Phase Development Strategy
 
 ### Phase 1: Foundation (Current) - [FIRST_USER] as First User
+
 **Objective**: [Phase 1 Goals]
 
 **Key Features**:
+
 - [Feature 1]
 - [Feature 2]
 - [Feature 3]
 - [Feature 4]
 
 **Success Criteria**:
+
 - [Criteria 1]
 - [Criteria 2]
 - [Criteria 3]
 
 ### Phase 2: [Phase 2 Name]
+
 **Objective**: [Phase 2 Goals]
 
 **Key Features**:
+
 - [Feature 1]
 - [Feature 2]
 - [Feature 3]
 
 **Success Criteria**:
+
 - [Criteria 1]
 - [Criteria 2]
 - [Criteria 3]
 
 ### Phase 3: [Phase 3 Name]
+
 **Objective**: [Phase 3 Goals]
 
 **Key Features**:
+
 - [Feature 1]
 - [Feature 2]
 - [Feature 3]
 
 **Success Criteria**:
+
 - [Criteria 1]
 - [Criteria 2]
 - [Criteria 3]
@@ -222,34 +256,43 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 📈 Development Progress
 
 ### Completed Phases
-**Foundation Setup** ✅ *Completed [DATE]*
+
+**Foundation Setup** ✅ _Completed [DATE]_
+
 - Installed dependencies and project structure
 - Set up development environment
 - [Other completed items]
 
 ### Current Phase
-**[Current Work]** 🔄 *In Progress*
+
+**[Current Work]** 🔄 _In Progress_
+
 - [Current task description]
 - [Progress details]
 
 ### Foundation Pipeline
-**[Next Major Item]** ⏳ *Planned*
+
+**[Next Major Item]** ⏳ _Planned_
+
 - [Description]
 - [Expected outcomes]
 
 ## 🎪 Real Implementation Learnings
 
 ### Technical Discoveries
+
 1. **[Discovery 1]**: [Description and impact]
 2. **[Discovery 2]**: [Description and impact]
 3. **[Discovery 3]**: [Description and impact]
 
 ### Architecture Validations
+
 1. **[Validation 1]**: [Description]
 2. **[Validation 2]**: [Description]
 3. **[Validation 3]**: [Description]
 
 ### Development Process Insights
+
 1. **[Insight 1]**: [Description]
 2. **[Insight 2]**: [Description]
 3. **[Insight 3]**: [Description]
@@ -257,12 +300,14 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 👥 User Experience Principles
 
 ### For [Primary User Type]
+
 - **[UX Principle 1]**: [Description]
 - **[UX Principle 2]**: [Description]
 - **[UX Principle 3]**: [Description]
 - **[UX Principle 4]**: [Description]
 
 ### For [Secondary User Type]
+
 - **[UX Principle 1]**: [Description]
 - **[UX Principle 2]**: [Description]
 - **[UX Principle 3]**: [Description]
@@ -271,11 +316,13 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 🚧 Known Technical Constraints
 
 ### Current Limitations
+
 1. **[Limitation 1]**: [Description and workaround]
 2. **[Limitation 2]**: [Description and workaround]
 3. **[Limitation 3]**: [Description and workaround]
 
 ### Scaling Considerations
+
 1. **[Consideration 1]**: [Description]
 2. **[Consideration 2]**: [Description]
 3. **[Consideration 3]**: [Description]
@@ -283,12 +330,14 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 🤝 Development Workflow & Team Structure
 
 ### Role Distribution
+
 - **Claude Web (Strategic AI)**: Strategic planning, PRDs, business development, market analysis
 - **Claude Code (Technical AI)**: Technical implementation, architecture, code development, testing
 - **GitHub Issues**: Project management, feature tracking, bug reports, collaboration
 - **CEO/Product Manager**: Vision guidance, user experience decisions, business strategy, master context approval
 
 ### Master Context Management Protocol
+
 1. **CTO identifies update need** based on development progress or new insights
 2. **CTO requests CEO approval** with clear explanation: "This is a MASTER PROJECT CONTEXT update request"
 3. **CEO reviews and approves** changes for accuracy and strategic alignment
@@ -297,6 +346,7 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 6. **Updated knowledge enables better strategic conversations** between CEO and Claude Web
 
 ### Development Standards
+
 - **Code Quality**: TypeScript strict mode, comprehensive testing, performance optimization
 - **Design Principles**: Mobile-first responsive design, accessibility compliance, human-centered UX
 - **Documentation**: Comprehensive technical and user documentation
@@ -305,6 +355,7 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 - **Context Integrity**: Continuous contradiction detection and resolution across all documentation and active communication
 
 ### Contradiction Detection and Resolution Protocol
+
 1. **Continuous Monitoring**: CTO scans all documentation during `qnew` and throughout development for conflicting information
 2. **Immediate Alert**: Upon detecting conflicts, CTO alerts CEO with "CONTRADICTION DETECTED" format including:
    - Exact conflicting sources and quotes
@@ -317,16 +368,19 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 📊 Quality and Success Metrics
 
 ### User Engagement Metrics
+
 - **[Metric 1]**: [Description]
 - **[Metric 2]**: [Description]
 - **[Metric 3]**: [Description]
 
 ### [User Type] Success Metrics
+
 - **[Metric 1]**: [Description]
 - **[Metric 2]**: [Description]
 - **[Metric 3]**: [Description]
 
 ### Platform Health Metrics
+
 - **[Metric 1]**: [Description]
 - **[Metric 2]**: [Description]
 - **[Metric 3]**: [Description]
@@ -334,16 +388,19 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 🚀 Future Vision & Expansion
 
 ### Platform Evolution
+
 - **[Evolution 1]**: [Description]
 - **[Evolution 2]**: [Description]
 - **[Evolution 3]**: [Description]
 
 ### Beyond [Core Use Case]
+
 - **[Expansion 1]**: [Description]
 - **[Expansion 2]**: [Description]
 - **[Expansion 3]**: [Description]
 
 ### Technical Innovation
+
 - **[Innovation 1]**: [Description]
 - **[Innovation 2]**: [Description]
 - **[Innovation 3]**: [Description]
@@ -351,16 +408,19 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 📋 Next Major Milestones
 
 ### Foundation Completion (Next 2-3 Issues)
+
 1. **[Milestone 1]**: [Description]
 2. **[Milestone 2]**: [Description]
 3. **[Milestone 3]**: [Description]
 
 ### Major Feature Development (Post-Foundation)
+
 1. **[Major Feature 1]**: [Description]
 2. **[Major Feature 2]**: [Description]
 3. **[Major Feature 3]**: [Description]
 
 ### Success Metrics
+
 - **Technical**: [Technical benchmarks]
 - **User**: [User success criteria]
 - **Business**: [Business goals]
@@ -369,7 +429,9 @@ The [CORE_SYSTEM_NAME] is a breakthrough feature that allows [MAIN_BENEFIT].
 ## 🔄 Master Context Update Protocol
 
 ### Update Triggers
+
 This master context document will be updated when:
+
 1. **Major Features Completed**: Issues resolved, new capabilities added
 2. **Architecture Decisions**: Technology choices, database changes, infrastructure decisions
 3. **Technical Constraints**: Performance bottlenecks, scaling limitations, integration challenges
@@ -377,6 +439,7 @@ This master context document will be updated when:
 5. **Strategic Pivots**: Business model changes, feature prioritization shifts
 
 ### Update Process
+
 1. **CTO Identifies Update Need**: Based on development progress or new insights
 2. **CTO Requests Master Context Update**: "This is a MASTER PROJECT CONTEXT update request"
 3. **CEO Reviews and Approves**: Ensures accuracy and strategic alignment
@@ -384,8 +447,9 @@ This master context document will be updated when:
 5. **CEO Downloads and Uploads**: Updates Claude Web project knowledge for strategic conversations
 
 ### Change Log
+
 - **v1.0 ([DATE])**: Initial template created from Archive Space project
 
 ---
 
-*This document serves as the single source of truth for PROJECT_NAME development. All strategic planning, technical decisions, and Claude Web conversations should align with this comprehensive context. PROJECT_NAME represents [CORE_VISION_STATEMENT].*
+_This document serves as the single source of truth for PROJECT_NAME development. All strategic planning, technical decisions, and Claude Web conversations should align with this comprehensive context. PROJECT_NAME represents [CORE_VISION_STATEMENT]._

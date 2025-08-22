@@ -11,6 +11,7 @@ This document describes the Supabase database migrations for Archive Space, impl
 **Purpose**: Creates the foundation tables for Archive Space
 
 **Tables Created**:
+
 - `creators` - Creator profiles and Space ownership
 - `spaces` - Creator-owned content spaces
 - `content` - Main timeline content with polymorphic design
@@ -18,6 +19,7 @@ This document describes the Supabase database migrations for Archive Space, impl
 - `content_tags` - Junction table for content-tag relationships
 
 **Key Features**:
+
 - ✅ **Future constraint option**: `one_post_per_day_per_space` available for future gallery curation (not enforced in Phase 1)
 - ✅ **Timeline optimization**: Primary index on `(space_id, published_at DESC)`
 - ✅ **Content type filtering**: Indexes for efficient type-based queries
@@ -25,6 +27,7 @@ This document describes the Supabase database migrations for Archive Space, impl
 - ✅ **Auto-updated timestamps**: Triggers maintain `updated_at` fields
 
 **Custom Types**:
+
 ```sql
 CREATE TYPE content_type AS ENUM ('music', 'blog', 'artwork', 'project', 'update');
 CREATE TYPE project_status AS ENUM ('planning', 'in-progress', 'completed', 'on-hold', 'cancelled');
@@ -35,11 +38,13 @@ CREATE TYPE project_status AS ENUM ('planning', 'in-progress', 'completed', 'on-
 **Purpose**: Adds media management and user relationship tables
 
 **Tables Created**:
+
 - `media` - File storage metadata for images, audio, video
 - `user_accounts` - Extended profiles for Space visitors and subscribers
 - `follows` - Free following relationships between users and creators
 
 **Key Features**:
+
 - ✅ **Media processing tracking**: `is_processed` flag for file processing status
 - ✅ **Multi-format support**: Handles images, audio, video, documents
 - ✅ **User management**: Links to Supabase auth with extended profiles
@@ -50,9 +55,11 @@ CREATE TYPE project_status AS ENUM ('planning', 'in-progress', 'completed', 'on-
 **Purpose**: Implements paid subscription functionality
 
 **Tables Created**:
+
 - `subscriptions` - Paid creator-fan relationships with Stripe integration
 
 **Key Features**:
+
 - ✅ **Stripe integration**: Full subscription lifecycle management
 - ✅ **Status tracking**: Active, canceled, past_due, unpaid states
 - ✅ **Unique constraints**: One active subscription per creator-subscriber pair
@@ -63,6 +70,7 @@ CREATE TYPE project_status AS ENUM ('planning', 'in-progress', 'completed', 'on-
 **Purpose**: Implements Row Level Security for multi-tenant data isolation
 
 **Security Features**:
+
 - ✅ **Creator data isolation**: Creators can only access their own data
 - ✅ **Public content access**: Visitors can view published public content
 - ✅ **Premium content gates**: Subscribers can access premium content
@@ -94,16 +102,19 @@ CREATE POLICY "Subscribers can view premium content" ON content
 **Purpose**: Configures Supabase Storage for media files
 
 **Storage Buckets**:
+
 - `content-media`: For blog images, music files, artwork, videos (50MB limit)
 - `profile-images`: For creator avatars and space cover images (10MB limit)
 
 **Access Controls**:
+
 - ✅ **Creator uploads**: Creators can upload media for their own content
 - ✅ **Public access**: Anyone can view public media files
 - ✅ **File type restrictions**: Enforces allowed MIME types
 - ✅ **Size limits**: Prevents oversized uploads
 
 **Allowed MIME Types**:
+
 ```sql
 -- Content media
 'image/jpeg', 'image/png', 'image/webp', 'image/gif'
@@ -120,10 +131,12 @@ CREATE POLICY "Subscribers can view premium content" ON content
 ### Local Development
 
 **Prerequisites**:
+
 - Docker Desktop installed and running
 - Supabase CLI installed locally
 
 **Commands**:
+
 ```bash
 # Start local Supabase instance
 npx supabase start
@@ -138,11 +151,13 @@ npm run db:generate
 ### Production Deployment
 
 **Supabase Dashboard Method**:
+
 1. Navigate to SQL Editor in Supabase Dashboard
 2. Run migration files in order (001, 002, 003, 004, 005)
 3. Verify all tables and policies are created
 
 **CLI Method** (when Supabase project is linked):
+
 ```bash
 # Link to Supabase project
 npx supabase link --project-ref YOUR_PROJECT_ID
@@ -156,22 +171,25 @@ npx supabase db push
 ### Verification Queries
 
 **Check all tables exist**:
+
 ```sql
-SELECT table_name 
-FROM information_schema.tables 
+SELECT table_name
+FROM information_schema.tables
 WHERE table_schema = 'public'
 ORDER BY table_name;
 ```
 
 **Verify RLS is enabled**:
+
 ```sql
-SELECT schemaname, tablename, rowsecurity 
-FROM pg_tables 
-WHERE schemaname = 'public' 
+SELECT schemaname, tablename, rowsecurity
+FROM pg_tables
+WHERE schemaname = 'public'
 AND rowsecurity = true;
 ```
 
 **Test one post per day constraint**:
+
 ```sql
 -- This should succeed
 INSERT INTO content (space_id, type, title, slug, is_published, published_at)
@@ -183,8 +201,9 @@ VALUES ('same-uuid', 'blog', 'Second Post', 'second-post', true, '2024-01-01 15:
 ```
 
 **Test timeline query performance**:
+
 ```sql
-EXPLAIN ANALYZE 
+EXPLAIN ANALYZE
 SELECT c.*, array_agg(t.name) as tags
 FROM content c
 LEFT JOIN content_tags ct ON c.id = ct.content_id
@@ -202,6 +221,7 @@ LIMIT 20;
 ### Down Migrations
 
 **Manual Rollback Order** (if needed):
+
 ```sql
 -- 005: Drop storage buckets and policies
 DELETE FROM storage.buckets WHERE id IN ('content-media', 'profile-images');
@@ -235,16 +255,19 @@ DROP TYPE project_status;
 ### Key Metrics to Monitor
 
 **Query Performance**:
+
 - Timeline queries should use `idx_content_timeline` index
 - Content type filtering should use `idx_content_type_timeline`
 - Full-text search should use `idx_content_search` GIN index
 
 **Storage Usage**:
+
 - Monitor bucket storage consumption
 - Track file upload success rates
 - Watch for processing failures in media table
 
 **RLS Policy Performance**:
+
 - Monitor policy evaluation times
 - Watch for N+1 query patterns in subscription checks
 
@@ -253,19 +276,23 @@ DROP TYPE project_status;
 ### Common Issues
 
 **Migration Fails on RLS Policies**:
+
 - Ensure Supabase project has RLS enabled
 - Check that auth schema exists and is accessible
 
 **Storage Bucket Creation Fails**:
+
 - Verify storage is enabled in Supabase project
 - Check bucket naming conventions (lowercase, no spaces)
 
 **One Post Per Day Constraint Violations**:
+
 - Remember constraint uses `post_date` (DATE only)
 - Multiple posts same day will fail regardless of time
 - Use `published_at` for scheduling, not `created_at`
 
 **Performance Issues**:
+
 - Run `ANALYZE` on tables after bulk data loads
 - Monitor index usage with `pg_stat_user_indexes`
 - Consider partitioning for high-volume creators
@@ -273,12 +300,14 @@ DROP TYPE project_status;
 ## Next Steps
 
 ### Phase 2 Enhancements
+
 - [ ] Add materialized views for creator statistics
 - [ ] Implement date-based partitioning for high-volume creators
 - [ ] Add advanced search indexes (trigram, fuzzy matching)
 - [ ] Create stored procedures for complex queries
 
 ### Monitoring Setup
+
 - [ ] Configure query performance monitoring
 - [ ] Set up alerts for constraint violations
 - [ ] Monitor storage bucket usage and costs

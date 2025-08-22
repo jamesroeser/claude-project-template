@@ -36,7 +36,7 @@ PROJECT_NAME is [PROJECT_DESCRIPTION]. [Customize this section with your specifi
 [Replace this section with your project's specific features. The template includes these as examples:]
 
 1. **Feature One**: [Description]
-2. **Feature Two**: [Description] 
+2. **Feature Two**: [Description]
 3. **Feature Three**: [Description]
 
 ### [CORE_SYSTEM_NAME]
@@ -295,14 +295,64 @@ Remember the following shortcuts which the user may invoke at any time.
 
 When I type "qnew", this means:
 
-Understand all BEST PRACTICES listed in CLAUDE.md and docs/development-best-practices.md.
-Your code SHOULD ALWAYS follow these best practices.
-Remember our CTO-CEO workflow: GitHub issues workflow established for project development.
-Maintain project context: Use the "GitHub Issues Workflow" phase where CEO reviews issues before CTO implementation.
-Current status: Template ready for project-specific customization.
-Remind me to use /clear when switching between different GitHub issues or major feature development.
+**FIRST TIME SETUP DETECTION**:
+
+- Check if this is a fresh template by looking for placeholder text (PROJECT_NAME, [BRACKETS], etc.)
+- If fresh template detected, initiate comprehensive onboarding flow
+- If customized project detected, proceed with standard workflow
+
+**FRESH TEMPLATE ONBOARDING FLOW**:
+When placeholders are detected, execute this complete setup process:
+
+1. **Welcome & Context Setting**
+   - Welcome to the Claude Project Template
+   - Explain the three-interface workflow: Claude Code (technical), GitHub (project management), Claude Web (strategy)
+   - Confirm this is a new project setup
+
+2. **Project Discovery Phase**
+   - Ask: "What's your project idea? Describe your vision, target audience, and core value proposition."
+   - Ask: "What type of project is this? (SaaS platform, e-commerce, productivity app, social platform, etc.)"
+   - Ask: "What should we call this project? (This will replace PROJECT_NAME everywhere)"
+   - Ask: "What's your domain name? (or desired domain for PROJECT_DOMAIN)"
+   - Ask: "Who will be your first user/tester? (This replaces FIRST_USER)"
+
+3. **Technical Setup Verification**
+   - Verify GitHub repository is set up and accessible
+   - Check if Supabase account/project is ready
+   - Confirm Node.js and development environment
+   - Validate .env.local setup
+
+4. **Template Customization**
+   - Replace all PROJECT_NAME instances with actual project name
+   - Update package.json with correct project name
+   - Customize CLAUDE.md with project-specific details
+   - Update README.md with project information
+   - Create initial master-project-context.md from template
+
+5. **Initial GitHub Issues Creation**
+   - Create Issue #1: "Project Setup and Environment Configuration"
+   - Create Issue #2: "Database Schema Design for [PROJECT_TYPE]"
+   - Create Issue #3: "Core Feature Implementation Plan"
+   - Create Issue #4: "UI/UX Design System Setup"
+   - Ask user to review and approve these initial issues
+
+6. **Workflow Education**
+   - Explain CTO-CEO collaboration pattern
+   - Demonstrate other shortcuts (qplan, qcode, qcheck, qgit)
+   - Show how to use GitHub Issues for feature tracking
+   - Explain master context document importance
+
+**EXISTING PROJECT WORKFLOW**:
+If no placeholders detected, proceed with standard workflow:
+
+- Understand all BEST PRACTICES listed in CLAUDE.md and docs/development-best-practices.md
+- Your code SHOULD ALWAYS follow these best practices
+- Remember our CTO-CEO workflow: GitHub issues workflow established for project development
+- Maintain project context: Use the "GitHub Issues Workflow" phase where CEO reviews issues before CTO implementation
+- Remind me to use /clear when switching between different GitHub issues or major feature development
 
 **CONTRADICTION DETECTION PROTOCOL**:
+
 1. **Scan all documentation** for conflicting information between CLAUDE.md, docs/development-best-practices.md, docs/master-project-context.md, and current conversation
 2. **Identify conflicts** in processes, technical decisions, project status, or architectural choices
 3. **Alert CEO immediately** with clear presentation: "CONTRADICTION DETECTED" followed by:
@@ -438,18 +488,22 @@ Context becomes cluttered or unfocused
 ## Master Project Context Management
 
 ### Master Context Document
+
 - **Location**: `docs/master-project-context.md`
 - **Purpose**: Single source of truth combining technical architecture, business vision, progress, and implementation learnings
 - **CEO Responsibility**: Download and upload to Claude Web project knowledge regularly
 
 ### CTO Update Responsibilities
+
 Update `docs/master-project-context.md` when:
+
 - **Major features completed** (Issues resolved)
 - **Architecture decisions made** (Technology, database, infrastructure choices)
-- **Technical constraints discovered** (Performance, scaling, integration challenges)  
+- **Technical constraints discovered** (Performance, scaling, integration challenges)
 - **User testing insights** (Khol Gray feedback, usability discoveries)
 
 ### Master Context Update Protocol
+
 1. **CTO identifies update need** based on development progress
 2. **CTO requests CEO approval** with clear explanation of changes needed
 3. **CTO explicitly states**: "This is a MASTER PROJECT CONTEXT update request"
