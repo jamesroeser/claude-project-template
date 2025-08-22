@@ -57,4 +57,6 @@ coverage/
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
+next-env.d.ts# Template Maintainer Testing Documents
+COMPLETE-BEGINNER-JOURNEY-TEST.md
+ONBOARDING-FLOW-TEST.md
