@@ -2,7 +2,7 @@
  * Supabase Client Configuration
  *
  * This file creates and exports the Supabase client instance used throughout
- * the Archive Space application. It handles authentication, database queries,
+ * the application. It handles authentication, database queries,
  * and file storage operations.
  */
 

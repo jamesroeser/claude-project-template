@@ -1,8 +1,8 @@
 /**
  * Home Page Component
  *
- * The main landing page for the Khol Gray Archive.
- * This showcases the timeline-first approach with the most recent content
+ * The main landing page for PROJECT_NAME.
+ * This showcases the core features and user interface
  * and provides navigation to different content types.
  *
  * Features:
@@ -21,12 +21,12 @@ export default function Home() {
       <section className="border-b bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Khol Gray Archive
+            PROJECT_NAME
           </h1>
           <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground sm:text-xl">
-            Welcome to the digital archive - a timeline-focused journey through
-            music, art, and creative expression. Every piece tells a story in
-            time.
+            [PROJECT_DESCRIPTION] - [Customize this description to match your
+            project purpose and value proposition. This will be replaced during
+            onboarding.]
           </p>
 
           {/* Call-to-Action Buttons */}

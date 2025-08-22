@@ -5,9 +5,8 @@ import '@/styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Khol Gray Archive',
-  description:
-    "Digital archive for Khol Gray's music, art, and creative journey",
+  title: 'PROJECT_NAME',
+  description: 'PROJECT_DESCRIPTION',
 }
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
-name: Archive Space CI/CD Pipeline
+name: PROJECT_NAME CI/CD Pipeline
 
 on:
   push:

@@ -13,6 +13,7 @@
  */
 
 import React from 'react'
+import Image from 'next/image'
 import { formatDistanceToNow } from 'date-fns'
 
 // Define what data structure each timeline entry expects
@@ -135,9 +136,11 @@ export function TimelineEntry({
         return (
           <div className="mt-2">
             {mediaUrl && (
-              <img
+              <Image
                 src={mediaUrl}
                 alt={title}
+                width={400}
+                height={256}
                 className="max-h-64 w-full rounded-lg object-cover"
                 loading="lazy" // Only load images when they're about to be visible
               />

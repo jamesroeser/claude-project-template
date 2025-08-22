@@ -4,7 +4,7 @@ Fixes #[issue-number]
 
 ## Feature Description
 
-Brief description of what this PR accomplishes for Archive Space.
+Brief description of what this PR accomplishes for PROJECT_NAME.
 
 ## Changes Made
 
@@ -17,8 +17,8 @@ Brief description of what this PR accomplishes for Archive Space.
 - [ ] Unit tests written and passing
 - [ ] Integration tests verified
 - [ ] Manual testing on mobile and desktop
-- [ ] Timeline functionality verified
-- [ ] Audio queue functionality tested (if applicable)
+- [ ] Core functionality verified
+- [ ] Key features tested (if applicable)
 
 ## Code Quality Checklist
 
@@ -28,12 +28,12 @@ Brief description of what this PR accomplishes for Archive Space.
 - [ ] Conventional commit messages used
 - [ ] No console.log statements in production code
 
-## Archive Space Specific Checks
+## PROJECT_NAME Specific Checks
 
-- [ ] Timeline-first design principles followed
+- [ ] Project design principles followed
 - [ ] Mobile-first responsive design implemented
-- [ ] Anti-social media constraints respected
-- [ ] Creator-focused user experience maintained
+- [ ] Business requirements satisfied
+- [ ] User-focused experience maintained
 
 ## Deployment Notes
 

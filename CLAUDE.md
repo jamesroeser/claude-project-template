@@ -155,7 +155,7 @@ npm run test:e2e    # Run end-to-end tests
 - Always run `npm run type-check` after making changes
 - Use conventional commits for better git history
 - Timeline is the core UX pattern - everything should support chronological storytelling
-- Keep scalability in mind for future multi-creator platform
+- Keep scalability in mind for future growth and user expansion
 - Maintain lean development approach with minimal dependencies
 
 ## Learning Guide for New Developers
@@ -204,7 +204,7 @@ These tools work together to make your code professional-quality without manual 
 ### Development Workflow
 
 1. **Write code** → Tools automatically format and check it
-2. **Commit to GitHub** → Vercel automatically deploys to kholgray.com
+2. **Commit to GitHub** → Vercel automatically deploys to PROJECT_DOMAIN
 3. **No manual steps needed** → Everything is automated for efficiency
 
 ## CTO-CEO Development Workflow
@@ -500,7 +500,7 @@ Update `docs/master-project-context.md` when:
 - **Major features completed** (Issues resolved)
 - **Architecture decisions made** (Technology, database, infrastructure choices)
 - **Technical constraints discovered** (Performance, scaling, integration challenges)
-- **User testing insights** (Khol Gray feedback, usability discoveries)
+- **User testing insights** (FIRST_USER feedback, usability discoveries)
 
 ### Master Context Update Protocol
 
