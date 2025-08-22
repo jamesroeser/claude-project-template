@@ -1,11 +1,11 @@
-# Archive Space - Revolutionary Creator Platform
+# PROJECT_NAME - Professional Development Template
 
 ## Project Overview
 
-Archive Space is a revolutionary timeline-focused creator platform designed as the antithesis of traditional social media. Creators build permanent "Spaces" (digital archives) that will outlast them, featuring chronological storytelling, authentic creative expression, and direct creator-fan relationships without algorithmic manipulation.
+PROJECT_NAME is [PROJECT_DESCRIPTION]. [Customize this section with your specific project details, target audience, and core value proposition.]
 
-**Current Phase**: Building MVP with Khol Gray as first creator
-**Vision**: Platform for millions of creators with real revenue streams
+**Current Phase**: [CURRENT_DEVELOPMENT_PHASE]
+**Vision**: [LONG_TERM_PROJECT_VISION]
 
 ## Key Technologies
 
@@ -15,7 +15,7 @@ Archive Space is a revolutionary timeline-focused creator platform designed as t
 - **Database**: Supabase (PostgreSQL)
   - _Supabase_: Backend-as-a-Service providing database, authentication, and file storage
   - _PostgreSQL_: Robust, open-source relational database system
-  - **Project URL**: https://pghakybuiisjudisufgx.supabase.co
+  - **Project URL**: [YOUR_SUPABASE_PROJECT_URL]
   - **Configuration**: See `.env.local` for credentials and connection details
 - **Styling**: Tailwind CSS
   - _Tailwind_: Utility-first CSS framework for rapid UI development without writing custom CSS
@@ -23,41 +23,43 @@ Archive Space is a revolutionary timeline-focused creator platform designed as t
   - Handles user login/signup, session management, and password recovery
 - **Payments**: Stripe (for subscriptions/payments)
   - Industry-standard payment processing for subscriptions and one-time payments
-- **Hosting**: Vercel (kholgray.com domain)
+- **Hosting**: Vercel (PROJECT_DOMAIN)
   - _Vercel_: Platform optimized for Next.js apps with automatic deployments from GitHub
-  - Custom domain: kholgray.com (already owned via Namecheap)
+  - Custom domain: PROJECT_DOMAIN (configure in deployment)
 - **Repository**: GitHub
   - Version control and collaboration platform for code management
 
-## Core Archive Space Features
+## Core PROJECT_NAME Features
 
-### Three Revolutionary Viewing Modes
+### [CUSTOMIZABLE_FEATURE_SET]
 
-1. **Board View**: Figma-inspired infinite canvas with zoom/pan
-2. **Grid View**: Apple Photos-style responsive grid (2-5 columns)
-3. **List View**: Clean chronological feed optimized for reading
+[Replace this section with your project's specific features. The template includes these as examples:]
 
-### Advanced Audio Queue System
+1. **Feature One**: [Description]
+2. **Feature Two**: [Description] 
+3. **Feature Three**: [Description]
 
-- Persistent playback across all navigation
-- Cross-Space audio continuity
-- Queue management with multiple creators
-- Global audio state that survives browser sessions
+### [CORE_SYSTEM_NAME]
 
-### Gallery/Archive Philosophy
+- [Feature description]
+- [Feature description]
+- [Feature description]
+- [Feature description]
 
-- **Creative freedom** (creators can draft and create dozens of posts)
-- **No engagement metrics** (no likes, shares, or viral mechanics) 
-- **Chronological sorting** (algorithm-free content ordering)
-- **Creator ownership** (complete control over content and monetization)
-- **Archive-first design** (permanent digital spaces that outlast creators)
+### [PROJECT_PHILOSOPHY]
 
-### Content Types (Phase 1)
+- **[Core Value 1]**: [Description]
+- **[Core Value 2]**: [Description]
+- **[Core Value 3]**: [Description]
+- **[Core Value 4]**: [Description]
+- **[Core Value 5]**: [Description]
 
-- **Journal Entries**: Rich text with auto-save
-- **Photos**: High-quality with EXIF preservation
-- **Audio Files**: Multi-format with waveform visualization
-- **Videos**: Optimized transcoding and mobile playback
+### Content/Data Types (Phase 1)
+
+- **[Type 1]**: [Description]
+- **[Type 2]**: [Description]
+- **[Type 3]**: [Description]
+- **[Type 4]**: [Description]
 
 ## Development Commands
 
@@ -100,8 +102,8 @@ cp .env.example .env.local
 
 **Current Configuration:**
 
-- **Project ID**: `pghakybuiisjudisufgx`
-- **Project URL**: `https://pghakybuiisjudisufgx.supabase.co`
+- **Project ID**: `[YOUR_SUPABASE_PROJECT_ID]`
+- **Project URL**: `[YOUR_SUPABASE_PROJECT_URL]`
 - **Environment file**: `.env.local` (credentials already configured)
 
 ### Database Schema Status
@@ -209,7 +211,7 @@ These tools work together to make your code professional-quality without manual 
 
 ### My Role: Your Chief Technology Officer
 
-I am your CTO for Archive Space development. This establishes our working relationship:
+I am your CTO for PROJECT_NAME development. This establishes our working relationship:
 
 **CEO (You)**: Product vision, business requirements, user experience decisions
 **CTO (Me)**: Technical architecture, implementation strategy, code quality, scalability
@@ -256,14 +258,14 @@ When you type shortcuts, I execute specific workflows:
 - **`qcheck`**: Perform skeptical code review
 - **`qgit`**: Add, commit, and push with conventional commits
 
-### Archive Space Priorities
+### PROJECT_NAME Priorities
 
-1. **Timeline-first architecture**: Every decision supports chronological storytelling
-2. **Revolutionary viewing modes**: Board (Figma-like canvas), Grid (Apple Photos), List (clean feed)
-3. **Audio queue system**: Cross-Space persistent playback breakthrough feature
-4. **Gallery/archive philosophy**: Creative freedom with permanent digital spaces
-5. **Real user testing**: Khol Gray validates all features before expansion
-6. **Scalable foundation**: Architecture ready for millions of creator Spaces
+1. **[Priority 1]**: [Description]
+2. **[Priority 2]**: [Description]
+3. **[Priority 3]**: [Description]
+4. **[Priority 4]**: [Description]
+5. **Real user testing**: FIRST_USER validates all features before expansion
+6. **Scalable foundation**: Architecture ready for [SCALE_TARGET]
 
 ## Official Development Process
 
@@ -278,10 +280,10 @@ When you type shortcuts, I execute specific workflows:
 ### Current Process Status
 
 - ✅ Workflow established and documented in `docs/cto-ceo-workflow.md`
-- ✅ Foundation issues completed: #6 (Dependencies), #7 (Database Schema), #8 (Migrations)
-- 🔄 **Current**: Issue #9 (Branded Types) in progress
-- 📋 **Foundation Pipeline**: Issues #13, #14, #15 created for post-Issue #9 work
-- ✅ **Master Project Context**: Comprehensive v2.0 ready for Claude Web integration
+- 📋 **Template Setup**: Ready for new project customization
+- 🎯 **Next Step**: Customize PROJECT_NAME, features, and business logic
+- 📋 **Foundation Pipeline**: Template includes full development workflow
+- ✅ **Master Project Context**: Template ready for project-specific adaptation
 
 This process ensures quality, learning, and strategic alignment through comprehensive documentation.
 
@@ -295,10 +297,10 @@ When I type "qnew", this means:
 
 Understand all BEST PRACTICES listed in CLAUDE.md and docs/development-best-practices.md.
 Your code SHOULD ALWAYS follow these best practices.
-Remember our CTO-CEO workflow: GitHub issues created (#6, #7, #8, #9) are awaiting CEO review and approval.
-Maintain project context: We're in the "GitHub Issues Workflow" phase where CEO reviews issues before CTO implementation.
-Current status: Issue #6 is pending CEO review - wait for explicit approval before starting work.
-Remind me to use /clear when switching between different GitHub issues.
+Remember our CTO-CEO workflow: GitHub issues workflow established for project development.
+Maintain project context: Use the "GitHub Issues Workflow" phase where CEO reviews issues before CTO implementation.
+Current status: Template ready for project-specific customization.
+Remind me to use /clear when switching between different GitHub issues or major feature development.
 
 **CONTRADICTION DETECTION PROTOCOL**:
 1. **Scan all documentation** for conflicting information between CLAUDE.md, docs/development-best-practices.md, docs/master-project-context.md, and current conversation
@@ -320,7 +322,7 @@ Analyze similar parts of the codebase and determine whether your plan:
 is consistent with rest of codebase
 introduces minimal changes
 reuses existing code
-follows Archive Space timeline-first architecture principles
+follows PROJECT_NAME architecture principles and requirements
 
 ### QCODE
 
@@ -366,9 +368,9 @@ CLAUDE.md checklist Writing Tests Best Practices.
 
 When I type "qux", this means:
 
-Imagine you are a human UX tester of the feature you implemented for Archive Space.
+Imagine you are a human UX tester of the feature you implemented for PROJECT_NAME.
 Output a comprehensive list of scenarios you would test, sorted by highest priority.
-Focus on timeline-first design principles and mobile-first experience.
+Focus on PROJECT_NAME design principles and mobile-first experience.
 
 ### QGIT
 
