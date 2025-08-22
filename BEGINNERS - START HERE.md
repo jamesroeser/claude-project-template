@@ -106,29 +106,51 @@ git config --global user.email "your-email@example.com"
 
 ## 🎯 Step 3: Create Your Project (5 minutes)
 
-### A. Fork This Template
+### A. Prepare Your Workspace
 
-1. While viewing this GitHub repository, click "Fork" button (top right)
-2. Choose your personal GitHub account
-3. Name your repository (your project name)
-4. Make it "Public" (you can change later)
-5. Click "Create fork"
+**IMPORTANT**: Always start from a general projects directory:
 
-### B. Clone to Your Computer
+```bash
+# Navigate to your general projects workspace
+cd ~/Documents/Projects  # or wherever you organize projects
+```
 
-1. Click green "Code" button on YOUR fork
-2. Copy the HTTPS URL
-3. Open terminal and navigate to where you want your project:
-   ```bash
-   cd Desktop  # or wherever you want it
-   ```
-4. Clone your repository:
-   ```bash
-   git clone [paste-your-URL-here]
-   cd [your-project-name]
-   ```
+### B. Clone the Template
 
-### C. Install Dependencies
+```bash
+# Clone the refined template to your new project name
+git clone https://github.com/jamesroeser/claude-project-template new-project-name
+
+# Navigate into your new project
+cd new-project-name
+```
+
+### C. Set Up Your Own Repository
+
+**Step 1: Create your repository on GitHub**
+
+1. Go to [github.com](https://github.com)
+2. Click "+" icon → "New repository"
+3. **Recommended**: Create a new organization first (for professional appearance)
+4. Name your repository
+5. Make it "Public" (you can change later)
+6. **Don't** initialize with README (we already have one)
+7. Click "Create repository"
+
+**Step 2: Connect your project to your new repository**
+
+```bash
+# Remove connection to template repository
+git remote remove origin
+
+# Connect to your new repository (replace with YOUR repository URL)
+git remote add origin https://github.com/your-username/your-repository-name.git
+
+# Push the template to your new repository
+git push -u origin main
+```
+
+### D. Install Dependencies
 
 ```bash
 npm install
@@ -140,13 +162,29 @@ npm install
 
 ## 🎯 Step 4: Start Your AI Assistant (5 minutes)
 
-### A. Open Claude Code in Your Project
+### A. Install Claude Code (if not done yet)
+
+If you haven't installed Claude Code yet:
+
+1. Go to [claude.ai/code](https://claude.ai/code)
+2. Follow installation instructions, or install directly:
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+
+### B. Open Claude Code in Your Project
+
+**Make sure you're in your project directory:**
 
 ```bash
+# Navigate to your project (if not already there)
+cd ~/Documents/Projects/new-project-name  # use your actual project name
+
+# Start Claude Code
 claude-code
 ```
 
-### B. Begin Guided Setup
+### C. Begin Guided Setup
 
 In Claude Code, type:
 

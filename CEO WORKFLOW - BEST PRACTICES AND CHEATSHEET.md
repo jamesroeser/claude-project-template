@@ -45,6 +45,21 @@ rm -rf node_modules && npm install  # Nuclear option: completely reinstall
 | **qpr**    | Create Pull Request for review            | When feature is complete         |
 | **qclear** | Reminder to use /clear in Claude Code     | Between different tasks          |
 
+### Repository Setup Reference
+
+If you need to reconnect your project to a different repository:
+
+```bash
+# Remove current connection
+git remote remove origin
+
+# Add your new repository (get this URL from GitHub)
+git remote add origin https://github.com/your-new-organization/repository-name.git
+
+# Push to your repository
+git push -u origin main
+```
+
 ### How to Use Shortcuts
 
 1. Open terminal in your project folder
