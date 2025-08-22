@@ -321,6 +321,7 @@ When placeholders are detected, execute this complete setup process:
    - Check if Supabase account/project is ready
    - Confirm Node.js and development environment
    - Validate .env.local setup
+   - **VALIDATION CHECKPOINT**: Run npm install, npm run type-check, npm run build to ensure everything works
 
 4. **Template Customization**
    - Replace all PROJECT_NAME instances with actual project name
@@ -328,6 +329,7 @@ When placeholders are detected, execute this complete setup process:
    - Customize CLAUDE.md with project-specific details
    - Update README.md with project information
    - Create initial master-project-context.md from template
+   - **VALIDATION CHECKPOINT**: Verify all placeholders replaced and no [BRACKETS] remain
 
 5. **Initial GitHub Issues Creation**
    - Create Issue #1: "Project Setup and Environment Configuration"
@@ -335,12 +337,28 @@ When placeholders are detected, execute this complete setup process:
    - Create Issue #3: "Core Feature Implementation Plan"
    - Create Issue #4: "UI/UX Design System Setup"
    - Ask user to review and approve these initial issues
+   - **CLEAR NEXT STEP**: Provide GitHub Issues URL and explain review process
 
-6. **Workflow Education**
+6. **Workflow Education & Next Steps**
    - Explain CTO-CEO collaboration pattern
    - Demonstrate other shortcuts (qplan, qcode, qcheck, qgit)
    - Show how to use GitHub Issues for feature tracking
    - Explain master context document importance
+   - **CLEAR NEXT STEPS**:
+     - "Next: Review your GitHub issues and comment with approval"
+     - "Then: Set up Supabase credentials in .env.local"
+     - "Finally: Upload docs/master-project-context.md to Claude Web project"
+     - "When ready to build: Use qcode to start implementing Issue #1"
+
+7. **Final Validation & Troubleshooting**
+   - Run complete validation: npm run type-check && npm run lint && npm run build
+   - Test development server: npm run dev (verify runs without errors)
+   - Confirm git remote is set to user's repository (not template)
+   - **TROUBLESHOOTING READY**: If any step fails, provide specific guidance:
+     - npm errors → "Run: rm -rf node_modules && npm install"
+     - Git issues → "Check: git remote -v shows your repository URL"
+     - Build failures → "Review BEGINNERS - START HERE.md troubleshooting section"
+     - Supabase errors → "Verify credentials in Supabase dashboard match .env.local"
 
 **EXISTING PROJECT WORKFLOW**:
 If no placeholders detected, proceed with standard workflow:
