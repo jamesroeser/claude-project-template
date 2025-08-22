@@ -80,6 +80,18 @@ These rules ensure maintainability, safety, and developer velocity.
 
 ---
 
+### 8 — Context Integrity & Contradiction Resolution
+
+- **CI-1 (MUST)** Scan all documentation during `qnew` for conflicting information across CLAUDE.md, docs/development-best-practices.md, docs/master-project-context.md, and current conversation.
+- **CI-2 (MUST)** Alert CEO immediately upon detecting contradictions with format: "CONTRADICTION DETECTED" followed by specific conflicting sources, quotes, and impact analysis.
+- **CI-3 (MUST)** Present clear recommendation for resolution identifying which source should be considered authoritative.
+- **CI-4 (MUST)** Request explicit CEO approval before updating any documentation to resolve conflicts.
+- **CI-5 (SHOULD)** Monitor for emerging contradictions during active development and flag them immediately.
+- **CI-6 (MUST)** Update all affected documentation after CEO approves conflict resolution to maintain context integrity.
+- **CI-7 (SHOULD)** Verify context alignment between Claude Code and Claude Web project knowledge through master-project-context.md synchronization.
+
+---
+
 ## Writing Functions Best Practices
 
 When evaluating whether a function you implemented is good or not, use this checklist:

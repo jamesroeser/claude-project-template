@@ -456,6 +456,17 @@ Consumers can choose their preferred viewing mode for the main timeline:
 - **Documentation**: Comprehensive technical and user documentation
 - **Testing Strategy**: Unit tests, integration tests, real-user testing with Khol Gray content
 - **Performance Standards**: Fast loading, smooth interactions, optimal mobile experience
+- **Context Integrity**: Continuous contradiction detection and resolution across all documentation and active communication
+
+### Contradiction Detection and Resolution Protocol
+1. **Continuous Monitoring**: CTO scans all documentation during `qnew` and throughout development for conflicting information
+2. **Immediate Alert**: Upon detecting conflicts, CTO alerts CEO with "CONTRADICTION DETECTED" format including:
+   - Exact conflicting sources and quotes
+   - Impact analysis on current work and decisions
+   - Clear recommendation for resolution
+3. **CEO Clarification**: CEO determines which source is authoritative and approves resolution approach
+4. **Documentation Update**: CTO updates all affected documentation to maintain consistency
+5. **Context Validation**: Ensure alignment between Claude Code and Claude Web project knowledge via master-project-context.md synchronization
 
 ## 📊 Quality and Success Metrics
 
