@@ -1,174 +1,245 @@
-# Archive Space - Complete Development Reference
+# PROJECT_NAME - Complete Development Reference
 
-## Quick Start Commands
+> **Quick reference guide for all development commands, shortcuts, and workflows. This will be customized during your project setup.**
 
+## 🚀 Essential Commands
+
+### Development Server
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run type-check   # Check TypeScript
-npm run lint         # Run ESLint
+npm run dev          # Start development server (http://localhost:3000)
+npm run build        # Create production build
+npm run start        # Start production server
+```
+
+### Code Quality
+```bash
+npm run type-check   # TypeScript type checking
+npm run lint         # ESLint code quality checks
+npm run lint:fix     # Auto-fix linting issues
 npm run format:check # Check Prettier formatting
-npm run format:write # Apply Prettier formatting
-npm test             # Run all tests
-npm run test:watch   # Run tests in watch mode
-npm run test:e2e     # Run end-to-end tests with Playwright
+npm run format:write # Auto-format with Prettier
 ```
 
-## Database Commands
-
+### Testing
 ```bash
-npm run db:generate  # Generate TypeScript types from Supabase
-npm run db:reset     # Reset local database
-npm run db:push      # Push schema changes to Supabase
+npm test            # Run all tests
+npm run test:watch  # Run tests in watch mode
+npm run test:e2e    # Run end-to-end tests
 ```
 
-## Claude Code Shortcuts
+### Database (Supabase)
+```bash
+npm run db:generate # Generate TypeScript types from database
+npm run db:reset    # Reset local database
+npm run db:push     # Push schema changes
+```
 
-- **qnew** - Read all best practices and prepare for new work
-- **qplan** - Analyze plan against existing codebase
-- **qcode** - Implement plan with all quality checks
-- **qcheck** - Review all code changes against best practices
-- **qcheckf** - Review functions against best practices
-- **qcheckt** - Review tests against best practices
-- **qux** - Generate UX testing scenarios
-- **qgit** - Stage, commit, and push with conventional commits
-- **qpr** - Create Pull Request for current feature
-- **qclear** - Reminder to use /clear between issues
+## ⌨️ Claude Code Shortcuts
 
-## Context Management
+| Command | Purpose | When to Use |
+|---------|---------|-------------|
+| `qnew` | Start fresh session with best practices | Beginning of work session |
+| `qplan` | Analyze approach for consistency | Before implementing features |
+| `qcode` | Implement with testing and quality | When ready to build |
+| `qcheck` | Perform thorough code review | After major changes |
+| `qgit` | Professional commit and push | Save work with proper messages |
+| `qpr` | Create Pull Request | Feature complete and tested |
+| `qclear` | Reminder to use /clear | Between different tasks |
 
-- **/clear** - Wipe context window (use between different issues)
-- Keep context during active development on same issue
-- Always clear when switching GitHub issues
-- Clear after completing major features
-
-## Git Workflow
-
-1. Create feature branch: `git checkout -b feature/issue-X-description`
-2. Make focused commits with conventional messages
-3. Push regularly: `git push origin feature-branch-name`
-4. Open PR when feature complete
-5. Request review before merging
-6. Delete branch after merge
-
-## GitHub Issue Workflow
-
-1. Review issue requirements and acceptance criteria
-2. Break down into smaller tasks
-3. Create feature branch
-4. Use /clear to start fresh context
-5. Implement with regular commits
-6. Test thoroughly on mobile and desktop
-7. Open PR and request review
-8. Use /clear before starting next issue
-
-## Conventional Commit Format
-
-- **feat:** new feature for Archive Space
-- **fix:** bug fix
-- **docs:** documentation changes
-- **style:** formatting changes (no code logic changes)
-- **refactor:** code refactoring without feature changes
-- **test:** adding or updating tests
-- **chore:** maintenance tasks (dependencies, build config)
-
-## File Structure Reference
+## 📁 Project Structure
 
 ```
-kg.archive/
+PROJECT_NAME/
 ├── src/
 │   ├── app/           # Next.js app router pages
-│   ├── components/    # React components
-│   │   ├── timeline/  # Timeline-specific components
-│   │   ├── ui/        # General UI components
-│   │   └── media/     # Media player components
-│   ├── lib/          # Utilities and configurations
+│   ├── components/    # Reusable UI components
+│   │   └── ui/       # Base UI components
 │   ├── hooks/        # Custom React hooks
-│   ├── types/        # TypeScript type definitions
-│   └── styles/       # Global styles and Tailwind config
-├── public/           # Static assets (images, icons, etc.)
-├── docs/            # Project documentation
-│   ├── claude-code-context.md
-│   ├── development-best-practices.md
-│   ├── design-references.md
-│   └── development-cheatsheet.md
-├── .github/         # GitHub templates and workflows
-├── supabase/        # Database migrations and configuration
-├── tests/           # Test files and configurations
-├── CLAUDE.md        # Development standards and shortcuts
-└── package.json     # Scripts and dependencies
+│   ├── lib/          # Utility functions and configurations
+│   ├── styles/       # Global styles and CSS
+│   └── types/        # TypeScript type definitions
+├── docs/             # Project documentation
+├── supabase/         # Database migrations and config
+└── .github/          # GitHub workflows and templates
 ```
 
-## Quality Gates (All Must Pass)
+## 🗂️ Git Workflow
 
-- TypeScript strict mode (zero errors)
-- ESLint (zero errors)
-- Prettier formatting check
-- Unit and integration tests
-- Manual mobile testing
-- Timeline functionality verification
+### Conventional Commits
+```bash
+# Feature commits
+git commit -m "feat: add user authentication system"
+git commit -m "feat(auth): implement password reset flow"
 
-## Archive Space Core Principles
+# Bug fixes
+git commit -m "fix: resolve login redirect issue"
+git commit -m "fix(ui): correct button alignment on mobile"
 
-- **Timeline-First:** All features support chronological storytelling
-- **Mobile-First:** Responsive design, touch-optimized interactions
-- **Anti-Social Media:** One post/day limit, no engagement metrics
-- **Creator-Owned:** Complete creator control and monetization
-- **Long-Lived Content:** Built to outlast creators
+# Other types
+git commit -m "docs: update API documentation"
+git commit -m "style: improve responsive design"
+git commit -m "refactor: simplify user data handling"
+git commit -m "test: add integration tests for payments"
+```
 
-## Three Viewing Modes Architecture
+### Branch Management
+```bash
+# Create feature branch
+git checkout -b feature/user-dashboard
 
-- **Board View:** Figma-like canvas with free positioning and zoom/pan
-- **Grid View:** Apple Photos-style responsive grid (2-5 columns)
-- **List View:** Single column chronological feed
+# Create bugfix branch
+git checkout -b fix/navigation-issue
 
-## Audio Queue System Requirements
+# Push new branch
+git push -u origin feature/user-dashboard
+```
 
-- **Persistent playback** across all navigation
-- **Cross-Space continuity** between different creators
-- **Queue management** (add/remove/reorder tracks)
-- **Global player** component that never disappears
+## 🔧 Environment Configuration
 
-## Mobile-First Development Standards
+### Required Environment Variables
+```env
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-- Touch gesture optimization for all interactions
-- Responsive breakpoints: mobile (<768px), tablet (768-1024px), desktop (>1024px)
-- Performance targets: <2 seconds load on 3G networks
-- iOS and Android compatibility testing required
+# Optional: Stripe (for payments)
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
 
-## Development Environment Stack
+# Optional: Analytics
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-...
+```
 
-- **Framework:** Next.js 14+ with TypeScript strict mode
-- **Database:** Supabase (PostgreSQL) with real-time capabilities
-- **Styling:** Tailwind CSS utility-first approach
-- **Authentication:** Supabase Auth for user management
-- **Testing:** Jest for unit tests, Playwright for e2e tests
-- **Hosting:** Vercel with automatic deployment from GitHub
-- **CI/CD:** GitHub Actions for automated testing and quality checks
+### Local Development Setup
+```bash
+# 1. Clone and navigate
+git clone your-repository-url
+cd your-project-name
 
-## Debugging and Troubleshooting
+# 2. Install dependencies
+npm install
 
-- Use `npm run type-check` for TypeScript errors
-- Use `npm run lint` for code quality issues
-- Use `npm run format:check` to verify formatting
-- Check browser dev tools for runtime errors
-- Test on mobile devices for responsive issues
-- Verify Supabase connection for database problems
+# 3. Set up environment
+cp .env.example .env.local
+# Edit .env.local with your values
 
-## Performance Optimization Guidelines
+# 4. Run development server
+npm run dev
+```
 
-- Optimize images with Next.js Image component
-- Lazy load components below the fold
-- Use React.memo for expensive re-renders
-- Implement efficient database queries with proper indexing
-- Cache frequently accessed data
-- Monitor Core Web Vitals for user experience
+## 📊 Quality Gates
 
-## Security Best Practices
+### Before Committing (Required)
+- [ ] `npm run type-check` passes
+- [ ] `npm run lint` passes  
+- [ ] `npm run format:check` passes
+- [ ] All tests pass
+- [ ] Manual testing completed
 
-- Never commit environment variables to git
-- Use Supabase Row Level Security (RLS) for data protection
-- Validate all user inputs on both client and server
-- Implement proper authentication checks
-- Sanitize content to prevent XSS attacks
-- Regular dependency updates for security patches
+### Before Merging PR (Required)
+- [ ] All CI checks pass
+- [ ] Code reviewed and approved
+- [ ] Feature tested on mobile and desktop
+- [ ] Documentation updated if needed
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+```bash
+# Node modules issues
+rm -rf node_modules package-lock.json
+npm install
+
+# TypeScript errors
+npm run type-check
+# Fix errors shown in output
+
+# Linting issues
+npm run lint:fix
+npm run format:write
+
+# Build failures
+npm run build
+# Address specific errors shown
+```
+
+### Database Issues
+```bash
+# Reset local database
+npm run db:reset
+
+# Regenerate types
+npm run db:generate
+
+# Check Supabase connection
+# Verify .env.local has correct values
+```
+
+## 📱 Mobile Development
+
+### Testing on Mobile
+- Use Chrome DevTools device simulation
+- Test on actual mobile devices when possible
+- Verify touch interactions work correctly
+- Check responsive design breakpoints
+
+### Performance Considerations
+- Optimize images for mobile
+- Minimize JavaScript bundle size
+- Use lazy loading for components
+- Test on slower network connections
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+# Connect to Vercel
+npm i -g vercel
+vercel
+
+# Manual deployment
+vercel --prod
+```
+
+### Environment Variables in Production
+1. Add all environment variables in Vercel dashboard
+2. Ensure Supabase URLs point to production instance
+3. Update any API keys for production services
+
+## 📈 Monitoring & Analytics
+
+### Performance Monitoring
+- Use Vercel Analytics for web vitals
+- Monitor Core Web Vitals scores
+- Track page load times
+- Monitor error rates
+
+### User Analytics (Optional)
+```javascript
+// Google Analytics integration
+// Add GA4 measurement ID to environment
+// Track key user actions and conversions
+```
+
+## 🎯 PROJECT_NAME Specific Guidelines
+
+> **This section will be customized during project setup with:**
+> - Your specific feature requirements
+> - Business logic considerations  
+> - User experience guidelines
+> - Performance targets
+> - Scaling considerations
+
+### Architecture Principles
+- [To be filled during project setup]
+- [Based on your application type]
+- [Your specific requirements]
+
+### Development Priorities
+1. [Priority 1 - to be defined]
+2. [Priority 2 - to be defined] 
+3. [Priority 3 - to be defined]
+
+---
+
+*This cheat sheet will be updated throughout development to reflect your project's specific needs and learnings.*

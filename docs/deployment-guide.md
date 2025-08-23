@@ -1,221 +1,227 @@
-# Deployment Guide - Khol Gray Archive
+# Deployment Guide - PROJECT_NAME
 
 ## Overview
 
-This guide walks through setting up hosting for kholgray.com using Vercel, connecting your custom domain from Namecheap, and configuring automatic deployments from GitHub.
+This guide walks through deploying your PROJECT_NAME application using Vercel, connecting a custom domain (optional), and configuring automatic deployments from GitHub.
 
-## Why This Setup?
+**The Modern Deployment Pipeline:**
 
-**GitHub → Vercel → kholgray.com** creates a professional deployment pipeline:
+**GitHub → Vercel → Your Domain** creates a professional deployment workflow:
 
-- **GitHub**: Stores your code and tracks changes
-- **Vercel**: Builds and hosts your website automatically when you push code
-- **Custom Domain**: Professional appearance (kholgray.com vs random-name.vercel.app)
+- **GitHub**: Version control and collaboration
+- **Vercel**: Hosting optimized for Next.js applications  
+- **Custom Domain**: Professional appearance (yoursite.com vs random-name.vercel.app)
 
 ## Prerequisites
 
-- [x] GitHub account and repository
-- [x] Vercel account (free tier)
-- [x] Domain kholgray.com owned through Namecheap
-- [x] Project code ready for deployment
+Before starting deployment:
+
+- [x] PROJECT_NAME repository on GitHub
+- [x] Vercel account (free) connected to GitHub
+- [x] Domain name (optional - Vercel provides free subdomains)
+- [x] Project working locally (`npm run build` succeeds)
 
 ## Step 1: Connect GitHub to Vercel
 
-### What we're doing:
+Setting up automatic deployments from your repository.
 
-Setting up automatic deployments so every time you push code to GitHub, your website updates automatically.
+### Initial Setup
 
-### Steps:
-
-1. Go to [vercel.com](https://vercel.com) and sign up with your GitHub account
-2. Click "Import Project" or "New Project"
-3. Select your `khol-gray-archive` repository
+1. Go to [vercel.com](https://vercel.com) and log in with GitHub
+2. Click "New Project" 
+3. Select your `PROJECT_NAME` repository
 4. Configure project settings:
    - **Framework Preset**: Next.js (auto-detected)
-   - **Root Directory**: Leave blank (uses project root)
-   - **Build Command**: `npm run build` (auto-filled)
-   - **Output Directory**: `.next` (auto-filled)
+   - **Root Directory**: `./` (default)
+   - **Build Command**: `npm run build` (default)
+   - **Output Directory**: `.next` (default)
 
-### Why these settings?
+### Environment Variables
 
-- Vercel automatically detects Next.js projects and configures optimal settings
-- The build process compiles your TypeScript and optimizes your assets
-- The output directory is where the compiled website files are stored
-
-## Step 2: Configure Environment Variables
-
-### What we're doing:
-
-Adding secret keys and configuration that shouldn't be in your public code.
-
-### In Vercel Dashboard:
-
-1. Go to your project → Settings → Environment Variables
-2. Add these variables:
+5. Add environment variables (click "Environment Variables"):
    ```
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   STRIPE_SECRET_KEY=your_stripe_secret_key (when ready)
+   ```
+   
+   **Optional variables:**
+   ```
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_... (for payments)
+   STRIPE_SECRET_KEY=sk_live_... (for payments)
+   NEXT_PUBLIC_GA_MEASUREMENT_ID=G-... (for analytics)
    ```
 
-### Why environment variables?
+6. Click "Deploy"
 
-- Keeps sensitive information secure (not visible in your code)
-- Different values for development vs production environments
-- Easy to update without changing code
+### Verification
 
-## Step 3: Connect Custom Domain (kholgray.com)
+- **Build Success**: Check deployment logs for any errors
+- **Site Access**: Your app is now live at `https://random-name.vercel.app`
+- **Functionality Test**: Verify key features work in production
 
-### What we're doing:
+## Step 2: Custom Domain Setup (Optional)
 
-Making your website accessible at kholgray.com instead of a random Vercel URL.
+Making your website accessible at your custom domain instead of a random Vercel URL.
 
-### In Vercel:
+### In Vercel Dashboard
 
 1. Go to your project → Settings → Domains
-2. Add domain: `kholgray.com`
-3. Add subdomain: `www.kholgray.com` (recommended for SEO)
+2. Add domain: `yourdomain.com`
+3. Add subdomain: `www.yourdomain.com` (recommended for SEO)
 
-### In Namecheap:
+### DNS Configuration
 
-1. Log into your Namecheap account
-2. Go to Domain List → Manage → Advanced DNS
-3. Delete existing A records and CNAME records
-4. Add these records:
+Vercel will provide DNS instructions for your domain provider:
 
+**Recommended Setup:**
 ```
-Type: A Record
-Host: @
-Value: 76.76.19.19
-TTL: Automatic
-
-Type: CNAME
-Host: www
-Value: cname.vercel-dns.com
-TTL: Automatic
+A Record: @ → 76.76.19.19 (Vercel's IP)
+CNAME Record: www → cname.vercel-dns.com
 ```
 
-### Why these DNS settings?
+**What these records do:**
+- **A Record**: Points your main domain (yourdomain.com) to Vercel's servers
+- **CNAME Record**: Points www.yourdomain.com to Vercel's content delivery network
 
-- **A Record**: Points your main domain (kholgray.com) to Vercel's servers
-- **CNAME Record**: Points www.kholgray.com to Vercel's content delivery network
-- **TTL (Time To Live)**: How long DNS servers cache this information
+### Domain Provider Examples
 
-### Expected Timeline:
+**Namecheap:**
+1. Login → Domain List → Manage
+2. Advanced DNS → Add records as shown above
 
-- DNS changes can take 24-48 hours to propagate globally
-- Vercel will show "Configuration Error" until DNS propagates
-- SSL certificate will be automatically issued once DNS is working
+**GoDaddy:**
+1. DNS Management → Add records as shown above
 
-## Step 4: Test Deployment
+**Cloudflare:**
+1. DNS → Add records (ensure proxy is disabled for initial setup)
 
-### What to verify:
+### Verification
 
-1. **Build Success**: Check Vercel dashboard for successful deployment
-2. **Environment Variables**: Ensure no undefined environment variable errors
-3. **Domain Access**: Test both kholgray.com and www.kholgray.com
-4. **SSL Certificate**: Look for the lock icon in your browser
-5. **Mobile Responsive**: Test on different screen sizes
+- **SSL Certificate**: Vercel automatically generates HTTPS certificates
+- **Domain Access**: Test both yourdomain.com and www.yourdomain.com
+- **Redirect Setup**: Configure www → non-www or vice versa in Vercel
 
-### Common Issues and Solutions:
+## Step 3: Automatic Deployments
 
-**Build Fails:**
+Every push to your main branch automatically updates your live website.
 
-- Check the build logs in Vercel dashboard
-- Usually TypeScript errors or missing dependencies
-- Run `npm run build` locally to reproduce the error
+### How It Works
 
-**Domain Not Working:**
+1. **Code Push**: You commit and push code to GitHub
+2. **Auto-Build**: Vercel detects changes and starts building
+3. **Quality Checks**: Build process runs tests and validation
+4. If build succeeds, new version goes live at your domain
+5. **Rollback Available**: Previous version can be restored instantly
 
-- DNS propagation takes time (24-48 hours maximum)
-- Use [whatsmydns.net](https://whatsmydns.net) to check propagation
-- Verify DNS records match exactly what Vercel requires
+### Branch Strategy
 
-**Environment Variables Missing:**
+- **main branch**: Automatically deploys to your production domain
+- **develop branch**: Can be configured for staging deployments
+- **Feature branches**: Create preview deployments for testing
 
-- Make sure variables are added in Vercel dashboard
-- Variable names must match exactly (case-sensitive)
-- Redeploy after adding new environment variables
+### Monitoring Deployments
 
-## Step 5: Set Up Automatic Deployments
+- **Vercel Dashboard**: View all deployments and their status
+- **GitHub Integration**: See deployment status directly in pull requests
+- **Email Notifications**: Get notified of successful/failed deployments
 
-### What happens automatically:
-
-1. You push code to GitHub main branch
-2. Vercel detects the change within seconds
-3. Vercel builds your project with latest code
-4. If build succeeds, new version goes live at kholgray.com
-5. If build fails, previous version stays live (no downtime)
-
-### Branch Strategy:
-
-- **main branch**: Automatically deploys to kholgray.com
-- **feature branches**: Create preview deployments for testing
-- **Pull requests**: Generate preview links for code review
-
-## Step 6: Monitoring and Maintenance
-
-### Vercel Analytics (Free):
-
-- Page views and performance metrics
-- Core Web Vitals tracking
-- No setup required, automatically enabled
-
-### GitHub Integration:
-
-- Deployment status shown in GitHub commits
-- Preview links automatically added to pull requests
-- Failed deployments create GitHub issues
-
-### Performance Monitoring:
-
-- Vercel automatically optimizes images, fonts, and JavaScript
-- Global CDN ensures fast loading worldwide
-- Built-in monitoring alerts for downtime
-
-## Production Checklist
+## Step 4: Production Checklist
 
 Before going live with real users:
 
-- [ ] Custom domain working (kholgray.com)
-- [ ] SSL certificate active (https://)
-- [ ] Environment variables configured
-- [ ] Database connection working
-- [ ] Error pages customized
-- [ ] Analytics tracking setup
-- [ ] Performance testing completed
+### Technical Verification
+- [ ] All environment variables set correctly in production
+- [ ] Database migrations applied to production Supabase instance
+- [ ] Custom domain working (if configured)
+- [ ] HTTPS certificate active
+- [ ] All pages load correctly
 - [ ] Mobile responsiveness verified
-- [ ] SEO meta tags configured
+- [ ] Core user flows tested in production
 
-## Future Enhancements
+### Performance Optimization
+- [ ] Image optimization enabled
+- [ ] Core Web Vitals scores acceptable
+- [ ] Page load times under 3 seconds
+- [ ] Database queries optimized
+- [ ] API response times acceptable
 
-### Advanced Vercel Features:
+### Security & Compliance
+- [ ] No sensitive data exposed in client-side code
+- [ ] API routes properly secured
+- [ ] Database RLS policies active
+- [ ] CORS configuration correct
+- [ ] Privacy policy and terms of service (if required)
 
-- **Edge Functions**: Run code closer to users for better performance
-- **Image Optimization**: Automatic WebP conversion and resizing
-- **Analytics**: Detailed performance and user behavior insights
-- **Preview Deployments**: Test changes before going live
+## Advanced Configuration
 
-### Domain Management:
+### Multiple Environments
 
-- **Email Setup**: Configure email@kholgray.com through email service
-- **Subdomain Strategy**: blog.kholgray.com, shop.kholgray.com, etc.
-- **CDN Configuration**: Optimize global content delivery
+**Staging Environment:**
+- Deploy `develop` branch to `staging.yourdomain.com`
+- Use separate Supabase project for testing
+- Test new features before production release
 
-## Cost Breakdown
+**Preview Deployments:**
+- Every pull request gets a unique preview URL
+- Perfect for reviewing changes before merging
+- Automatically cleaned up when PR is closed
 
-### Free Tier Limits (Vercel):
+### Custom Domains Strategy
 
-- 100GB bandwidth per month
-- Unlimited personal projects
-- Custom domains included
-- SSL certificates included
+**Subdomain Ideas:**
+- `app.yourdomain.com` - Main application
+- `api.yourdomain.com` - API endpoints (if separate)
+- `blog.yourdomain.com` - Marketing/blog content
+- `admin.yourdomain.com` - Admin dashboard
 
-### When to upgrade:
+### Analytics and Monitoring
 
-- Higher traffic (>100GB/month)
-- Need team collaboration features
-- Advanced analytics and monitoring
-- Enterprise security requirements
+**Vercel Analytics** (Recommended):
+- Built-in performance monitoring
+- Core Web Vitals tracking
+- User behavior insights
+- Zero configuration required
 
-This setup gives you a professional, scalable foundation that can grow with your project!
+**Third-party Options:**
+- Google Analytics 4 for detailed user analytics
+- Hotjar for user behavior heatmaps
+- Sentry for error monitoring
+
+## Troubleshooting
+
+### Common Deployment Issues
+
+**Build Failures:**
+```bash
+# Test locally first
+npm run build
+
+# Check specific error in Vercel logs
+# Fix issues and redeploy
+```
+
+**Environment Variable Issues:**
+- Ensure all required variables are set in Vercel dashboard
+- Variable names must match exactly (including NEXT_PUBLIC_ prefix)
+- Redeploy after adding/changing environment variables
+
+**Domain Connection Problems:**
+- Verify DNS records are correct and have propagated (24-48 hours)
+- Check SSL certificate status in Vercel dashboard
+- Try incognito mode to avoid browser caching
+
+**Database Connection Errors:**
+- Verify Supabase URLs point to correct project
+- Check database connection limits and usage
+- Ensure RLS policies allow your application access
+
+### Getting Help
+
+- **Vercel Documentation**: [vercel.com/docs](https://vercel.com/docs)
+- **Vercel Support**: Available through dashboard for paid plans
+- **Community**: Vercel Discord and GitHub discussions
+- **Supabase Support**: For database-related deployment issues
+
+---
+
+*This deployment guide will be updated as your project grows and deployment needs evolve.*

@@ -151,18 +151,20 @@ export function EmptyState({
 }
 
 /**
- * Timeline Empty State
+ * Generic Content Empty State
  *
- * Specific empty state for when the timeline has no content.
+ * Specific empty state for when content lists have no items.
  */
-export function TimelineEmptyState({
+export function ContentEmptyState({
   hasFilters = false,
   onClearFilters,
   className = '',
+  contentType = 'content',
 }: {
   hasFilters?: boolean
   onClearFilters?: () => void
   className?: string
+  contentType?: string
 }) {
   if (hasFilters) {
     return (
@@ -179,9 +181,9 @@ export function TimelineEmptyState({
 
   return (
     <EmptyState
-      icon="📅"
-      title="Timeline coming soon"
-      message="New content is being added regularly. Check back soon to see the latest updates!"
+      icon="📄"
+      title={`No ${contentType} yet`}
+      message="Content will appear here as it's added to your application."
       className={className}
     />
   )
@@ -209,7 +211,7 @@ export function SearchEmptyState({
       actionLabel="Clear Search"
       onAction={onClearSearch}
       secondaryActionLabel="Browse All"
-      onSecondaryAction={() => (window.location.href = '/timeline')}
+      onSecondaryAction={() => (window.location.href = '/')}
       className={className}
       size="sm"
     />
@@ -230,37 +232,46 @@ export function ContentTypeEmptyState({
 }) {
   const getContentInfo = () => {
     switch (contentType.toLowerCase()) {
-      case 'music':
+      case 'user':
+      case 'users':
         return {
-          icon: '🎵',
-          title: 'No music yet',
-          message:
-            "New tracks and albums will appear here as they're released.",
+          icon: '👥',
+          title: 'No users yet',
+          message: 'Users will appear here as they sign up for your application.',
         }
-      case 'blog':
+      case 'post':
+      case 'posts':
         return {
           icon: '📝',
-          title: 'No blog posts yet',
-          message:
-            'Stay tuned for behind-the-scenes stories and creative insights.',
+          title: 'No posts yet',
+          message: 'Posts and articles will appear here when users create them.',
         }
-      case 'artwork':
+      case 'product':
+      case 'products':
         return {
-          icon: '🎨',
-          title: 'No artwork yet',
-          message: 'Visual art and creative projects will be showcased here.',
+          icon: '🛍️',
+          title: 'No products yet',
+          message: 'Products will be displayed here once you add them.',
         }
       case 'project':
+      case 'projects':
         return {
           icon: '🚀',
           title: 'No projects yet',
-          message: 'Collaborations and special projects will be featured here.',
+          message: 'Projects and work items will be featured here.',
+        }
+      case 'task':
+      case 'tasks':
+        return {
+          icon: '✅',
+          title: 'No tasks yet',
+          message: 'Tasks and to-do items will appear here when created.',
         }
       default:
         return {
           icon: '📄',
           title: `No ${contentType} yet`,
-          message: "Content will appear here as it's added.",
+          message: "Items will appear here as they're added to your application.",
         }
     }
   }

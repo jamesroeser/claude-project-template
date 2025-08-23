@@ -343,6 +343,55 @@ git checkout -b feature/fix-current-work
 4. Share error messages exactly as they appear
 5. Ask for step-by-step guidance
 
+### Authentication and API Issues
+
+**❌ "Exit code 1" when tagging @claude in GitHub issues:**
+
+1. **Check ANTHROPIC_API_KEY setup**:
+   - Go to GitHub repo → Settings → Secrets → Actions
+   - Verify `ANTHROPIC_API_KEY` secret exists
+   - Get new key from [console.anthropic.com](https://console.anthropic.com) if needed
+
+2. **Check API Budget**:
+   - Go to [console.anthropic.com](https://console.anthropic.com) → Billing
+   - Verify you have available API credits ($10+ recommended)
+   - Set monthly limit to prevent overuse
+
+3. **Test GitHub CLI**:
+   ```bash
+   gh auth status    # Should show "Logged in"
+   gh repo view      # Should show your repo, not error
+   ```
+
+**❌ GitHub CLI authentication problems:**
+
+```bash
+# Re-authenticate GitHub CLI
+gh auth logout
+gh auth login
+# Follow prompts: GitHub.com → HTTPS → Yes → Web browser login
+```
+
+**❌ Supabase connection errors:**
+
+1. Go to [supabase.com](https://supabase.com) → Your project → Settings → API
+2. Copy Project URL and anon key
+3. Update `.env.local` with correct values:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your_project_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+   ```
+4. Restart development server: `npm run dev`
+
+### Financial Setup Reminders
+
+**Critical for GitHub Integration:**
+- Ensure you have API budget configured at [console.anthropic.com](https://console.anthropic.com)
+- Minimum $10 recommended for active development
+- Claude Code needs API credits to create GitHub issues and use @claude tagging
+- Set monthly limits to control spending
+- Check usage regularly during active development periods
+
 ### Deployment and Hosting Issues
 
 1. Check environment variables are set correctly
