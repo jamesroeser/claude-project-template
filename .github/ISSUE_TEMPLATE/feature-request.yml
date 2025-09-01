@@ -1,0 +1,187 @@
+name: 🚀 Feature Request
+description: Request a new feature for the project
+title: "[FEATURE] "
+labels: ["enhancement", "needs-review"]
+assignees:
+  - "@claude"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Multi-Agent Feature Request
+        This template coordinates requirements between CEO (strategic vision), CTO (technical implementation), and CMO/CFO (business impact).
+
+  - type: textarea
+    id: business-justification
+    attributes:
+      label: "Business Justification (CEO)"
+      description: "Why is this feature important? What business value does it provide?"
+      placeholder: |
+        - User problem this solves
+        - Business impact expected
+        - Strategic alignment with project vision
+        - Priority level and timeline expectations
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: "User Story"
+      description: "Describe the feature from the user's perspective"
+      placeholder: |
+        As a [user type]
+        I want [goal/desire]
+        So that [benefit/value]
+        
+        Example user scenarios:
+        - Scenario 1: [description]
+        - Scenario 2: [description]
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Define clear, testable requirements for this feature"
+      placeholder: |
+        Functional Requirements:
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+        - [ ] Requirement 3
+        
+        Visual/UX Requirements:
+        - [ ] Mobile responsive design
+        - [ ] Accessibility compliance
+        - [ ] Matches design system
+        
+        Performance Requirements:
+        - [ ] Page loads in under 2 seconds
+        - [ ] Works offline (if applicable)
+        - [ ] Handles edge cases gracefully
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority Level"
+      description: "What is the business priority of this feature?"
+      options:
+        - "🔥 Critical (MVP blocker)"
+        - "⚡ High (Important for launch)"
+        - "📋 Medium (Nice to have)"
+        - "💡 Low (Future consideration)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: "Expected Complexity"
+      description: "CEO estimate of implementation complexity"
+      options:
+        - "🟢 Simple (1-2 days)"
+        - "🟡 Medium (3-5 days)"
+        - "🟠 Complex (1-2 weeks)"
+        - "🔴 Major (2+ weeks)"
+        - "❓ Unknown (needs CTO analysis)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: ui-requirements
+    attributes:
+      label: "UI/Design Requirements"
+      description: "Visual design and user experience requirements"
+      placeholder: |
+        Design Requirements:
+        - [ ] Mockups/wireframes needed
+        - [ ] Interactive prototypes required
+        - [ ] Design system components to use
+        
+        User Experience:
+        - [ ] User journey flow
+        - [ ] Error states and handling
+        - [ ] Loading states and feedback
+        
+        Responsive Requirements:
+        - [ ] Mobile-first design
+        - [ ] Tablet considerations
+        - [ ] Desktop enhancements
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: "Technical Considerations (Optional)"
+      description: "Any technical constraints or integration requirements"
+      placeholder: |
+        - Database changes needed
+        - Third-party integrations
+        - Performance considerations
+        - Security requirements
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: "Success Metrics"
+      description: "How will we measure the success of this feature?"
+      placeholder: |
+        Business Metrics:
+        - [ ] User engagement increase
+        - [ ] Conversion rate improvement
+        - [ ] Customer satisfaction score
+        
+        Technical Metrics:
+        - [ ] Performance benchmarks
+        - [ ] Error rate reduction
+        - [ ] System reliability
+
+  - type: checkboxes
+    id: coordination-requirements
+    attributes:
+      label: "Multi-Agent Coordination"
+      description: "Which aspects require coordination between agents?"
+      options:
+        - label: "Claude Web (CMO/CFO) input needed for market research"
+        - label: "Claude Web (CMO/CFO) input needed for content strategy"
+        - label: "Claude Code (CTO) technical architecture review required"
+        - label: "CEO approval needed before implementation begins"
+        - label: "Shared context documentation update required"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Any other information that would be helpful"
+      placeholder: |
+        - Reference materials or examples
+        - Competitor analysis
+        - User feedback or research
+        - Related issues or dependencies
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Next Steps
+        
+        **For CTO (@claude):**
+        1. Analyze technical requirements and complexity
+        2. Create acceptance criteria document in `shared-context/acceptance-criteria/`
+        3. Identify UI mockup requirements for `shared-context/ui-specifications/`
+        4. Provide technical implementation approach
+        5. Break down into smaller implementable tasks
+        
+        **For CEO:**
+        1. Review CTO analysis and approve approach
+        2. Provide or approve UI mockups/wireframes
+        3. Set final priority and timeline expectations
+        4. Coordinate with Claude Web for business analysis (if needed)
+        
+        **For Claude Web (CMO/CFO):**
+        1. Provide market research and competitive analysis
+        2. Analyze business impact and ROI projections  
+        3. Suggest content strategy and user communication
+        4. Update shared context with business insights

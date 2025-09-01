@@ -304,9 +304,13 @@ When I type "qnew", this means:
 **FRESH TEMPLATE ONBOARDING FLOW**:
 When placeholders are detected, execute this complete setup process:
 
-1. **Welcome & System Verification First**
+1. **Welcome & Automated Setup Offer**
    - Welcome to the Claude Professional Development Template
-   - Explain this is a bulletproof template designed for complete beginners
+   - **OFFER AUTOMATED SETUP**: "I can run the automated initialization script to set everything up for you. Would you like me to run `node scripts/initialize-template.js` to handle all the setup automatically, or would you prefer manual step-by-step setup?"
+   - If **AUTOMATED CHOSEN**: Run initialization script and proceed to step 8 (workflow education)
+   - If **MANUAL CHOSEN**: Continue with manual step-by-step process below
+
+2. **System Verification & Requirements Check**
    - **CRITICAL**: System verification MUST pass before proceeding
    - Test GitHub CLI: `gh auth status` (must show "Logged in")
    - Test repository secrets: Verify ANTHROPIC_API_KEY exists in repo settings
@@ -411,12 +415,18 @@ When placeholders are detected, execute this complete setup process:
    - "Focus on strategic planning while I handle technical execution"
    - "Review progress through GitHub pull requests and deployment updates"
 
-9. **Master Project Context Management**
-   - "Download the updated docs/master-project-context.md file"
-   - "Upload it to your Claude Web project knowledge base"
-   - "This keeps Claude Web synchronized with your latest project context"
-   - "Update this file every few issues to maintain strategic alignment"
-   - Explain why three-interface coordination is critical for success
+9. **Shared Context Knowledge Base Setup**
+   - **NEW SYSTEM**: "I've created a comprehensive shared-context/ folder that replaces the single master-project-context.md file"
+   - **Multi-Agent Coordination**: Explain this folder contains all project context shared between CEO (User), CTO (Claude Code), and CMO/CFO (Claude Web)
+   - **Files Created**:
+     - `shared-context/project-overview.md` - Strategic vision and current status
+     - `shared-context/agent-workflows.md` - How all three agents coordinate
+     - `shared-context/quality-standards.md` - Testing and validation framework
+     - `shared-context/acceptance-criteria/` - Feature specifications and validation
+     - `shared-context/ui-specifications/` - UI mockups and visual validation
+   - **CEO Instructions**: "Download the entire shared-context folder and upload all files to Claude Web project knowledge base"
+   - **Update Process**: "After major features or strategic changes, I'll update relevant files and notify you to re-sync with Claude Web"
+   - **Three-Agent Orchestration**: Explain how this enables seamless coordination between Claude Code (technical), Claude Web (business), and CEO (strategic)
 
 10. **Beginner-Focused Process Reminders Setup**
     - "For your first 15 issues: I'll remind you about commit/push after each implementation"
@@ -447,13 +457,29 @@ When placeholders are detected, execute this complete setup process:
     **FINAL MESSAGE**: "🎉 Your professional development environment is ready! You now have a bulletproof workflow that eliminates every potential friction point. Your next step is to review Issue #2 in GitHub and begin building your MVP."
 
 **EXISTING PROJECT WORKFLOW**:
-If no placeholders detected, proceed with standard workflow:
+If no placeholders detected, proceed with enhanced production workflow:
 
-- Understand all BEST PRACTICES listed in CLAUDE.md and docs/development-best-practices.md
-- Your code SHOULD ALWAYS follow these best practices
-- Remember our CTO-CEO workflow: GitHub issues workflow established for project development
-- Maintain project context: Use the "GitHub Issues Workflow" phase where CEO reviews issues before CTO implementation
-- Remind me to use /clear when switching between different GitHub issues or major feature development
+**Context Synchronization First**:
+- Load latest project context from `shared-context/` folder
+- Review recent updates in `shared-context/sprint-updates/` for current status
+- Check `shared-context/acceptance-criteria/` for active feature requirements
+- Scan for contradiction detection across all documentation
+
+**Onboarding vs Production Mode Detection**:
+- **First 15 Issues** (Onboarding Mode): Enhanced guidance, step-by-step explanations, manual approval checkpoints
+- **Issue 16+** (Production Mode): Streamlined execution, automated workflows, trust-based development
+
+**Multi-Agent Orchestration**:
+- Use MCP tools for context gathering (file system, documentation, git history)
+- Apply iterative agentic loops with fixed spec validators
+- Coordinate with Claude Web through shared-context knowledge base
+- Maintain CEO strategic oversight with technical autonomy
+
+**Enhanced Workflow Integration**:
+- Follow TDD approach with beginner-friendly test descriptions
+- Use Playwright for UI validation against mockups in `shared-context/ui-specifications/`
+- Apply contradiction detection protocol across all documentation
+- Update shared-context files after major implementations
 
 **CONTRADICTION DETECTION PROTOCOL**:
 
@@ -539,6 +565,48 @@ SHOULD structure commit message as follows:
 <type>[optional scope]: <description>
 [optional body]
 [optional footer(s)]
+
+### QVALIDATE
+
+When I type "qvalidate", this means:
+
+**Iterative Agentic Loop with Fixed Spec Validation**:
+
+1. **Load Acceptance Criteria**: Read from `shared-context/acceptance-criteria/[feature-name].md`
+2. **Visual Validation**: Compare implementation against UI mockups in `shared-context/ui-specifications/`
+3. **Automated Testing**: Run full test suite including Playwright visual tests
+4. **Spec Comparison**: Validate each acceptance criteria point systematically
+5. **Gap Analysis**: Identify any differences between implementation and specifications
+6. **Iteration Loop**: If gaps exist, refine implementation and re-validate
+7. **CEO Approval**: Request final manual validation when all automated criteria pass
+
+**MCP Tool Orchestration**:
+- Use file system tools to access specifications and mockups
+- Apply Playwright for automated UI validation and screenshot comparison
+- Leverage git tools for tracking implementation progress
+- Coordinate context updates across shared-context files
+
+### QSPEC
+
+When I type "qspec", this means:
+
+**Create or Update Feature Specification**:
+
+1. **CEO Input Gathering**: Collect feature requirements, user stories, acceptance criteria
+2. **Technical Analysis**: Determine implementation approach, dependencies, complexity
+3. **UI/UX Planning**: Identify mockup requirements, responsive design considerations
+4. **Testing Strategy**: Define TDD approach, validation methods, success metrics
+5. **Specification Creation**: Generate comprehensive spec in `shared-context/acceptance-criteria/`
+6. **Visual Requirements**: Create template for UI mockups in `shared-context/ui-specifications/`
+7. **CEO Approval**: Review and approve specification before implementation begins
+
+**Specification Template Structure**:
+- User story and business justification
+- Detailed functional requirements with clear pass/fail criteria
+- Visual and responsive design requirements
+- Technical implementation notes and constraints
+- Testing approach and validation methods
+- Definition of done checklist
 
 ### QPR
 

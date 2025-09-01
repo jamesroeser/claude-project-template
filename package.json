@@ -16,7 +16,16 @@
     "db:push": "supabase db push",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:visual": "playwright test tests/visual --reporter=html",
+    "test:examples": "playwright test tests/examples --reporter=html",
+    "init": "node scripts/initialize-template.js",
+    "qvalidate": "npm run type-check && npm run lint && npm run test && npm run test:e2e",
+    "qcheck": "npm run type-check && npm run lint && npm run format:check",
+    "prebuild": "npm run qcheck",
+    "setup:dev": "npm install && npm run qcheck && npm run test",
+    "visual:update": "playwright test tests/visual --update-snapshots",
+    "quality:full": "npm run type-check && npm run lint && npm run test && npm run test:visual && npm run build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",

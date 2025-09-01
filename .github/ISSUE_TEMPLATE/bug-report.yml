@@ -1,0 +1,203 @@
+name: 🐛 Bug Report
+description: Report a bug or issue
+title: "[BUG] "
+labels: ["bug", "needs-investigation"]
+assignees:
+  - "@claude"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Help us fix issues quickly with detailed information about what went wrong.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Bug Severity"
+      description: "How serious is this issue?"
+      options:
+        - "🔥 Critical (System down/unusable)"
+        - "⚡ High (Core feature broken)"
+        - "📋 Medium (Feature partially broken)"
+        - "💡 Low (Minor issue/cosmetic)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: "What went wrong?"
+      description: "Describe the problem in simple terms"
+      placeholder: |
+        Clear description of what happened that shouldn't have happened.
+        
+        Example:
+        - When I click the "Save" button, nothing happens
+        - The page loads but shows an error message
+        - The form accepts invalid email addresses
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "What should have happened?"
+      description: "Describe what you expected to happen"
+      placeholder: |
+        Clear description of the correct/expected behavior.
+        
+        Example:
+        - Clicking "Save" should save my work and show a confirmation
+        - The page should load normally without errors
+        - The form should reject invalid email formats
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: "How to reproduce this bug"
+      description: "Step-by-step instructions to recreate the problem"
+      placeholder: |
+        1. Go to [page/URL]
+        2. Click on [element]
+        3. Enter [specific data]
+        4. Click [button]
+        5. See error/problem
+        
+        Be as specific as possible so we can reproduce the exact same issue.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: "Device Type"
+      description: "What device were you using?"
+      options:
+        - "📱 Mobile phone"
+        - "📟 Tablet"
+        - "💻 Desktop computer"
+        - "🔄 Multiple devices (specify in description)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: "Browser"
+      description: "What browser were you using?"
+      options:
+        - "Chrome"
+        - "Safari"
+        - "Firefox"
+        - "Edge"
+        - "Other (specify in description)"
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: "Error Messages"
+      description: "Copy any error messages you saw"
+      placeholder: |
+        Paste exact error messages here, including:
+        - Text of error dialogs
+        - Console errors (if you know how to check)
+        - Any red text or warning messages
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots or Screen Recording"
+      description: "Visual proof of the issue (very helpful!)"
+      placeholder: |
+        Attach screenshots showing:
+        - The error/problem as it appears
+        - The page/screen where it happens
+        - Any error messages or unusual behavior
+        
+        Drag and drop images directly into this text area.
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: "How does this affect users?"
+      description: "What is the business/user impact of this bug?"
+      placeholder: |
+        - Does this prevent users from completing important tasks?
+        - How many users are likely affected?
+        - Is there a workaround users can use?
+        - Does this affect revenue or user satisfaction?
+
+  - type: checkboxes
+    id: testing-scope
+    attributes:
+      label: "Testing Required"
+      description: "What testing should be done after the fix?"
+      options:
+        - label: "Test the specific bug fix works"
+        - label: "Test related functionality isn't broken"
+        - label: "Test on mobile devices"
+        - label: "Test on different browsers"
+        - label: "Run full automated test suite"
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: "Current Workaround"
+      description: "Is there a temporary way to avoid this issue?"
+      placeholder: |
+        If you found a way to work around this problem, describe it here.
+        This helps other users while we work on a permanent fix.
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: "How often does this happen?"
+      description: "Is this consistent or intermittent?"
+      options:
+        - "Always (100% of the time)"
+        - "Usually (most of the time)"
+        - "Sometimes (occasionally)"
+        - "Rarely (hard to reproduce)"
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Additional Information"
+      description: "Anything else that might be helpful"
+      placeholder: |
+        - When did you first notice this problem?
+        - Did this work correctly before?
+        - Any recent changes that might be related?
+        - Other relevant context or information
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Investigation & Fix Process
+        
+        **Immediate CTO Actions:**
+        1. 🔍 Reproduce the bug using provided steps
+        2. 🐛 Identify root cause and scope of impact
+        3. 🛠️ Determine fix complexity and timeline
+        4. 📋 Create fix plan and update this issue with findings
+        
+        **Quality Assurance:**
+        1. ✅ Write test case to prevent regression
+        2. 🧪 Validate fix works correctly
+        3. 📱 Test across devices and browsers
+        4. 🚀 Verify no side effects on related features
+        
+        **CEO Notification:**
+        - Critical/High severity bugs will be immediately escalated
+        - Fix timeline and user impact assessment provided
+        - Workaround communicated to users if needed
+        
+        **Documentation Updates:**
+        - Bug fix added to changelog
+        - Related documentation updated if needed
+        - Shared context updated with learnings
