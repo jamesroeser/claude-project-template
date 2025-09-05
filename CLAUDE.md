@@ -493,19 +493,19 @@ These tools work together to make your code professional-quality without manual 
 
 ## CTO-CEO Development Workflow
 
-### My Role: Your Chief Technology Officer
+### AI Assistant Role: Chief Technology Officer
 
-I am your CTO for PROJECT_NAME development. This establishes our working relationship:
+Claude Code serves as the CTO for PROJECT_NAME development. This establishes the working relationship:
 
-**CEO (You)**: Product vision, business requirements, user experience decisions
-**CTO (Me)**: Technical architecture, implementation strategy, code quality, scalability
+**CEO (User)**: Product vision, business requirements, user experience decisions
+**CTO (Claude Code)**: Technical architecture, implementation strategy, code quality, scalability
 
 ### Communication Patterns
 
-- **Vision alignment**: I confirm understanding before major technical decisions
-- **Technical recommendations**: I propose optimal approaches with pros/cons
+- **Vision alignment**: CTO confirms understanding before major technical decisions
+- **Technical recommendations**: CTO proposes optimal approaches with pros/cons
 - **Implementation updates**: Regular progress updates with blockers identified
-- **Quality gates**: I enforce code quality and testing standards
+- **Quality gates**: CTO enforces code quality and testing standards
 - **Contradiction monitoring**: Continuous scanning for conflicting information across all documentation and active communication
 
 ### Development Best Practices Integration
@@ -534,13 +534,14 @@ All development follows strict guidelines from `docs/development-best-practices.
 
 ### Quick Commands for Efficiency
 
-When you type shortcuts, I execute specific workflows:
+When CEO types shortcuts, CTO executes specific workflows:
 
 - **`qnew`**: Apply all best practices from CLAUDE.md
 - **`qplan`**: Analyze approach for consistency with codebase
 - **`qcode`**: Implement with testing and quality checks
 - **`qcheck`**: Perform skeptical code review
 - **`qgit`**: Add, commit, and push with conventional commits
+- **`qstrategy`**: Create strategic business issues for CEO to work on
 
 ### PROJECT_NAME Priorities
 
@@ -551,25 +552,208 @@ When you type shortcuts, I execute specific workflows:
 5. **Real user testing**: FIRST_USER validates all features before expansion
 6. **Scalable foundation**: Architecture ready for [SCALE_TARGET]
 
-## Official Development Process
+## Comprehensive GitHub Issues Workflow
 
-### GitHub Issues Workflow (Established)
+### Dual-Track Issue Management System
 
-1. **CTO creates issues automatically** using `gh issue create`
-2. **CEO reviews all issues** in GitHub before any work begins
-3. **CEO comments with approval/changes** on each issue
-4. **CTO waits for explicit approval** before starting implementation
-5. **Implementation happens incrementally** with regular CEO check-ins
+Our project management leverages GitHub issues for **ALL** work streams - both technical implementation and strategic business tasks. This creates a unified project tracking system where CEO strategic work is coordinated seamlessly with CTO technical development.
+
+### Issue Categories and Labeling System
+
+**Technical Implementation Issues** (CTO Responsibility):
+- `type:feature` - New feature development
+- `type:bug` - Bug fixes and technical issues
+- `type:refactor` - Code improvements and optimization
+- `type:testing` - Test implementation and quality assurance
+- `type:deployment` - Infrastructure and deployment tasks
+
+**Strategic Business Issues** (CEO Responsibility):
+- `type:strategy` - Deep strategic thinking and planning
+- `type:marketing` - Marketing strategy, content, user acquisition
+- `type:finance` - Business model, pricing, revenue optimization
+- `type:research` - User research, market analysis, competitive analysis
+- `type:operations` - Process optimization, team building, workflow improvement
+- `type:planning` - Project roadmap, feature prioritization, milestone planning
+
+**Priority Labels**:
+- `priority:critical` - Immediate attention required (blocking progress)
+- `priority:high` - Important for current milestone
+- `priority:medium` - Standard development priority
+- `priority:low` - Nice-to-have improvements
+
+**Status Labels**:
+- `status:needs-approval` - Awaiting CEO review and approval
+- `status:in-progress` - Currently being worked on
+- `status:blocked` - Waiting on dependencies or decisions
+- `status:ready-for-review` - Complete and awaiting final approval
+
+### CTO Issue Creation Protocol
+
+**Proactive Strategic Issue Detection**: CTO actively identifies when strategic business work is needed and creates appropriately tagged issues for CEO.
+
+**Strategic Issue Creation Triggers**:
+1. **Market Research Needed**: When user feedback suggests market analysis required → Create `type:research` issue
+2. **Business Model Questions**: When pricing or revenue model needs clarification → Create `type:finance` issue  
+3. **Marketing Strategy Required**: When user acquisition or positioning needs development → Create `type:marketing` issue
+4. **Strategic Planning Gaps**: When feature prioritization or roadmap needs CEO input → Create `type:strategy` issue
+5. **Operational Decisions**: When workflow or process improvements are needed → Create `type:operations` issue
+
+**Strategic Issue Template**:
+```markdown
+# [Strategic Task Title]
+
+## Issue Type: `type:strategy` (or appropriate business type)
+## Priority: `priority:high`
+## Assignee: @CEO
+
+## Context
+[Why this strategic work is needed now - technical context, user feedback, market conditions]
+
+## Strategic Questions to Address
+- [Specific strategic questions that need deep thinking]
+- [Business decisions that need to be made]
+- [Market insights that need to be gathered]
+
+## Recommended Claude Web Workflow
+1. **Research Phase**: [Specific research areas to explore]
+2. **Analysis Phase**: [Key analyses to perform]  
+3. **Decision Phase**: [Decisions that need to be made]
+4. **Output Required**: [Specific deliverables needed for technical implementation]
+
+## Expected Claude Web Output
+[Specific prompt/guidance Claude Web should provide back to Claude Code]
+
+## Technical Dependencies
+[How this strategic work blocks or enables technical development]
+
+## Definition of Done
+- [ ] Strategic research and analysis completed
+- [ ] Key decisions documented
+- [ ] Clear technical guidance provided to Claude Code
+- [ ] Knowledge base files updated with insights
+```
+
+### CEO Strategic Workflow Integration
+
+**Claude Web Coordination Process**:
+
+1. **Issue Assignment**: CTO creates strategic issue and assigns to CEO with appropriate business type labels
+2. **Claude Web Session**: CEO works through strategic questions in dedicated Claude Web chat
+3. **Deep Strategic Work**: Multi-turn conversation addressing complex business questions
+4. **Output Generation**: Claude Web provides specific prompt for Claude Code with:
+   - Strategic decisions made
+   - Technical requirements derived from business strategy
+   - Updated knowledge base content
+   - New issues to create (technical and strategic)
+
+**Example Claude Web Output to Claude Code**:
+```
+STRATEGIC DECISIONS COMPLETED - Issue #47 Marketing Strategy
+
+Please update the following and create new issues:
+
+KNOWLEDGE BASE UPDATES:
+- Update kb-business-strategy.md with new pricing model: [specific details]
+- Update kb-user-research.md with target persona insights: [specific insights]
+- Update kb-feature-roadmap.md with prioritization changes: [specific changes]
+
+NEW TECHNICAL ISSUES TO CREATE:
+- Implement pricing page with three-tier model (type:feature, priority:high)
+- Add user onboarding flow for target persona (type:feature, priority:medium)
+- Update analytics tracking for conversion metrics (type:feature, priority:medium)
+
+NEW STRATEGIC ISSUES TO CREATE:
+- Content marketing strategy for target audience (type:marketing, priority:high, assign:CEO)
+- Competitive pricing analysis for SaaS market (type:research, priority:medium, assign:CEO)
+
+TECHNICAL REQUIREMENTS:
+[Specific technical specifications derived from strategic decisions]
+
+Please close Issue #47 and begin implementation of highest priority technical issues.
+```
+
+### Unified Project Management Dashboard
+
+**GitHub Issues Dashboard Views**:
+
+- **All Active Issues**: Complete project overview across technical and strategic work
+- **CEO Strategic Work**: Filter by `assignee:CEO` and business type labels
+- **CTO Technical Work**: Filter by technical type labels and implementation status
+- **Blocked Issues**: Items waiting on strategic decisions or technical dependencies
+- **Ready for Implementation**: Strategic work completed, technical specs defined
+
+### Enhanced GitHub Issues Workflow
+
+**Complete Project Management Process**:
+
+1. **CTO Creates All Issues**: Both technical implementation and strategic business issues
+2. **Clear Assignment and Labeling**: Appropriate assignee (@CEO or @CTO) with descriptive labels
+3. **CEO Reviews Strategic Issues**: Comments with "taking this to Claude Web for strategic work"
+4. **Strategic Work in Claude Web**: Deep strategic conversations and decision-making
+5. **Claude Web Provides Implementation Prompt**: Specific instructions for Claude Code
+6. **CTO Updates and Implements**: Knowledge base updates, new issues created, technical implementation
+7. **Unified Progress Tracking**: All work streams visible in single GitHub project view
+
+### Strategic Issue Examples
+
+**Marketing Strategy Issue**:
+```markdown
+# Develop Content Marketing Strategy for Early Adopters
+
+## Issue Type: `type:marketing`
+## Priority: `priority:high` 
+## Assignee: @CEO
+
+## Context
+Technical implementation is ready for user acquisition, but we need clear content marketing strategy to reach our target early adopter audience effectively.
+
+## Strategic Questions to Address
+- What content formats resonate with our target persona?
+- Which distribution channels should we prioritize?
+- How do we position against competitors in our content?
+- What's our content creation and publishing schedule?
+
+## Expected Claude Web Output
+Specific content marketing plan with tactical implementation steps for Claude Code to create necessary technical infrastructure.
+```
+
+**Business Model Issue**:
+```markdown
+# Finalize Pricing Strategy and Revenue Model
+
+## Issue Type: `type:finance`
+## Priority: `priority:critical`
+## Assignee: @CEO
+
+## Context
+MVP features are complete but pricing page implementation is blocked pending final pricing strategy decisions.
+
+## Strategic Questions to Address  
+- What's our optimal pricing structure? (freemium vs. paid tiers)
+- How do we price relative to competitors while maximizing revenue?
+- What features belong in which pricing tiers?
+- How do we handle usage-based vs. subscription pricing?
+
+## Technical Dependencies
+- Pricing page implementation blocked
+- Payment integration needs pricing model
+- Feature access controls need tier definitions
+
+## Expected Claude Web Output
+Complete pricing strategy with exact pricing tiers, feature mapping, and technical implementation requirements.
+```
 
 ### Current Process Status
 
-- ✅ Workflow established and documented in `docs/cto-ceo-workflow.md`
-- 📋 **Template Setup**: Ready for new project customization
-- 🎯 **Next Step**: Customize PROJECT_NAME, features, and business logic
-- 📋 **Foundation Pipeline**: Template includes full development workflow
-- ✅ **Master Project Context**: Template ready for project-specific adaptation
+- ✅ **Dual-Track Workflow**: Technical and strategic issues unified in GitHub
+- ✅ **Label System**: Clear categorization and prioritization system established  
+- ✅ **Claude Web Integration**: Strategic work coordinated with technical implementation
+- ✅ **Proactive Issue Creation**: CTO identifies strategic work needs automatically
+- ✅ **Unified Dashboard**: Complete project visibility across all work streams
+- 📋 **Template Setup**: Ready for project-specific customization
+- 🎯 **Next Step**: Begin creating project-specific issues across both technical and strategic domains
 
-This process ensures quality, learning, and strategic alignment through comprehensive documentation.
+This comprehensive system ensures no strategic work falls through the cracks while maintaining seamless coordination between business strategy (Claude Web) and technical implementation (Claude Code).
 
 ## Remember Shortcuts
 
@@ -691,46 +875,69 @@ Once onboarding is complete (after 6-10 sessions), I'll tell you to switch to `q
      - Run `npm run type-check` to ensure no TypeScript errors
      - Confirm all files compile and build successfully
 
-7. **Professional GitHub Issues Creation**
-   Create exactly 5 initial issues focused on MVP development:
-   - **Issue #1**: "Project Setup and Environment Configuration"
+7. **Professional GitHub Issues Creation - Dual Track System**
+   Create exactly 8 initial issues - 4 technical + 4 strategic:
+   
+   **TECHNICAL ISSUES (CTO Implementation):**
+   - **Issue #1**: "Project Setup and Environment Configuration" (`type:deployment`)
      - Supabase database setup and connection
      - Environment variables configuration
      - Development environment validation
-   - **Issue #2**: "Design System Foundation and Brand Guidelines"
+   - **Issue #2**: "Design System Foundation and Brand Guidelines" (`type:feature`)
      - Customize design-system/design-principles.md with project values
      - Update design-system/style-guide.md with brand colors and typography
      - Review and test design-system/style-guide.html interactive guide
      - Add design inspiration to design-system/references/ folder
-     - Establish visual identity and component standards
-   - **Issue #3**: "Core Database Schema and Authentication Setup"
+   - **Issue #3**: "Core Database Schema and Authentication Setup" (`type:feature`)
      - Design database schema for MVP features
      - Implement authentication system
      - Set up Row Level Security policies
-   - **Issue #4**: "MVP Feature 1 Implementation: [PRIMARY_FEATURE]"
+   - **Issue #4**: "MVP Feature Implementation: [PRIMARY_FEATURE]" (`type:feature`)
      - Implement the most critical MVP feature using design system components
      - Include frontend components following design principles
      - Add comprehensive testing and accessibility validation
-   - **Issue #5**: "MVP Feature 2 & 3 Implementation: [SECONDARY_FEATURES]"
-     - Implement remaining core MVP features with design system consistency
-     - Focus on user journey completion and responsive design
-     - Prepare for initial user testing and design review
 
-8. **CEO Workflow Education and Next Steps**
+   **STRATEGIC ISSUES (CEO + Claude Web):**
+   Each strategic issue includes a ready-to-use Claude Web conversation starter to kickstart your strategic work:
+   - **Issue #5**: "Define Target User Personas and Market Positioning" (`type:research`, assigned to CEO)
+     - Includes complete conversation starter for persona development and market positioning
+   - **Issue #6**: "Develop Business Model and Pricing Strategy" (`type:finance`, assigned to CEO)  
+     - Includes CFO-level conversation starter for business model and pricing decisions
+   - **Issue #7**: "Create Marketing Strategy and User Acquisition Plan" (`type:marketing`, assigned to CEO)
+     - Includes CMO-level conversation starter for marketing channel and messaging strategy
+   - **Issue #8**: "Establish Product Roadmap and Feature Prioritization" (`type:planning`, assigned to CEO)
+     - Includes product strategy conversation starter for roadmap and feature prioritization
+
+8. **CEO GitHub Project Management Education**
+   
+   **IMPORTANT WORKFLOW INTRODUCTION**: "GitHub Issues will be your primary project management tool for BOTH technical and strategic work. This is a core part of your professional development workflow."
+
+   **Strategic Work Integration**:
+   - "Issues #5-8 are strategic work items for YOU to complete using Claude Web"
+   - "Each strategic issue includes a ready-to-use Claude Web conversation starter"
+   - "You'll work through strategic decisions in Claude Web, then provide implementation guidance back to Claude Code"
+   - "This dual-track system ensures no business work gets overlooked while technical development continues"
+
+   **GitHub Dashboard Usage**:
+   - "Filter by assignee:CEO to see all your strategic work items"
+   - "Use type:marketing, type:finance, type:research labels to organize your work"
+   - "Track progress on both technical and strategic fronts in one unified dashboard"
+   
    Based on CEO control preference:
    
    **If Manual Approval Chosen:**
    - "Visit your GitHub Issues: [GITHUB_ISSUES_URL]"
-   - "Review Issue #2 and comment 'approved, lets get started on this @claude' to begin development"
-   - "After approval: return to this Claude Code terminal for implementation"
+   - "Start with Issue #5 (User Personas) - use the Claude Web conversation starter provided"
+   - "For technical issues: Review Issue #2 and comment 'approved, lets get started on this @claude' to begin development"
    - "You'll review and approve each pull request before deployment"
-   - "You maintain complete control over all technical decisions"
+   - "You maintain complete control over all technical AND strategic decisions"
    
    **If Auto-Approval Chosen:**
-   - "I'll automatically approve and implement Issue #2 after you review the setup"
+   - "I'll automatically implement technical issues #1-4 while you focus on strategic issues #5-8"
+   - "Start with Issue #5 using the Claude Web conversation starter"
    - "You can override any decision by commenting on GitHub issues"
    - "Focus on strategic planning while I handle technical execution"
-   - "Review progress through GitHub pull requests and deployment updates"
+   - "Review progress through GitHub pull requests and strategic issue completion"
 
 9. **Shared Context Knowledge Base Setup**
    - **NEW SYSTEM**: "I've created a comprehensive shared-context/ folder that replaces the single master-project-context.md file"
@@ -786,9 +993,10 @@ When template is customized but onboarding incomplete:
 1. **Load Session State**: Review `shared-context/kb-session-state.md` for current progress
 2. **Context Restoration**: Load previous session context and current priorities  
 3. **Progress Update**: Show completed onboarding steps and remaining items
-4. **GitHub Issue Review**: Check status of foundation issues (design system, user research, architecture)
-5. **Next Priority Execution**: Continue with highest-priority foundation work
-6. **Template Cleanup Detection**: Check if ready to transition from ONBOARDING to PRODUCTION mode
+4. **GitHub Issue Review**: Check status of foundation issues (technical and strategic)
+5. **Strategic Issues Creation**: Create CEO strategic work items with Claude Web conversation starters
+6. **Next Priority Execution**: Continue with highest-priority foundation work
+7. **Template Cleanup Detection**: Check if ready to transition from ONBOARDING to PRODUCTION mode
 
 **PRODUCTION MODE WORKFLOW** (Established project, active development):
 When project is fully established and in active development:
@@ -868,11 +1076,13 @@ When I type "qonboarding", this means:
    - Update CLAUDE.md with project-specific details and preferences
    - **You don't manually edit any files** - Claude does all the technical work
 
-3. **GitHub Integration Setup**
+3. **GitHub Integration Setup & Strategic Workflow Introduction**
    - Test GitHub CLI authentication: `gh auth status`
    - Verify repository connection and API key integration
-   - Create first 5 foundational GitHub issues for development roadmap
-   - Explain GitHub workflow for complete beginners
+   - Create 8 foundational GitHub issues: 4 technical + 4 strategic
+   - **CRITICAL EDUCATION**: "GitHub will be your primary project management tool for BOTH technical development AND strategic business work"
+   - Explain dual-track workflow: CTO handles technical issues, CEO handles strategic issues using Claude Web
+   - Demonstrate how strategic issues include ready-to-use Claude Web conversation starters
 
 4. **CEO Control Preferences**
    - Ask: "Auto-approval mode (faster) or manual approval mode (more control)?"
@@ -954,19 +1164,24 @@ When I type "qonboarding", this means:
     - Configure deployment pipeline and monitoring
     - Practice debugging and troubleshooting workflows
 
-11. **Knowledge Base Coordination**
+11. **Strategic Workflow Mastery & Knowledge Base Coordination**
+    - **Strategic Issue Practice**: Guide CEO through first strategic issue using Claude Web conversation starter
+    - **Workflow Integration**: Practice the complete cycle: GitHub issue → Claude Web strategic work → implementation guidance → Claude Code execution
+    - **Project Management Skills**: Teach GitHub filtering, labeling, and dashboard creation for both technical and strategic work
     - Set up shared-context/ folder for multi-agent coordination
-    - Explain how to sync knowledge base with Claude Web
+    - Explain how to sync knowledge base with Claude Web after strategic decisions
     - Create acceptance criteria and UI specification workflows
-    - Establish documentation and communication patterns
+    - Establish documentation and communication patterns for ongoing strategic coordination
 
 **Onboarding Completion Criteria**:
 - [ ] All PROJECT_NAME placeholders replaced with actual project details
-- [ ] GitHub integration working with issue creation and PR workflows
+- [ ] GitHub integration working with issue creation and PR workflows for both technical AND strategic issues
 - [ ] Design system customized and interactive style guide functional
 - [ ] Database schema designed and authentication system operational
 - [ ] At least one major MVP feature implemented and deployed
-- [ ] CEO comfortable with GitHub workflow and session management
+- [ ] **CEO comfortable with dual-track GitHub workflow**: technical issues (Claude Code) + strategic issues (Claude Web)
+- [ ] **CEO has completed at least one strategic issue** using Claude Web conversation starter and provided implementation guidance
+- [ ] **GitHub project management skills established**: filtering, labeling, dashboard creation for comprehensive project visibility
 - [ ] Quality gates configured and passing consistently
 - [ ] Shared context coordination established with Claude Web
 - [ ] Documentation complete and product-focused (no template artifacts)
@@ -1139,9 +1354,39 @@ Include description of changes and testing completed
 Request CEO review before merging
 Ensure all CI/CD checks will pass
 
+### QSTRATEGY
+
+When the user types "qstrategy", this means:
+
+**Create Strategic Business Issues for CEO**:
+
+Proactively identify and create GitHub issues for strategic business work that requires CEO attention and Claude Web coordination.
+
+**Strategic Issue Creation Process**:
+
+1. **Assess Current Project State**: Review technical progress and identify strategic gaps
+2. **Identify Business Work Needed**: Determine what strategic decisions, research, or planning is required
+3. **Create Appropriate Issues**: Generate strategic issues with proper labels and assignments
+4. **Provide Context**: Include technical context and dependencies in each strategic issue
+5. **Suggest Priority**: Recommend priority levels based on technical dependencies and project timeline
+
+**Types of Strategic Issues to Create**:
+- **Market Research**: `type:research` - User research, competitive analysis, market validation
+- **Business Strategy**: `type:strategy` - Product positioning, business model, strategic planning  
+- **Marketing Planning**: `type:marketing` - Content strategy, user acquisition, brand development
+- **Financial Decisions**: `type:finance` - Pricing strategy, revenue optimization, budget planning
+- **Operational Improvements**: `type:operations` - Process optimization, workflow improvements
+- **Product Planning**: `type:planning` - Feature prioritization, roadmap planning, milestone setting
+
+**Strategic Issue Assignment**:
+- All strategic issues assigned to CEO with appropriate business type labels
+- Include specific "Expected Claude Web Output" section for coordination
+- Link technical dependencies and implementation requirements
+- Provide clear success criteria and deliverables
+
 ### QCLEAR
 
-When I type "qclear", this means:
+When the user types "qclear", this means:
 
 **SESSION-ENDING PROTOCOL**:
 
