@@ -176,6 +176,113 @@ Once Claude completes your onboarding (after 6-8 sessions), you'll have a simple
 - GitHub project management
 - Deployment automation
 
+## 🛠️ Tools & Infrastructure Overview
+
+### 🔧 Core Development Stack
+
+**Claude AI** - Your Development Team
+- **Claude Code (CTO)**: Technical implementation, coding, deployment
+- **Claude Web (Strategic Team)**: Business strategy, marketing, operations guidance
+- **Why these tools**: Professional AI assistance eliminates need for technical team initially
+
+**GitHub** - Project Management & Code Storage
+- **What it does**: Stores your code, tracks changes, manages development tasks
+- **Why it's perfect**: Industry standard, integrates seamlessly with all other tools
+- **Alternative**: GitLab, Bitbucket (but GitHub integration is optimized)
+
+**Next.js + TypeScript** - Web Application Framework  
+- **What it does**: Creates fast, professional web applications
+- **Why it's chosen**: Most popular framework, excellent performance, scales to millions of users
+- **Alternative**: React, Vue, Svelte (but would require template modifications)
+
+### ☁️ Infrastructure & Services
+
+**Vercel** - Web Hosting & Deployment
+- **What it does**: Hosts your website, makes it fast worldwide, handles traffic spikes
+- **Why it's recommended**: Created by Next.js team, automatic deployments, excellent free tier
+- **Alternatives**: Netlify, Railway, AWS (Claude Code can adapt to any platform you prefer)
+
+**Supabase** - Database & Authentication
+- **What it does**: Stores user data, handles login/signup, manages file uploads
+- **Why it's chosen**: Easy to use, powerful features, generous free tier
+- **Alternatives**: Firebase, PlanetScale, Neon (Claude Code can configure any database)
+
+**Stripe** - Payment Processing
+- **What it does**: Handles subscriptions, one-time payments, billing management
+- **Why it's standard**: Industry leader, trusted by millions, comprehensive features
+- **Alternatives**: PayPal, Square, Paddle (easy to switch later)
+
+### 🎨 Design & Development Tools
+
+**Tailwind CSS** - Styling Framework
+- **What it does**: Makes your app look professional without custom design work
+- **Why it's efficient**: Rapid development, consistent design, mobile-responsive
+- **Alternative**: Custom CSS, Bootstrap (but Tailwind is optimized for speed)
+
+**shadcn/ui** - Component Library  
+- **What it does**: Professional UI components (buttons, forms, menus) ready to use
+- **Why it's powerful**: Accessible, beautiful, customizable, saves weeks of design work
+- **Alternative**: Material-UI, Chakra UI (Claude Code can adapt to any preference)
+
+## 💰 Cost Breakdown & Scaling Guide
+
+### 🌱 Getting Started (Months 1-3)
+**Total Monthly Cost: $10-25**
+
+**Claude AI**:
+- **Claude Pro**: $20/month (recommended) 
+- **API Credits**: $5-10/month for GitHub integration and development
+- **Alternative**: Claude Free + API credits ($10-15/month) but less efficient
+
+**Infrastructure** (All Free Tiers):
+- ✅ **Vercel**: Free (up to 100GB bandwidth, unlimited deployments)
+- ✅ **Supabase**: Free (50,000 monthly active users, 500MB database) 
+- ✅ **GitHub**: Free (unlimited repositories, basic project management)
+- ✅ **Domain**: Optional ($10-15/year for custom domain)
+
+**Perfect for**: MVP development, initial user testing, validation
+
+### 🚀 Growth Phase (Months 4-12)
+**Total Monthly Cost: $100-200**
+
+**Claude AI** (Recommended Upgrade):
+- **Claude Pro Max**: $100/month (unlimited usage, priority access)
+- **Why upgrade**: Faster development, unlimited strategic consultations, priority support
+
+**Infrastructure** (Still Mostly Free):
+- **Vercel**: $20/month Pro (custom domains, team features, 1TB bandwidth)
+- **Supabase**: Free → $25/month (2GB database, 100K monthly active users)
+- **Stripe**: 2.9% per transaction (only pay when you earn)
+- **Domain + Email**: $50-100/year
+
+**Perfect for**: 100-1,000 users, revenue generation, team collaboration
+
+### 📈 Scale Phase (Year 2+)
+**Total Monthly Cost: $300-800**
+
+**Infrastructure Scaling**:
+- **Vercel**: $50-200/month (high traffic, team features, enterprise support)
+- **Supabase**: $25-100/month (larger database, more users, advanced features)
+- **Additional Services**: Email (ConvertKit $30), Analytics ($20-50), Support tools ($50-100)
+
+**Perfect for**: 1,000+ users, $5K+ monthly revenue, distributed team
+
+### 🎯 Revenue Benchmarks & Break-Even Points
+
+**$1K Monthly Revenue**: All infrastructure costs covered, profitable with Claude Pro
+**$5K Monthly Revenue**: Upgrade to Claude Pro Max + premium infrastructure tiers  
+**$15K Monthly Revenue**: All tooling costs become negligible (2-3% of revenue)
+**$50K+ Monthly Revenue**: Reinvest in growth tools, team expansion, advanced infrastructure
+
+### 💡 Smart Scaling Strategy
+
+**Start Simple**: Use free tiers, focus on user validation and revenue
+**Scale Gradually**: Upgrade only when hitting limits or when revenue supports it
+**Monitor Metrics**: Claude Code will recommend upgrades based on actual usage
+**Stay Flexible**: Easy to switch platforms if better options emerge
+
+**The beauty of this stack**: Starts essentially free, scales infinitely, with Claude Code guiding optimal upgrade timing based on your actual growth and revenue.
+
 ## 📚 Essential Documents (Read After Setup)
 
 After completing onboarding, reference these guides:
