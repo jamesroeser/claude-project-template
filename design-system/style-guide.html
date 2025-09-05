@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Style Guide</title>
+    <link rel="stylesheet" href="styles/design-system.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="style-guide-nav">
+        <h1>Design System</h1>
+        <ul>
+            <li><a href="#foundation">Foundation</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#patterns">Patterns</a></li>
+            <li><a href="#layouts">Layouts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="style-guide-content">
+        
+        <!-- Foundation Section -->
+        <section id="foundation" class="style-section">
+            <h2>Foundation</h2>
+            
+            <!-- Colors -->
+            <div class="subsection">
+                <h3>Colors</h3>
+                
+                <h4>Brand Colors</h4>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #f0f9ff;"></div>
+                        <div class="color-info">
+                            <strong>Primary 50</strong>
+                            <code>#f0f9ff</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #e0f2fe;"></div>
+                        <div class="color-info">
+                            <strong>Primary 100</strong>
+                            <code>#e0f2fe</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #0ea5e9;"></div>
+                        <div class="color-info">
+                            <strong>Primary 500</strong>
+                            <code>#0ea5e9</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #0284c7;"></div>
+                        <div class="color-info">
+                            <strong>Primary 600</strong>
+                            <code>#0284c7</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #0c4a6e;"></div>
+                        <div class="color-info">
+                            <strong>Primary 900</strong>
+                            <code>#0c4a6e</code>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Neutral Colors</h4>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #fafafa;"></div>
+                        <div class="color-info">
+                            <strong>Neutral 50</strong>
+                            <code>#fafafa</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #f5f5f5;"></div>
+                        <div class="color-info">
+                            <strong>Neutral 100</strong>
+                            <code>#f5f5f5</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #e5e5e5;"></div>
+                        <div class="color-info">
+                            <strong>Neutral 200</strong>
+                            <code>#e5e5e5</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #a3a3a3;"></div>
+                        <div class="color-info">
+                            <strong>Neutral 400</strong>
+                            <code>#a3a3a3</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #525252;"></div>
+                        <div class="color-info">
+                            <strong>Neutral 600</strong>
+                            <code>#525252</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #171717;"></div>
+                        <div class="color-info">
+                            <strong>Neutral 900</strong>
+                            <code>#171717</code>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Semantic Colors</h4>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #22c55e;"></div>
+                        <div class="color-info">
+                            <strong>Success</strong>
+                            <code>#22c55e</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #f59e0b;"></div>
+                        <div class="color-info">
+                            <strong>Warning</strong>
+                            <code>#f59e0b</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #ef4444;"></div>
+                        <div class="color-info">
+                            <strong>Error</strong>
+                            <code>#ef4444</code>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #3b82f6;"></div>
+                        <div class="color-info">
+                            <strong>Info</strong>
+                            <code>#3b82f6</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography -->
+            <div class="subsection">
+                <h3>Typography</h3>
+                
+                <h4>Headings</h4>
+                <div class="typography-sample">
+                    <h1>Heading 1 - 48px Bold</h1>
+                    <h2>Heading 2 - 36px Semibold</h2>
+                    <h3>Heading 3 - 30px Semibold</h3>
+                    <h4>Heading 4 - 24px Semibold</h4>
+                    <h5>Heading 5 - 20px Semibold</h5>
+                    <h6>Heading 6 - 18px Medium</h6>
+                </div>
+
+                <h4>Body Text</h4>
+                <div class="typography-sample">
+                    <p class="text-lg">Large body text - 18px Regular</p>
+                    <p class="text-base">Regular body text - 16px Regular</p>
+                    <p class="text-sm">Small body text - 14px Regular</p>
+                    <p class="text-xs">Caption text - 12px Regular</p>
+                </div>
+
+                <h4>Font Weights</h4>
+                <div class="typography-sample">
+                    <p class="font-light">Light - 300</p>
+                    <p class="font-normal">Normal - 400</p>
+                    <p class="font-medium">Medium - 500</p>
+                    <p class="font-semibold">Semibold - 600</p>
+                    <p class="font-bold">Bold - 700</p>
+                </div>
+
+                <h4>Code Typography</h4>
+                <div class="typography-sample">
+                    <code class="inline-code">inline code</code>
+                    <pre class="code-block">
+function example() {
+  return "Code block example";
+}</pre>
+                </div>
+            </div>
+
+            <!-- Spacing -->
+            <div class="subsection">
+                <h3>Spacing Scale</h3>
+                <div class="spacing-demo">
+                    <div class="spacing-item">
+                        <div class="spacing-bar" style="width: 4px;"></div>
+                        <span>4px (1)</span>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-bar" style="width: 8px;"></div>
+                        <span>8px (2)</span>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-bar" style="width: 16px;"></div>
+                        <span>16px (4)</span>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-bar" style="width: 24px;"></div>
+                        <span>24px (6)</span>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-bar" style="width: 32px;"></div>
+                        <span>32px (8)</span>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-bar" style="width: 48px;"></div>
+                        <span>48px (12)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section id="components" class="style-section">
+            <h2>Components</h2>
+
+            <!-- Buttons -->
+            <div class="subsection">
+                <h3>Buttons</h3>
+                
+                <h4>Primary Buttons</h4>
+                <div class="component-demo">
+                    <button class="btn btn-primary btn-sm">Small Primary</button>
+                    <button class="btn btn-primary">Medium Primary</button>
+                    <button class="btn btn-primary btn-lg">Large Primary</button>
+                    <button class="btn btn-primary" disabled>Disabled Primary</button>
+                </div>
+
+                <h4>Secondary Buttons</h4>
+                <div class="component-demo">
+                    <button class="btn btn-secondary btn-sm">Small Secondary</button>
+                    <button class="btn btn-secondary">Medium Secondary</button>
+                    <button class="btn btn-secondary btn-lg">Large Secondary</button>
+                    <button class="btn btn-secondary" disabled>Disabled Secondary</button>
+                </div>
+
+                <h4>Danger Buttons</h4>
+                <div class="component-demo">
+                    <button class="btn btn-danger">Delete Item</button>
+                    <button class="btn btn-danger-outline">Cancel</button>
+                </div>
+
+                <h4>Ghost Buttons</h4>
+                <div class="component-demo">
+                    <button class="btn btn-ghost">Ghost Button</button>
+                    <button class="btn btn-ghost" disabled>Disabled Ghost</button>
+                </div>
+            </div>
+
+            <!-- Form Elements -->
+            <div class="subsection">
+                <h3>Form Elements</h3>
+                
+                <div class="form-demo">
+                    <div class="form-group">
+                        <label for="text-input" class="form-label">Text Input</label>
+                        <input type="text" id="text-input" class="form-input" placeholder="Enter text here">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-input" class="form-label required">Email Input</label>
+                        <input type="email" id="email-input" class="form-input" placeholder="user@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password-input" class="form-label required">Password</label>
+                        <input type="password" id="password-input" class="form-input" placeholder="Enter password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="textarea" class="form-label">Textarea</label>
+                        <textarea id="textarea" class="form-input" rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select" class="form-label">Select</label>
+                        <select id="select" class="form-input">
+                            <option>Choose an option</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="checkbox" class="form-checkbox">
+                            <label for="checkbox" class="checkbox-label">I agree to the terms and conditions</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <input type="radio" id="radio1" name="radio" class="form-radio">
+                            <label for="radio1" class="radio-label">Option 1</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="radio2" name="radio" class="form-radio">
+                            <label for="radio2" class="radio-label">Option 2</label>
+                        </div>
+                    </div>
+
+                    <!-- Error State -->
+                    <div class="form-group">
+                        <label for="error-input" class="form-label required">Error State</label>
+                        <input type="text" id="error-input" class="form-input form-input-error" value="Invalid input">
+                        <div class="form-error">This field is required and must be valid.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="subsection">
+                <h3>Cards</h3>
+                
+                <div class="cards-demo">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Basic Card</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>This is a basic card with header and content areas.</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-interactive">
+                        <div class="card-header">
+                            <h3>Interactive Card</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>This card has hover effects and can be clicked.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card with Action</h3>
+                            <p>This card includes action buttons in the footer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary btn-sm">Cancel</button>
+                            <button class="btn btn-primary btn-sm">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="subsection">
+                <h3>Navigation</h3>
+                
+                <div class="nav-demo">
+                    <nav class="demo-nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-active">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Settings</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Badges & Pills -->
+            <div class="subsection">
+                <h3>Badges & Status</h3>
+                
+                <div class="badge-demo">
+                    <span class="badge badge-primary">Primary</span>
+                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-warning">Warning</span>
+                    <span class="badge badge-error">Error</span>
+                    <span class="badge badge-neutral">Neutral</span>
+                </div>
+
+                <div class="badge-demo">
+                    <span class="pill pill-primary">Active</span>
+                    <span class="pill pill-success">Completed</span>
+                    <span class="pill pill-warning">Pending</span>
+                    <span class="pill pill-error">Failed</span>
+                    <span class="pill pill-neutral">Draft</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patterns Section -->
+        <section id="patterns" class="style-section">
+            <h2>Patterns</h2>
+
+            <!-- Loading States -->
+            <div class="subsection">
+                <h3>Loading States</h3>
+                
+                <div class="loading-demo">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+
+                <!-- Skeleton Loading -->
+                <div class="skeleton-demo">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-avatar"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton skeleton-line skeleton-line-long"></div>
+                            <div class="skeleton skeleton-line skeleton-line-medium"></div>
+                            <div class="skeleton skeleton-line skeleton-line-short"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="subsection">
+                <h3>Notifications</h3>
+                
+                <div class="notification-demo">
+                    <div class="notification notification-success">
+                        <strong>Success!</strong> Your changes have been saved.
+                        <button class="notification-close">&times;</button>
+                    </div>
+                    <div class="notification notification-warning">
+                        <strong>Warning:</strong> Please review your settings.
+                        <button class="notification-close">&times;</button>
+                    </div>
+                    <div class="notification notification-error">
+                        <strong>Error:</strong> Something went wrong.
+                        <button class="notification-close">&times;</button>
+                    </div>
+                    <div class="notification notification-info">
+                        <strong>Info:</strong> New features are available.
+                        <button class="notification-close">&times;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty States -->
+            <div class="subsection">
+                <h3>Empty States</h3>
+                
+                <div class="empty-state">
+                    <div class="empty-state-icon">📄</div>
+                    <h3>No documents found</h3>
+                    <p>You haven't created any documents yet. Get started by creating your first document.</p>
+                    <button class="btn btn-primary">Create Document</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layouts Section -->
+        <section id="layouts" class="style-section">
+            <h2>Layout Examples</h2>
+
+            <!-- Dashboard Layout -->
+            <div class="subsection">
+                <h3>Dashboard Layout</h3>
+                
+                <div class="layout-demo">
+                    <div class="dashboard-layout">
+                        <header class="dashboard-header">
+                            <h2>Dashboard</h2>
+                            <button class="btn btn-primary btn-sm">New Item</button>
+                        </header>
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h4>Total Users</h4>
+                                <div class="metric">1,234</div>
+                                <div class="metric-change positive">+12%</div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Revenue</h4>
+                                <div class="metric">$45,678</div>
+                                <div class="metric-change positive">+8%</div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Conversion Rate</h4>
+                                <div class="metric">3.4%</div>
+                                <div class="metric-change negative">-2%</div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Active Sessions</h4>
+                                <div class="metric">89</div>
+                                <div class="metric-change neutral">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="styles/design-system.js"></script>
+</body>
+</html>
