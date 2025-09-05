@@ -220,11 +220,19 @@ When Claude declares onboarding complete:
    - Type `/clear` to reset Claude context  
    - **From now on**: Always start new sessions with `qnew` (not `qonboarding`)
 
-3. **Your New Development Workflow**:
+3. **Set Up Your Strategic Advisory Team (Claude Web)**:
+   - Claude Code will provide you with complete setup instructions
+   - You'll create a dedicated Claude Web project for strategic guidance  
+   - This becomes your CMO, CFO, COO, and business mentor
+   - Upload project knowledge base files to keep it informed
+   - Use this for business decisions while Claude Code handles technical work
+
+4. **Your New Development Workflow**:
    - Start each session: `qnew`
    - Work on features and issues
    - End each session: `qclear` then `/clear`
    - Repeat for all future development
+   - Consult Claude Web project for strategic business decisions
 
 ## 🚨 Common Beginner Issues & Solutions
 
@@ -268,12 +276,30 @@ When Claude declares onboarding complete:
 
 ## 📞 Getting Help
 
+### 🥇 Best Solution: Use Claude Web Chat!
+
+**For ANY problem, question, or confusion:**
+
+1. **Go to [claude.ai](https://claude.ai)** and start a new chat
+2. **Describe your situation**: "I'm setting up the Claude development template and..."
+3. **Share screenshots**: Claude can see and understand images of your screen
+4. **Copy/paste error messages**: Include exact error text for precise help
+5. **Ask specific questions**: "What does this mean?" "How do I fix this?"
+
+**Why this is the best approach:**
+- Claude can see your exact situation through screenshots
+- Get personalized help for your specific setup
+- No waiting - instant responses and solutions
+- Claude understands technical errors and can explain them simply
+
+### Other Help Options
+
 If you get stuck:
 
-1. **Double-check this guide** - most issues are covered here
-2. **Try the troubleshooting steps** above for your specific problem
-3. **Take a break** - fresh perspective often helps
-4. **Ask for help** - everyone was a beginner once!
+1. **Try Claude Web chat first** (seriously, it's the best option!)
+2. **Double-check this guide** - most issues are covered here  
+3. **Try the troubleshooting steps** above for your specific problem
+4. **Take a break** - fresh perspective often helps
 
 ## 🎉 Success Indicators
 

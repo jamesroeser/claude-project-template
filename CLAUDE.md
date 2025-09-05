@@ -879,39 +879,82 @@ When I type "qonboarding", this means:
    - Update workflow behavior based on preference
    - Store choice in CLAUDE.md for session consistency
 
+5. **Claude Web Project Setup (CRITICAL)**
+   **What Claude Code Will Provide**:
+   - **Project Name**: "[PROJECT_NAME] - Strategic Development"
+   - **Project Description Template**: Complete setup instructions for Claude Web
+   - **Knowledge Base Files**: List of all `kb-` files to upload initially
+   - **Ongoing Sync Instructions**: How to keep Claude Web updated
+
+   **Claude Web Project Setup Instructions Provided to CEO**:
+   ```
+   CLAUDE WEB PROJECT SETUP INSTRUCTIONS
+   
+   1. Go to claude.ai and create a new project
+   2. Name: "[PROJECT_NAME] - Strategic Development"  
+   3. First Question: "What are you trying to achieve?"
+      Answer: "I'm building [PROJECT_NAME], a [PROJECT_TYPE] for [TARGET_USERS]. 
+      I need strategic guidance, business planning, marketing advice, and operational 
+      support as I develop this product from MVP to market success. You'll work 
+      alongside Claude Code (my CTO) to help me make smart business decisions."
+   
+   4. Instructions to Claude Web:
+      "You are my strategic co-founder team including:
+      - CMO (Chief Marketing Officer): Marketing strategy, user acquisition, brand development
+      - CFO (Chief Financial Officer): Business model, pricing, revenue optimization  
+      - COO (Chief Operations Officer): Process optimization, team building, operations
+      - Mentor/Coach: Personal development, decision-making guidance, industry insights
+      
+      I'm the CEO and initially a beginner, but I'll grow more capable over time. 
+      Claude Code serves as my CTO handling all technical development. We coordinate 
+      through shared knowledge base files (kb-*.md) that I'll upload and update regularly.
+      
+      Always provide strategic, actionable advice focused on business growth, user needs, 
+      and long-term success. Help me think through important decisions and spot opportunities 
+      I might miss. Be supportive but honest about challenges and realistic timelines."
+   
+   5. Upload Initial Knowledge Base Files:
+   [List of all kb-*.md files will be provided]
+   
+   6. Ongoing Process:
+   - After major development milestones, download updated kb-*.md files 
+   - Delete old files from Claude Web project and upload new versions
+   - This keeps your strategic advisor aligned with current project status
+   ```
+
 **Session 3-5: Core Infrastructure**
-5. **Design System Foundation** 
+6. **Design System Foundation** 
    - Customize design-system/ files with project branding
    - Update color schemes, typography, and component standards
    - Test interactive style guide in browser
    - Establish visual identity and accessibility standards
 
-6. **Database & Authentication Setup**
+7. **Database & Authentication Setup**
    - Configure Supabase integration and environment variables
    - Design database schema for MVP features
    - Implement authentication system with Row Level Security
    - Test all database connections and user flows
 
-7. **First Feature Implementation**
+8. **First Feature Implementation**
    - Build primary MVP feature using established design system
    - Follow TDD approach with beginner-friendly explanations
    - Create comprehensive tests and documentation
    - Deploy and test feature end-to-end
 
 **Session 6-8: Workflow Mastery**
-8. **Advanced Workflow Training**
+9. **Advanced Workflow Training**
    - Guide through complete PR creation and review process
    - Teach GitHub issue management and project planning
    - Practice session management (qclear, /clear, qnew transitions)
    - Establish rhythm for efficient development sessions
 
-9. **Quality Assurance & Testing**
-   - Implement comprehensive testing strategy
-   - Set up automated quality gates (TypeScript, ESLint, Prettier)
-   - Configure deployment pipeline and monitoring
-   - Practice debugging and troubleshooting workflows
+10. **Quality Assurance & Testing**
+    - Implement comprehensive testing strategy
+    - Set up automated quality gates (TypeScript, ESLint, Prettier)
+    - Configure deployment pipeline and monitoring
+    - Practice debugging and troubleshooting workflows
 
-10. **Knowledge Base Coordination**
+11. **Knowledge Base Coordination**
     - Set up shared-context/ folder for multi-agent coordination
     - Explain how to sync knowledge base with Claude Web
     - Create acceptance criteria and UI specification workflows

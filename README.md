@@ -178,11 +178,23 @@ After completing onboarding, reference these guides:
 3. Navigate to project: `cd Desktop/your-project-name`
 4. Try `claude` again
 
+### Need Help? Use Claude Web Chat! 💬
+
+**Best solution for any issue**: Create a new chat at [claude.ai](https://claude.ai)
+
+1. **Describe your problem**: "I'm setting up the Claude development template and having trouble with..."
+2. **Share screenshots**: Take screenshots of error messages or your screen
+3. **Copy/paste error messages**: Include the exact text of any errors
+4. **Ask specific questions**: "What does this error mean?" or "How do I fix this?"
+
+**Why this works**: Claude can see screenshots, understand error messages, and provide step-by-step solutions tailored to your specific situation.
+
 ### Other Issues
 
 - **Installation problems**: See BEGINNERS-START-HERE.md for detailed solutions
-- **GitHub authentication**: Claude Code will guide you through this during onboarding
+- **GitHub authentication**: Claude Code will guide you through this during onboarding  
 - **API setup**: All handled automatically during the onboarding process
+- **Complex problems**: Always feel free to ask Claude Web chat for help!
 
 ## 🎉 Why This Template Works
 
