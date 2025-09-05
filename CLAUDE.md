@@ -852,10 +852,21 @@ When I type "qonboarding", this means:
    - Reference BEGINNERS-START-HERE.md for setup issues
 
 2. **Project Discovery & Customization**
-   - Guide through project vision and naming
-   - Help focus on MVP scope (3 core features maximum)
-   - Replace all PROJECT_NAME placeholders with actual project details
-   - Update package.json, README.md, and CLAUDE.md with project-specific information
+   **What Claude Code Will Ask You**:
+   - "What's your project idea? Describe your vision and core value proposition."
+   - "What should we call your project?" (for PROJECT_NAME replacement)
+   - "What type of project is this?" (SaaS platform, mobile app, productivity tool, etc.)
+   - "Who are your target users?" (for PROJECT_DESCRIPTION)
+   - "What are your 3 core MVP features?" (help focus scope, avoid feature creep)
+   - "Domain name?" (optional - can set up later)
+   
+   **What Claude Code Will Do Automatically**:
+   - Replace ALL PROJECT_NAME instances throughout the entire codebase
+   - Replace PROJECT_DESCRIPTION placeholders with your actual description
+   - Update package.json with correct project name and description
+   - Customize README.md with your project information
+   - Update CLAUDE.md with project-specific details and preferences
+   - **You don't manually edit any files** - Claude does all the technical work
 
 3. **GitHub Integration Setup**
    - Test GitHub CLI authentication: `gh auth status`

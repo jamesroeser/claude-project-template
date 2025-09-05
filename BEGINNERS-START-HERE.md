@@ -43,7 +43,7 @@ Before starting, make sure you have:
    - Complete verification process
 
 2. **Create New Repository from Template**:
-   - Visit: [Claude Professional Development Template](https://github.com/vista-concepts/claude-professional-development-template)
+   - Visit: [Claude Professional Development Template](https://github.com/jamesroeser/claude-project-template)
    - Click the green "Use this template" button
    - Click "Create a new repository"
    - **Repository name**: Choose your project name (lowercase, use hyphens for spaces)
