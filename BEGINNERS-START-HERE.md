@@ -200,11 +200,13 @@ Once Claude Code starts successfully:
    - Create your first GitHub issues for project management
    - Guide you through the development workflow
 
-3. **Complete All Onboarding Sessions**:
+3. **Complete All Onboarding Sessions** (CRITICAL WORKFLOW):
    - Plan for 5-8 sessions over several days
-   - Each session ends with `qclear` to save progress
-   - Use `/clear` only after `qclear` confirms everything is saved
-   - Always restart with `qonboarding` until Claude tells you onboarding is complete
+   - **Always start with**: `qonboarding` (not `qnew` during onboarding!)
+   - **Always end with**: `qclear` to save progress
+   - **Then use**: `/clear` only after `qclear` confirms everything is saved
+   - **🚨 NEVER skip `qclear`** - you'll lose your work!
+   - Continue using `qonboarding` until Claude declares onboarding complete
 
 ### Step 8: Transition to Production Development
 

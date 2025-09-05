@@ -125,6 +125,22 @@ qonboarding
 - **Sessions 2-8**: 30-45 minutes each over 3-5 days
 - **After onboarding**: 15-30 minutes per feature
 
+### ⚡ Session Management (IMPORTANT)
+
+**During Onboarding (Sessions 1-8):**
+1. **Start each session**: Type `qonboarding`
+2. **Work through guidance**: Follow Claude's step-by-step instructions
+3. **End each session**: Type `qclear` to save progress
+4. **Clear context**: Type `/clear` only after `qclear` confirms everything is saved
+
+**After Onboarding (Session 9+):**
+1. **Start each session**: Type `qnew` (switch from `qonboarding`)
+2. **Work on features**: Describe what you want to build
+3. **End each session**: Type `qclear` to save progress  
+4. **Clear context**: Type `/clear` only after `qclear` confirms everything is saved
+
+**🚨 NEVER type `/clear` without `qclear` first - you'll lose your work!**
+
 ## 🎯 After Onboarding: Your Development Workflow
 
 Once Claude completes your onboarding (after 6-8 sessions), you'll have a simple workflow:
